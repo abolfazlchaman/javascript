@@ -1102,9 +1102,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## کلاس ها و سازندگان
 
   <a name="constructors--use-class"></a><a name="9.1"></a>
-  - [9.1](#constructors--use-class) Always use `class`. Avoid manipulating `prototype` directly.
+  - [9.1](#constructors--use-class) همیشه از `class` استفاده کنید. از دستکاری مستقیم `prototype` خودداری کنید.
 
-    > Why? `class` syntax is more concise and easier to reason about.
+    > چرا؟ سینتکس `class` مختصرتر و ساده‌تر است.
 
     ```javascript
     // bad
@@ -1131,9 +1131,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="constructors--extends"></a><a name="9.2"></a>
-  - [9.2](#constructors--extends) Use `extends` for inheritance.
+  - [9.2](#constructors--extends) برای ارث بردن از `extends` استفاده کنید.
 
-    > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
+    > چرا؟ این یک روش داخلی برای به ارث بردن عملکرد نمونه اولیه بدون شکستن `instanceof` است.
 
     ```javascript
     // bad
@@ -1155,7 +1155,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="constructors--chaining"></a><a name="9.3"></a>
-  - [9.3](#constructors--chaining) Methods can return `this` to help with method chaining.
+  - [9.3](#constructors--chaining) متد‌ها می‌توانند `this` را برای کمک به زنجیره‌سازی متد برگردانند.
 
     ```javascript
     // bad
@@ -1192,7 +1192,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="constructors--tostring"></a><a name="9.4"></a>
-  - [9.4](#constructors--tostring) It’s okay to write a custom `toString()` method, just make sure it works successfully and causes no side effects.
+  - [9.4](#constructors--tostring) نوشتن یک متد سفارشی `()toString` اشکالی ندارد، فقط مطمئن شوید که با موفقیت کار می کند و عوارض جانبی ایجاد نمی کند.
 
     ```javascript
     class Jedi {
@@ -1211,7 +1211,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="constructors--no-useless"></a><a name="9.5"></a>
-  - [9.5](#constructors--no-useless) Classes have a default constructor if one is not specified. An empty constructor function or one that just delegates to a parent class is unnecessary. eslint: [`no-useless-constructor`](https://eslint.org/docs/rules/no-useless-constructor)
+  - [9.5](#constructors--no-useless) در صورتی که کلاس ها یک سازنده پیش فرض داشته باشند. یک تابع سازنده خالی یا تابعی که فقط به یک کلاس والد واگذار می شود، ضروری نیست. eslint: [`no-useless-constructor`](https://eslint.org/docs/rules/no-useless-constructor)
 
     ```javascript
     // bad
@@ -1240,9 +1240,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="classes--no-duplicate-members"></a>
-  - [9.6](#classes--no-duplicate-members) Avoid duplicate class members. eslint: [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
+  - [9.6](#classes--no-duplicate-members) از تکرار اعضای کلاس خودداری کنید. eslint: [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
 
-    > Why? Duplicate class member declarations will silently prefer the last one - having duplicates is almost certainly a bug.
+    > چرا؟ اعلان‌های تکراری اعضای کلاس بی‌صدا آخرین مورد را ترجیح می‌دهند - تقریباً و مطمئناً داشتن موارد تکراری یک اشکال و باگ است.
 
     ```javascript
     // bad
@@ -1263,7 +1263,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="classes--methods-use-this"></a>
-  - [9.7](#classes--methods-use-this) Class methods should use `this` or be made into a static method unless an external library or framework requires using specific non-static methods. Being an instance method should indicate that it behaves differently based on properties of the receiver. eslint: [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
+  - [9.7](#classes--methods-use-this) متدهای کلاس باید از `this` استفاده کنند یا به یک روش ثابت تبدیل شوند، مگر اینکه یک کتابخانه یا چارچوب خارجی نیاز به استفاده از روش‌های غیراستاتیک خاصی داشته باشد. یک روش نمونه بودن باید نشان دهد که بر اساس ویژگی های گیرنده رفتار متفاوتی دارد. eslint: [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
 
     ```javascript
     // bad
@@ -1300,9 +1300,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## ماژول ها
 
   <a name="modules--use-them"></a><a name="10.1"></a>
-  - [10.1](#modules--use-them) Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
+  - [10.1](#modules--use-them) همیشه از ماژول ها (`import`/`export`) روی یک سیستم ماژول غیر استاندارد استفاده کنید. شما همیشه می توانید به سیستم ماژول دلخواه خود انتقال دهید.
 
-    > Why? Modules are the future, let’s start using the future now.
+    > چرا؟ ماژول ها آینده هستند، از همین حالا از آینده استفاده کنید.
 
     ```javascript
     // bad
@@ -1319,9 +1319,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--no-wildcard"></a><a name="10.2"></a>
-  - [10.2](#modules--no-wildcard) Do not use wildcard imports.
+  - [10.2](#modules--no-wildcard) از واردات عام استفاده نکنید.
 
-    > Why? This makes sure you have a single default export.
+    > چرا؟ این اطمینان حاصل می کند که یک `export default` دارید.
 
     ```javascript
     // bad
@@ -1332,9 +1332,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--no-export-from-import"></a><a name="10.3"></a>
-  - [10.3](#modules--no-export-from-import) And do not export directly from an import.
+  - [10.3](#modules--no-export-from-import) و مستقیماً از واردات، صادر نکنید.
 
-    > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
+    > چرا؟ اگرچه خط یک خط مختصر است، اما داشتن یک راه واضح برای واردات و یک راه مشخص برای صادرات، همه چیز را منسجمتر می کند.
 
     ```javascript
     // bad
@@ -1348,9 +1348,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--no-duplicate-imports"></a>
-  - [10.4](#modules--no-duplicate-imports) Only import from a path in one place.
+  - [10.4](#modules--no-duplicate-imports) فقط از یک مسیر در یک مکان وارد کنید.
  eslint: [`no-duplicate-imports`](https://eslint.org/docs/rules/no-duplicate-imports)
-    > Why? Having multiple lines that import from the same path can make code harder to maintain.
+    > چرا؟ داشتن چندین خط که از یک مسیر وارد می شوند، می تواند حفظ کد را سخت تر کند.
 
     ```javascript
     // bad
@@ -1369,9 +1369,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--no-mutable-exports"></a>
-  - [10.5](#modules--no-mutable-exports) Do not export mutable bindings.
+  - [10.5](#modules--no-mutable-exports) پیوندهای قابل تغییر صادر نکنید.
  eslint: [`import/no-mutable-exports`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md)
-    > Why? Mutation should be avoided in general, but in particular when exporting mutable bindings. While this technique may be needed for some special cases, in general, only constant references should be exported.
+    > چرا؟ باید از mutation به طور کلی اجتناب شود، اما به طور خاص هنگام صادرات اتصالات قابل تغییر، در حالی که ممکن است این تکنیک برای برخی موارد خاص مورد نیاز باشد، به طور کلی، فقط مراجع ثابت باید صادر شوند.
 
     ```javascript
     // bad
@@ -1384,9 +1384,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--prefer-default-export"></a>
-  - [10.6](#modules--prefer-default-export) In modules with a single export, prefer default export over named export.
+  - [10.6](#modules--prefer-default-export) در ماژول‌هایی با یک صادرات، صادرات پیش‌فرض را به صادرات نام‌گذاری شده ترجیح دهید.
  eslint: [`import/prefer-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
-    > Why? To encourage more files that only ever export one thing, which is better for readability and maintainability.
+    > چرا؟ برای تشویق فایل های بیشتری که فقط یک چیز را صادر می کنند، که برای خوانایی و نگهداری بهتر است.
 
     ```javascript
     // bad
@@ -1397,9 +1397,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--imports-first"></a>
-  - [10.7](#modules--imports-first) Put all `import`s above non-import statements.
+  - [10.7](#modules--imports-first) همه `import` ها را بالای عبارات غیروارداتی قرار دهید.
  eslint: [`import/first`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
-    > Why? Since `import`s are hoisted, keeping them all at the top prevents surprising behavior.
+    > چرا؟ از آنجایی که `import` ها بالا میروند، نگه داشتن همه آنها در بالا از رفتار غیر منتظرانه کد جلوگیری می‌کند.
 
     ```javascript
     // bad
@@ -1416,10 +1416,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--multiline-imports-over-newlines"></a>
-  - [10.8](#modules--multiline-imports-over-newlines) Multiline imports should be indented just like multiline array and object literals.
+  - [10.8](#modules--multiline-imports-over-newlines) واردات چند خطی باید درست مانند آرایه های چند خطی و متغییر شیء ها دارای تورفتگی باشد.
  eslint: [`object-curly-newline`](https://eslint.org/docs/rules/object-curly-newline)
 
-    > Why? The curly braces follow the same indentation rules as every other curly brace block in the style guide, as do the trailing commas.
+    > چرا؟ کرلی بریس ها ( { ) از همان قوانین تورفتگی مانند هر بلوک کرلی بریس های دیگر در راهنمای سبک پیروی می‌کنند، مانند کاماهای انتهایی.
 
     ```javascript
     // bad
@@ -1436,9 +1436,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--no-webpack-loader-syntax"></a>
-  - [10.9](#modules--no-webpack-loader-syntax) Disallow Webpack loader syntax in module import statements.
+  - [10.9](#modules--no-webpack-loader-syntax) دستور لودر Webpack را در دستورات وارد کردن ماژول مجاز نکنید.
  eslint: [`import/no-webpack-loader-syntax`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)
-    > Why? Since using Webpack syntax in the imports couples the code to a module bundler. Prefer using the loader syntax in `webpack.config.js`.
+    > چرا؟ از آنجایی که استفاده از سینتکس Webpack در واردات، کد را به یک بسته‌کننده ماژول جفت می‌کند. ترجیحاً از سینتکس لودر در `webpack.config.js` استفاده کنید.
 
     ```javascript
     // bad
@@ -1451,9 +1451,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="modules--import-extensions"></a>
-  - [10.10](#modules--import-extensions) Do not include JavaScript filename extensions
+  - [10.10](#modules--import-extensions) پسوندهای نام فایل جاوا اسکریپت را درج نکنید
  eslint: [`import/extensions`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md)
-    > Why? Including extensions inhibits refactoring, and inappropriately hardcodes implementation details of the module you're importing in every consumer.
+    > چرا؟ گنجاندن پسوندها از بازآفرینی کد جلوگیری می‌کند و به‌طور نامناسب جزئیات پیاده‌سازی ماژولی را که وارد می‌کنید در هر مصرف‌کننده‌ای را کدگذاری می‌کند.
 
     ```javascript
     // bad
