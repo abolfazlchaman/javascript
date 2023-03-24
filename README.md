@@ -936,11 +936,11 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## توابع پیکانی
 
   <a name="arrows--use-them"></a><a name="8.1"></a>
-  - [8.1](#arrows--use-them) When you must use an anonymous function (as when passing an inline callback), use arrow function notation. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing)
+  - [8.1](#arrows--use-them) هنگامی که باید از یک تابع ناشناس استفاده کنید (مانند هنگام ارسال یک تماس درونی)، از نماد تابع فلش استفاده کنید. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing)
 
-    > Why? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
+    > چرا؟ این یک نسخه از تابع را ایجاد می کند که در زمینه `this` اجرا می شود، که معمولاً همان چیزی است که شما می خواهید، و یک سینتکس مختصرتر است.
 
-    > Why not? If you have a fairly complicated function, you might move that logic out into its own named function expression.
+    > چرا که نه؟ اگر یک تابع نسبتاً پیچیده دارید، ممکن است آن منطق را به عبارت تابع نام‌گذاری شده خودش منتقل کنید.
 
     ```javascript
     // bad
@@ -957,9 +957,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="arrows--implicit-return"></a><a name="8.2"></a>
-  - [8.2](#arrows--implicit-return) If the function body consists of a single statement returning an [expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) without side effects, omit the braces and use the implicit return. Otherwise, keep the braces and use a `return` statement. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens), [`arrow-body-style`](https://eslint.org/docs/rules/arrow-body-style)
+  - [8.2](#arrows--implicit-return) اگر بدنه تابع از یک عبارت واحد تشکیل شده است که یک [عبارت](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) را بدون عوارض جانبی برمی گرداند، بریس ها را حذف کنید و استفاده کنید. بازگشت ضمنی در غیر این صورت، بریس ها را نگه دارید و از عبارت `return` استفاده کنید. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens), [`arrow-body-style`](https://eslint.org/docs/rules/arrow-body-style)
 
-    > Why? Syntactic sugar. It reads well when multiple functions are chained together.
+    > چرا؟ خوانایی بهتر. هنگامی که چندین تابع به هم متصل می شوند،کد به خوبی خوانده می شود.
 
     ```javascript
     // bad
@@ -1002,9 +1002,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="arrows--paren-wrap"></a><a name="8.3"></a>
-  - [8.3](#arrows--paren-wrap) In case the expression spans over multiple lines, wrap it in parentheses for better readability.
+  - [8.3](#arrows--paren-wrap) در صورتی که عبارت در چندین خط باشد، برای خوانایی بهتر، آن را در پرانتز قرار دهید.
 
-    > Why? It shows clearly where the function starts and ends.
+    > چرا؟ این به وضوح نشان می دهد که تابع کجا شروع شده و به پایان می رسد.
 
     ```javascript
     // bad
@@ -1024,9 +1024,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="arrows--one-arg-parens"></a><a name="8.4"></a>
-  - [8.4](#arrows--one-arg-parens) Always include parentheses around arguments for clarity and consistency. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens)
+  - [8.4](#arrows--one-arg-parens) برای وضوح و سازگاری همیشه پرانتزها را در اطراف استدلال ها قرار دهید. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens)
 
-    > Why? Minimizes diff churn when adding or removing arguments.
+    > چرا؟ هنگام افزودن یا حذف آرگومان‌ها، تغییر تفاوت را به حداقل می‌رساند.
 
     ```javascript
     // bad
@@ -1059,7 +1059,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="arrows--confusing"></a><a name="8.5"></a>
-  - [8.5](#arrows--confusing) Avoid confusing arrow function syntax (`=>`) with comparison operators (`<=`, `>=`). eslint: [`no-confusing-arrow`](https://eslint.org/docs/rules/no-confusing-arrow)
+  - [8.5](#arrows--confusing) از گیج شدن نحو تابع پیکان (`=>`) با عملگرهای مقایسه (`<=`، `>=`) خودداری کنید. eslint: [`no-confusing-arrow`](https://eslint.org/docs/rules/no-confusing-arrow)
 
     ```javascript
     // bad
@@ -1079,7 +1079,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--implicit-arrow-linebreak"></a>
-  - [8.6](#whitespace--implicit-arrow-linebreak) Enforce the location of arrow function bodies with implicit returns. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
+  - [8.6](#whitespace--implicit-arrow-linebreak) مکان بدنه های تابع پیکان را با بازگشت های ضمنی اعمال کنید. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
 
     ```javascript
     // bad
