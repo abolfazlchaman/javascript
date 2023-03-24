@@ -101,7 +101,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## مراجع
 
@@ -156,7 +156,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     In the above code, you can see that referencing `a` and `b` will produce a ReferenceError, while `c` contains the number. This is because `a` and `b` are block scoped, while `c` is scoped to the containing function.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## اشیاء
 
@@ -332,7 +332,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## آرایه ها
 
@@ -497,7 +497,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ];
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## استخراج(Destructuring)
 
@@ -566,7 +566,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     const { left, top } = processInput(input);
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## رشته ها
 
@@ -649,7 +649,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     const foo = `my name is '${name}'`;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## توابع
 
@@ -931,7 +931,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     );
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## توابع پیکانی
 
@@ -1097,7 +1097,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     )
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## کلاس ها و سازندگان
 
@@ -1295,7 +1295,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## ماژول ها
 
@@ -1467,7 +1467,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     import baz from './baz';
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## تکرار کننده ها و مولدها
 
@@ -1581,7 +1581,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## خصوصیات
 
@@ -1628,7 +1628,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     const binary = 2 ** 10;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## متغیرها
 
@@ -1861,7 +1861,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // 'coords' is now the 'data' object without its 'type' property.
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## بالا بردن
 
@@ -1960,7 +1960,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
   - For more information refer to [JavaScript Scoping & Hoisting](https://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) by [Ben Cherry](https://www.adequatelygood.com/).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## اپراتورهای مقایسه و برابری
 
@@ -2145,7 +2145,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     const bar = a + (b / c) * d;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## بلوک ها
 
@@ -2261,7 +2261,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## بیانیه های کنترلی
 
@@ -2332,7 +2332,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## توضیح نویسی
 
@@ -2473,7 +2473,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## فضای سفید
 
@@ -2973,7 +2973,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
     <!-- markdownlint-enable MD012 -->
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## ویرگول ها
 
@@ -3108,7 +3108,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     );
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## نقطه ویرگول ها
 
@@ -3158,7 +3158,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     [Read more](https://stackoverflow.com/questions/7365172/semicolon-before-self-invoking-function/7365214#7365214).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## نوع ریختگی و اجبار
 
@@ -3249,7 +3249,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     const hasAge = !!age;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## قراردادهای نامگذاری
 
@@ -3488,7 +3488,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## دسترسی گیرنده / دهنده ها
 
@@ -3557,7 +3557,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## رویدادها
 
@@ -3588,7 +3588,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     });
     ```
 
-  **[⬆ back to top](#table-of-contents)**
+ **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## جی کوئری
 
@@ -3657,14 +3657,14 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     $sidebar.find('ul').hide();
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## سازگاری با ECMAScript 5
 
   <a name="es5-compat--kangax"></a><a name="26.1"></a>
   - [27.1](#es5-compat--kangax) Refer to [Kangax](https://twitter.com/kangax/)’s ES5 [compatibility table](https://kangax.github.io/es5-compat-table/).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 <a name="ecmascript-6-styles"></a>
 ## سبک های ECMAScript 6+ (ES 2015+)
@@ -3691,7 +3691,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     > Why? [They are not finalized](https://tc39.github.io/process-document/), and they are subject to change or to be withdrawn entirely. We want to use JavaScript, and proposals are not JavaScript yet.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## کتابخانه استاندارد
 
@@ -3731,7 +3731,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     Number.isFinite(parseInt('2e3', 10)); // true
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## آزمایش کردن
 
@@ -3753,7 +3753,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     - 100% test coverage is a good goal to strive for, even if it’s not always practical to reach it.
     - Whenever you fix a bug, *write a regression test*. A bug fixed without a regression test is almost certainly going to break again in the future.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## کارایی
 
@@ -3767,7 +3767,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - [Are JavaScript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
   - Loading...
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## منابع
 
@@ -3849,7 +3849,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - [JavaScript Air](https://javascriptair.com/)
   - [JavaScript Jabber](https://devchat.tv/js-jabber/)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## موارد استفاده در دنیای واقعی
 
@@ -3945,7 +3945,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
   - **ZocDoc**: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## ترجمه
 
@@ -4005,7 +4005,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## اصلاحیه ها
 
