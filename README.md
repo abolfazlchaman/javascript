@@ -654,9 +654,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## توابع
 
   <a name="functions--declarations"></a><a name="7.1"></a>
-  - [7.1](#functions--declarations) Use named function expressions instead of function declarations. eslint: [`func-style`](https://eslint.org/docs/rules/func-style)
+  - [7.1](#functions--declarations) به جای اعلان تابع از عبارات تابع نامگذاری شده استفاده کنید. eslint: [`func-style`](https://eslint.org/docs/rules/func-style)
 
-    > Why? Function declarations are hoisted, which means that it’s easy - too easy - to reference the function before it is defined in the file. This harms readability and maintainability. If you find that a function’s definition is large or complex enough that it is interfering with understanding the rest of the file, then perhaps it’s time to extract it to its own module! Don’t forget to explicitly name the expression, regardless of whether or not the name is inferred from the containing variable (which is often the case in modern browsers or when using compilers such as Babel). This eliminates any assumptions made about the Error’s call stack. ([Discussion](https://github.com/airbnb/javascript/issues/794))
+    > چرا؟ اعلان‌های تابع بالا می‌روند، به این معنی که ارجاع به تابع قبل از تعریف در فایل خیلی آسان است. این به خوانایی و قابلیت نگهداری آسیب می رساند. اگر متوجه شدید که تعریف یک تابع به اندازه کافی بزرگ یا پیچیده است که در درک بقیه فایل اختلال ایجاد می کند، شاید وقت آن رسیده که آن را در ماژول خودش استخراج کنید! فراموش نکنید که صراحتاً عبارت را نامگذاری کنید، صرف نظر از اینکه نام از متغیر حاوی استنباط شده باشد یا نه (که اغلب در مرورگرهای مدرن یا هنگام استفاده از کامپایلرهایی مانند Babel چنین است). این هر گونه فرضی را که در مورد پشته تماس خطا وجود دارد حذف می کند. ([بحث](https://github.com/airbnb/javascript/issues/794))
 
     ```javascript
     // bad
@@ -677,9 +677,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--iife"></a><a name="7.2"></a>
-  - [7.2](#functions--iife) Wrap immediately invoked function expressions in parentheses. eslint: [`wrap-iife`](https://eslint.org/docs/rules/wrap-iife)
+  - [7.2](#functions--iife) عبارات تابع فورا فراخوانی شده را در پرانتز قرار دهید. eslint: [`wrap-iife`](https://eslint.org/docs/rules/wrap-iife)
 
-    > Why? An immediately invoked function expression is a single unit - wrapping both it, and its invocation parens, in parens, cleanly expresses this. Note that in a world with modules everywhere, you almost never need an IIFE.
+    > چرا؟ یک عبارت تابعی که بلافاصله فراخوانی می شود یک واحد است - بسته بندی هر دو آن، و پرانتزهای فراخوانی آن، این را به وضوح بیان می کند. توجه داشته باشید که در دنیایی که ماژول‌ها در همه جا وجود دارد، تقریباً هرگز نیازی به IIFE ندارید.
 
     ```javascript
     // immediately-invoked function expression (IIFE)
@@ -689,10 +689,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--in-blocks"></a><a name="7.3"></a>
-  - [7.3](#functions--in-blocks) Never declare a function in a non-function block (`if`, `while`, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func)
+  - [7.3](#functions--in-blocks) هرگز یک تابع را در یک بلوک غیر تابعی (`if`، `while` و غیره) اعلام نکنید. به جای آن تابع را به یک متغیر اختصاص دهید. مرورگرها به شما اجازه انجام این کار را می‌دهند، اما همه آن‌ها آن را متفاوت تفسیر می‌کنند، که خبر بدی است. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func)
 
   <a name="functions--note-on-blocks"></a><a name="7.4"></a>
-  - [7.4](#functions--note-on-blocks) **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement.
+  - [7.4](#functions--note-on-blocks) **نکته:** ECMA-262 یک `block` را به عنوان لیستی از عبارات تعریف می کند. اعلان تابع یک عبارت نیست.
 
     ```javascript
     // bad
@@ -712,7 +712,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--arguments-shadow"></a><a name="7.5"></a>
-  - [7.5](#functions--arguments-shadow) Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
+  - [7.5](#functions--arguments-shadow) هرگز پارامتری را `arguments` نامگذاری نکنید. این موضوع بر شیء `arguments` که به هر محدوده تابعی داده می شود اولویت خواهد داشت.
 
     ```javascript
     // bad
@@ -727,9 +727,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es6-rest"></a><a name="7.6"></a>
-  - [7.6](#es6-rest) Never use `arguments`, opt to use rest syntax `...` instead. eslint: [`prefer-rest-params`](https://eslint.org/docs/rules/prefer-rest-params)
+  - [7.6](#es6-rest) هرگز از `arguments` استفاده نکنید، به جای آن از دستور rest `...` استفاده کنید. eslint: [`prefer-rest-params`](https://eslint.org/docs/rules/prefer-rest-params)
 
-    > Why? `...` is explicit about which arguments you want pulled. Plus, rest arguments are a real Array, and not merely Array-like like `arguments`.
+    > چرا؟ `...` در مورد اینکه کدام آرگومان‌هایی را می‌خواهید بکشید، صریح است. بعلاوه، آرگومان‌های rest یک آرایه واقعی هستند و فقط آرگومان‌های آرایه مانند نیستند.
 
     ```javascript
     // bad
@@ -745,7 +745,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es6-default-parameters"></a><a name="7.7"></a>
-  - [7.7](#es6-default-parameters) Use default parameter syntax rather than mutating function arguments.
+  - [7.7](#es6-default-parameters) به جای تغییر (mutate) در آرگومان های تابع، از نحو پارامتر پیش فرض استفاده کنید.
 
     ```javascript
     // really bad
@@ -772,9 +772,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--default-side-effects"></a><a name="7.8"></a>
-  - [7.8](#functions--default-side-effects) Avoid side effects with default parameters.
+  - [7.8](#functions--default-side-effects) با پارامترهای پیش فرض از عوارض جانبی اجتناب کنید.
 
-    > Why? They are confusing to reason about.
+    > چرا؟ آنها برای استدلال گیج کننده هستند.
 
     ```javascript
     let b = 1;
@@ -789,7 +789,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--defaults-last"></a><a name="7.9"></a>
-  - [7.9](#functions--defaults-last) Always put default parameters last. eslint: [`default-param-last`](https://eslint.org/docs/rules/default-param-last)
+  - [7.9](#functions--defaults-last) همیشه پارامترهای پیش فرض را در آخر قرار دهید. eslint: [`default-param-last`](https://eslint.org/docs/rules/default-param-last)
 
     ```javascript
     // bad
@@ -804,9 +804,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--constructor"></a><a name="7.10"></a>
-  - [7.10](#functions--constructor) Never use the Function constructor to create a new function. eslint: [`no-new-func`](https://eslint.org/docs/rules/no-new-func)
+  - [7.10](#functions--constructor) هرگز از سازنده تابع برای ایجاد یک تابع جدید استفاده نکنید. eslint: [`no-new-func`](https://eslint.org/docs/rules/no-new-func)
 
-    > Why? Creating a function in this way evaluates a string similarly to `eval()`, which opens vulnerabilities.
+    > چرا؟ ایجاد یک تابع به این روش، رشته ای را مشابه `eval()` ارزیابی می کند که آسیب پذیری ها را باز می کند.
 
     ```javascript
     // bad
@@ -817,9 +817,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--signature-spacing"></a><a name="7.11"></a>
-  - [7.11](#functions--signature-spacing) Spacing in a function signature. eslint: [`space-before-function-paren`](https://eslint.org/docs/rules/space-before-function-paren) [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
+  - [7.11](#functions--signature-spacing) فاصله گذاری در امضای تابع eslint: [`space-before-function-paren`](https://eslint.org/docs/rules/space-before-function-paren) [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
 
-    > Why? Consistency is good, and you shouldn’t have to add or remove a space when adding or removing a name.
+    > چرا؟ سازگاری خوب است، و هنگام افزودن یا حذف نام، مجبور نیستید فضایی را اضافه یا حذف کنید.
 
     ```javascript
     // bad
@@ -833,9 +833,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--mutate-params"></a><a name="7.12"></a>
-  - [7.12](#functions--mutate-params) Never mutate parameters. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign)
+  - [7.12](#functions--mutate-params) هرگز پارامترها را تغییر ندهید. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign)
 
-    > Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+    > چرا؟ دستکاری اشیاء ارسال شده به عنوان پارامتر می تواند باعث ایجاد عوارض جانبی متغیر ناخواسته در تماس گیرنده اصلی شود.
 
     ```javascript
     // bad
@@ -850,9 +850,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--reassign-params"></a><a name="7.13"></a>
-  - [7.13](#functions--reassign-params) Never reassign parameters. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign)
+  - [7.13](#functions--reassign-params) هرگز پارامترها را تغییر ندهید. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign)
 
-    > Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in V8.
+    > را؟ تخصیص مجدد پارامترها می‌تواند منجر به رفتار غیرمنتظره شود، به‌ویژه هنگام دسترسی به شیء `arguments`. همچنین می تواند باعث مشکلات بهینه سازی شود، به خصوص در موتور جاوا اسکریپت V8.
 
     ```javascript
     // bad
@@ -878,9 +878,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--spread-vs-apply"></a><a name="7.14"></a>
-  - [7.14](#functions--spread-vs-apply) Prefer the use of the spread syntax `...` to call variadic functions. eslint: [`prefer-spread`](https://eslint.org/docs/rules/prefer-spread)
+  - [7.14](#functions--spread-vs-apply) برای فراخوانی توابع متغیر، استفاده از اسپرد سینتکس `...` را ترجیح دهید. eslint: [`prefer-spread`](https://eslint.org/docs/rules/prefer-spread)
 
-    > Why? It’s cleaner, you don’t need to supply a context, and you can not easily compose `new` with `apply`.
+    > چرا؟ اینگونه کد تمیزتر است، شما نیازی به ارائه یک زمینه ندارید، و نمی توانید به راحتی `apply` با `new` بنویسید.
 
     ```javascript
     // bad
@@ -899,7 +899,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="functions--signature-invocation-indentation"></a>
-  - [7.15](#functions--signature-invocation-indentation) Functions with multiline signatures, or invocations, should be indented just like every other multiline list in this guide: with each item on a line by itself, with a trailing comma on the last item. eslint: [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
+  - [7.15](#functions--signature-invocation-indentation) توابع با امضای چند خطی یا فراخوانی باید درست مانند هر فهرست چند خطی دیگر در این راهنما تورفتگی داشته باشند: با هر مورد در یک خط به تنهایی، با یک کاما انتهایی در آخرین مورد. eslint: [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
 
     ```javascript
     // bad
