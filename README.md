@@ -60,7 +60,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## انواع داده ها
 
   <a name="types--primitives"></a><a name="1.1"></a>
-  - [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+  - [1.1](#types--primitives) **نوع اولیه ها**: هنگامی که به یک نوع اولیه دسترسی دارید، مستقیماً روی مقدار آن کار کنید.
 
     - `string`
     - `number`
@@ -81,10 +81,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     console.log(foo, bar); // => 1, 9
     ```
 
-    - Symbols and BigInts cannot be faithfully polyfilled, so they should not be used when targeting browsers/environments that don’t support them natively.
+    - Symbols و BigInts نمی توان به طرز درستی چند پر کرد، بنابراین نباید هنگام هدف قرار دادن مرورگرها/محیط هایی که به صورت بومی از آنها پشتیبانی نمی کنند استفاده شوند.
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#types--complex)  **انواع پیچیده**: هنگامی که به یک نوع پیچیده دسترسی پیدا می کنید، با یک مرجع به مقدار آن کار کنید.
 
     - `object`
     - `array`
