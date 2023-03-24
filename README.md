@@ -15,49 +15,49 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - [Ruby](https://github.com/airbnb/ruby)
 
 
-## Table of Contents
+## فهرست مطالب
 
-  1. [Types](#types)
-  1. [References](#references)
-  1. [Objects](#objects)
-  1. [Arrays](#arrays)
-  1. [Destructuring](#destructuring)
-  1. [Strings](#strings)
-  1. [Functions](#functions)
-  1. [Arrow Functions](#arrow-functions)
-  1. [Classes & Constructors](#classes--constructors)
-  1. [Modules](#modules)
-  1. [Iterators and Generators](#iterators-and-generators)
-  1. [Properties](#properties)
-  1. [Variables](#variables)
-  1. [Hoisting](#hoisting)
-  1. [Comparison Operators & Equality](#comparison-operators--equality)
-  1. [Blocks](#blocks)
-  1. [Control Statements](#control-statements)
-  1. [Comments](#comments)
-  1. [Whitespace](#whitespace)
-  1. [Commas](#commas)
-  1. [Semicolons](#semicolons)
-  1. [Type Casting & Coercion](#type-casting--coercion)
-  1. [Naming Conventions](#naming-conventions)
-  1. [Accessors](#accessors)
-  1. [Events](#events)
-  1. [jQuery](#jquery)
-  1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
-  1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
-  1. [Standard Library](#standard-library)
-  1. [Testing](#testing)
-  1. [Performance](#performance)
-  1. [Resources](#resources)
-  1. [In the Wild](#in-the-wild)
-  1. [Translation](#translation)
-  1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
-  1. [Chat With Us About JavaScript](#chat-with-us-about-javascript)
-  1. [Contributors](#contributors)
-  1. [License](#license)
-  1. [Amendments](#amendments)
+  1. [انواع داده ها](#انواع-داده-ها)
+  1. [مراجع](#مراجع)
+  1. [اشیاء](#اشیاء)
+  1. [آرایه ها](#آرایه-ها)
+  1. [استخراج(Destructuring)](#استخراجdestructuring)
+  1. [رشته ها](#رشته-ها)
+  1. [توابع](#توابع)
+  1. [توابع پیکانی](#توابع-پیکانی)
+  1. [کلاس ها و سازندگان](#کلاس-ها-و-سازندگان)
+  1. [ماژول ها](#ماژول-ها)
+  1. [تکرار کننده ها و مولدها](#تکرار-کننده-ها-و-مولدها)
+  1. [خصوصیات](#خصوصیات)
+  1. [متغیرها](#متغیرها)
+  1. [بالا بردن](#بالا-بردن)
+  1. [اپراتورهای مقایسه و برابری](#اپراتورهای-مقایسه-و-برابری)
+  1. [بلوک ها](#بلوک-ها)
+  1. [بیانیه های کنترلی](#بیانیه-های-کنترلی)
+  1. [توضیح نویسی](#توضیح-نویسی)
+  1. [فضای سفید](#فضای-سفید)
+  1. [ویرگول ها](#ویرگول-ها)
+  1. [نقطه ویرگول ها](#نقطه-ویرگول-ها)
+  1. [نوع ریختگی و اجبار](#نوع-ریختگی-و-اجبار)
+  1. [قراردادهای نامگذاری](#قراردادهای-نامگذاری)
+  1. [دسترسی گیرنده / دهنده ها](#دسترسی-گیرنده--دهنده-ها)
+  1. [رویدادها](#رویدادها)
+  1. [جی کوئری](#جی-کوئری)
+  1. [سازگاری با ECMAScript 5](#سازگاری-با-ecmascript-5)
+  1. [سبک های ECMAScript 6+ (ES 2015+)](#سبک-های-ecmascript-6-es-2015)
+  1. [کتابخانه استاندارد](#کتابخانه-استاندارد)
+  1. [آزمایش کردن](#آزمایش-کردن)
+  1. [کارایی](#کارایی)
+  1. [منابع](#منابع)
+  1. [موارد استفاده در دنیای واقعی](#موارد-استفاده-در-دنیای-واقعی)
+  1. [ترجمه](#ترجمه)
+  1. [راهنمای راهنمای سبک جاوا اسکریپت](#راهنمای-راهنمای-سبک-جاوا-اسکریپت)
+  1. [درباره جاوا اسکریپت با ما گپ بزنید](#درباره-جاوا-اسکریپت-با-ما-گپ-بزنید)
+  1. [مشارکت کنندگان](#مشارکت-کنندگان)
+  1. [مجوز](#مجوز)
+  1. [اصلاحیه ها](#اصلاحیه-ها)
 
-## Types
+## انواع داده ها
 
   <a name="types--primitives"></a><a name="1.1"></a>
   - [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
@@ -103,7 +103,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## References
+## مراجع
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
   - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
@@ -158,7 +158,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Objects
+## اشیاء
 
   <a name="objects--no-new"></a><a name="3.1"></a>
   - [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
@@ -334,7 +334,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Arrays
+## آرایه ها
 
   <a name="arrays--literals"></a><a name="4.1"></a>
   - [4.1](#arrays--literals) Use the literal syntax for array creation. eslint: [`no-array-constructor`](https://eslint.org/docs/rules/no-array-constructor)
@@ -499,7 +499,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Destructuring
+## استخراج(Destructuring)
 
   <a name="destructuring--object"></a><a name="5.1"></a>
   - [5.1](#destructuring--object) Use object destructuring when accessing and using multiple properties of an object. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
@@ -568,7 +568,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Strings
+## رشته ها
 
   <a name="strings--quotes"></a><a name="6.1"></a>
   - [6.1](#strings--quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
@@ -651,7 +651,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Functions
+## توابع
 
   <a name="functions--declarations"></a><a name="7.1"></a>
   - [7.1](#functions--declarations) Use named function expressions instead of function declarations. eslint: [`func-style`](https://eslint.org/docs/rules/func-style)
@@ -933,7 +933,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Arrow Functions
+## توابع پیکانی
 
   <a name="arrows--use-them"></a><a name="8.1"></a>
   - [8.1](#arrows--use-them) When you must use an anonymous function (as when passing an inline callback), use arrow function notation. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing)
@@ -1099,7 +1099,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Classes & Constructors
+## کلاس ها و سازندگان
 
   <a name="constructors--use-class"></a><a name="9.1"></a>
   - [9.1](#constructors--use-class) Always use `class`. Avoid manipulating `prototype` directly.
@@ -1297,7 +1297,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Modules
+## ماژول ها
 
   <a name="modules--use-them"></a><a name="10.1"></a>
   - [10.1](#modules--use-them) Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
@@ -1469,7 +1469,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Iterators and Generators
+## تکرار کننده ها و مولدها
 
   <a name="iterators--nope"></a><a name="11.1"></a>
   - [11.1](#iterators--nope) Don’t use iterators. Prefer JavaScript’s higher-order functions instead of loops like `for-in` or `for-of`. eslint: [`no-iterator`](https://eslint.org/docs/rules/no-iterator) [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
@@ -1583,7 +1583,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Properties
+## خصوصیات
 
   <a name="properties--dot"></a><a name="12.1"></a>
   - [12.1](#properties--dot) Use dot notation when accessing properties. eslint: [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
@@ -1630,7 +1630,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Variables
+## متغیرها
 
   <a name="variables--const"></a><a name="13.1"></a>
   - [13.1](#variables--const) Always use `const` or `let` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that. eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
@@ -1863,7 +1863,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Hoisting
+## بالا بردن
 
   <a name="hoisting--about"></a><a name="14.1"></a>
   - [14.1](#hoisting--about) `var` declarations get hoisted to the top of their closest enclosing function scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz). It’s important to know why [typeof is no longer safe](https://web.archive.org/web/20200121061528/http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
@@ -1962,7 +1962,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Comparison Operators & Equality
+## اپراتورهای مقایسه و برابری
 
   <a name="comparison--eqeqeq"></a><a name="15.1"></a>
   - [15.1](#comparison--eqeqeq) Use `===` and `!==` over `==` and `!=`. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq)
@@ -2147,7 +2147,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Blocks
+## بلوک ها
 
   <a name="blocks--braces"></a><a name="16.1"></a>
   - [16.1](#blocks--braces) Use braces with all multiline blocks. eslint: [`nonblock-statement-body-position`](https://eslint.org/docs/rules/nonblock-statement-body-position)
@@ -2263,7 +2263,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Control Statements
+## بیانیه های کنترلی
 
   <a name="control-statements"></a>
   - [17.1](#control-statements) In case your control statement (`if`, `while` etc.) gets too long or exceeds the maximum line length, each (grouped) condition could be put into a new line. The logical operator should begin the line.
@@ -2334,7 +2334,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Comments
+## توضیح نویسی
 
   <a name="comments--multiline"></a><a name="17.1"></a>
   - [18.1](#comments--multiline) Use `/** ... */` for multiline comments.
@@ -2475,7 +2475,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Whitespace
+## فضای سفید
 
   <a name="whitespace--spaces"></a><a name="18.1"></a>
   - [19.1](#whitespace--spaces) Use soft tabs (space character) set to 2 spaces. eslint: [`indent`](https://eslint.org/docs/rules/indent)
@@ -2975,7 +2975,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Commas
+## ویرگول ها
 
   <a name="commas--leading-trailing"></a><a name="19.1"></a>
   - [20.1](#commas--leading-trailing) Leading commas: **Nope.** eslint: [`comma-style`](https://eslint.org/docs/rules/comma-style)
@@ -3110,7 +3110,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Semicolons
+## نقطه ویرگول ها
 
   <a name="semicolons--required"></a><a name="20.1"></a>
   - [21.1](#semicolons--required) **Yup.** eslint: [`semi`](https://eslint.org/docs/rules/semi)
@@ -3160,7 +3160,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Type Casting & Coercion
+## نوع ریختگی و اجبار
 
   <a name="coercion--explicit"></a><a name="21.1"></a>
   - [22.1](#coercion--explicit) Perform type coercion at the beginning of the statement.
@@ -3251,7 +3251,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Naming Conventions
+## قراردادهای نامگذاری
 
   <a name="naming--descriptive"></a><a name="22.1"></a>
   - [23.1](#naming--descriptive) Avoid single letter names. Be descriptive with your naming. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
@@ -3490,7 +3490,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Accessors
+## دسترسی گیرنده / دهنده ها
 
   <a name="accessors--not-required"></a><a name="23.1"></a>
   - [24.1](#accessors--not-required) Accessor functions for properties are not required.
@@ -3559,7 +3559,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Events
+## رویدادها
 
   <a name="events--hash"></a><a name="24.1"></a>
   - [25.1](#events--hash) When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass an object literal (also known as a "hash") instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
@@ -3590,7 +3590,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
   **[⬆ back to top](#table-of-contents)**
 
-## jQuery
+## جی کوئری
 
   <a name="jquery--dollar-prefix"></a><a name="25.1"></a>
   - [26.1](#jquery--dollar-prefix) Prefix jQuery object variables with a `$`.
@@ -3659,7 +3659,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## ECMAScript 5 Compatibility
+## سازگاری با ECMAScript 5
 
   <a name="es5-compat--kangax"></a><a name="26.1"></a>
   - [27.1](#es5-compat--kangax) Refer to [Kangax](https://twitter.com/kangax/)’s ES5 [compatibility table](https://kangax.github.io/es5-compat-table/).
@@ -3667,8 +3667,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 **[⬆ back to top](#table-of-contents)**
 
 <a name="ecmascript-6-styles"></a>
-## ECMAScript 6+ (ES 2015+) Styles
-
+## سبک های ECMAScript 6+ (ES 2015+)
   <a name="es6-styles"></a><a name="27.1"></a>
   - [28.1](#es6-styles) This is a collection of links to the various ES6+ features.
 
@@ -3694,7 +3693,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Standard Library
+## کتابخانه استاندارد
 
   The [Standard Library](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects)
   contains utilities that are functionally broken but remain for legacy reasons.
@@ -3734,7 +3733,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Testing
+## آزمایش کردن
 
   <a name="testing--yup"></a><a name="28.1"></a>
   - [30.1](#testing--yup) **Yup.**
@@ -3756,7 +3755,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Performance
+## کارایی
 
   - [On Layout & Web Performance](https://www.kellegous.com/j/2013/01/26/layout-performance/)
   - [String vs Array Concat](https://web.archive.org/web/20200414200857/https://jsperf.com/string-vs-array-concat/2)
@@ -3770,7 +3769,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Resources
+## منابع
 
 **Learning ES6+**
 
@@ -3852,7 +3851,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## In the Wild
+## موارد استفاده در دنیای واقعی
 
   This is a list of organizations that are using this style guide. Send us a pull request and we'll add you to the list.
 
@@ -3948,7 +3947,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Translation
+## ترجمه
 
   This style guide is also available in other languages:
 
@@ -3969,19 +3968,19 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Ukrainian**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript)
   - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnam**: [dangkyokhoang/javascript-style-guide](https://github.com/dangkyokhoang/javascript-style-guide)
 
-## The JavaScript Style Guide Guide
+## راهنمای راهنمای سبک جاوا اسکریپت
 
   - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
 
-## Chat With Us About JavaScript
+## درباره جاوا اسکریپت با ما گپ بزنید
 
   - Find us on [gitter](https://gitter.im/airbnb/javascript).
 
-## Contributors
+## مشارکت کنندگان
 
   - [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
 
-## License
+## مجوز
 
 (The MIT License)
 
@@ -4008,7 +4007,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 **[⬆ back to top](#table-of-contents)**
 
-## Amendments
+## اصلاحیه ها
 
 We encourage you to fork this guide and change the rules to fit your team’s style guide. Below, you may list some amendments to the style guide. This allows you to periodically update your style guide without having to deal with merge conflicts.
 
