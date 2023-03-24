@@ -161,7 +161,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## اشیاء
 
   <a name="objects--no-new"></a><a name="3.1"></a>
-  - [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
+  - [3.1](#objects--no-new) از literal syntax برای ایجاد شی ها استفاده کنید. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
 
     ```javascript
     // bad
@@ -172,9 +172,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es6-computed-properties"></a><a name="3.4"></a>
-  - [3.2](#es6-computed-properties) Use computed property names when creating objects with dynamic property names.
+  - [3.2](#es6-computed-properties) هنگام ایجاد اشیایی با ویژگی های پویا از نام های ویژگی محاسبه شده استفاده کنید.
 
-    > Why? They allow you to define all the properties of an object in one place.
+    > چرا؟ این کار به شما اجازه می دهند تمام خصوصیات یک شی را در یک مکان تعریف کنید.
 
     ```javascript
 
@@ -198,7 +198,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es6-object-shorthand"></a><a name="3.5"></a>
-  - [3.3](#es6-object-shorthand) Use object method shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
+  - [3.3](#es6-object-shorthand) از روش اختصار شیء استفاده کنید. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
 
     ```javascript
     // bad
@@ -221,9 +221,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es6-object-concise"></a><a name="3.6"></a>
-  - [3.4](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
+  - [3.4](#es6-object-concise) از کوتاه نویسی استفاده کنید. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
 
-    > Why? It is shorter and descriptive.
+    > چرا؟ مختصرتر و توصیف کننده تر است.
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
@@ -240,9 +240,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="objects--grouped-shorthand"></a><a name="3.7"></a>
-  - [3.5](#objects--grouped-shorthand) Group your shorthand properties at the beginning of your object declaration.
+  - [3.5](#objects--grouped-shorthand) کوتاه نویسی های خود را در ابتدای اعلان شیء گروه بندی کنید.
 
-    > Why? It’s easier to tell which properties are using the shorthand.
+    > چرا؟ تشخیص اینکه کدام خصوصیات شیء از کوتاه نویسی استفاده می کنند آسان تر است.
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -270,9 +270,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="objects--quoted-props"></a><a name="3.8"></a>
-  - [3.6](#objects--quoted-props) Only quote properties that are invalid identifiers. eslint: [`quote-props`](https://eslint.org/docs/rules/quote-props)
+  - [3.6](#objects--quoted-props) فقط ویژگی هایی را داخل کوتیشن بگذارید که شناسه های نامعتبر هستند. eslint: [`quote-props`](https://eslint.org/docs/rules/quote-props)
 
-    > Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
+    > چرا؟ به طور کلی ما خواندن آن را به صورت ذهنی ساده تر می دانیم.این کار برجسته سازی کد را بهبود می بخشد و همچنین توسط بسیاری از موتورهای جاوا اسکریپتی  به راحتی بهینه می شود.
 
     ```javascript
     // bad
@@ -291,9 +291,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="objects--prototype-builtins"></a>
-  - [3.7](#objects--prototype-builtins) Do not call `Object.prototype` methods directly, such as `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`. eslint: [`no-prototype-builtins`](https://eslint.org/docs/rules/no-prototype-builtins)
+  - [3.7](#objects--prototype-builtins) هیچوقت `Object.prototype` را مستقیماً فراخوانی نکنید , مثلا `hasOwnProperty`, `propertyIsEnumerable`, و `isPrototypeOf`. <br/> eslint: [`no-prototype-builtins`](https://eslint.org/docs/rules/no-prototype-builtins)
 
-    > Why? These methods may be shadowed by properties on the object in question - consider `{ hasOwnProperty: false }` - or, the object may be a null object (`Object.create(null)`).
+    > چرا؟ این متدها ممکن است با ویژگی‌های شیء مورد نظر تداخل داشته باشند - `{ hasOwnProperty: false }` را در نظر بگیرید - یا شی، ممکن است یک شی، تهی باشد (`Object.create(null)`).
 
     ```javascript
     // bad
@@ -313,7 +313,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="objects--rest-spread"></a>
-  - [3.8](#objects--rest-spread) Prefer the object spread syntax over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest parameter syntax to get a new object with certain properties omitted. eslint: [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
+  - [3.8](#objects--rest-spread) برای کپی کردن اشیاء [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) سینتکس گسترش شیء را ترجیح دهید. از سینتکس گسترش شیء استفاده کنید تا یک شیء جدید با ویژگی های خاصی حذف شده باشد. eslint: [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
 
     ```javascript
     // very bad
