@@ -502,9 +502,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## استخراج(Destructuring)
 
   <a name="destructuring--object"></a><a name="5.1"></a>
-  - [5.1](#destructuring--object) Use object destructuring when accessing and using multiple properties of an object. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+  - [5.1](#destructuring--object) هنگام دسترسی و استفاده از چندین ویژگی یک شی، از استخراج ساختار استفاده کنید. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
 
-    > Why? Destructuring saves you from creating temporary references for those properties, and from repetitive access of the object. Repeating object access creates more repetitive code, requires more reading, and creates more opportunities for mistakes. Destructuring objects also provides a single site of definition of the object structure that is used in the block, rather than requiring reading the entire block to determine what is used.
+    > چرا؟ Destructuring شما را از ایجاد مراجع موقت برای آن ویژگی ها و دسترسی مکرر به شیء نجات می دهد. تکرار دسترسی به شیء کدهای تکراری بیشتری ایجاد می کند، به خواندن بیشتر نیاز دارد و فرصت های بیشتری برای اشتباهات ایجاد می کند. استخراج اشیاء همچنین به جای نیاز به خواندن کل بلوک برای تعیین آنچه مورد استفاده قرار می گیرد، یک مکان واحد برای تعریف ساختار شیء که در بلوک استفاده می شود، ارائه می دهد.
 
     ```javascript
     // bad
@@ -528,7 +528,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="destructuring--array"></a><a name="5.2"></a>
-  - [5.2](#destructuring--array) Use array destructuring. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+  - [5.2](#destructuring--array) از استخراج آرایه استفاده کنید. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
 
     ```javascript
     const arr = [1, 2, 3, 4];
@@ -542,9 +542,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="destructuring--object-over-array"></a><a name="5.3"></a>
-  - [5.3](#destructuring--object-over-array) Use object destructuring for multiple return values, not array destructuring.
+  - [5.3](#destructuring--object-over-array) از ساختارشکنی شیء برای مقادیر چندگانه بازگشتی استفاده کنید، نه برای استخراج آرایه.
 
-    > Why? You can add new properties over time or change the order of things without breaking call sites.
+    > چرا؟ می‌توانید به مرور زمان ویژگی‌های جدید اضافه کنید یا ترتیب کارها را بدون شکستن سایت‌های تماس تغییر دهید.
 
     ```javascript
     // bad
@@ -571,7 +571,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## رشته ها
 
   <a name="strings--quotes"></a><a name="6.1"></a>
-  - [6.1](#strings--quotes) Use single quotes `''` for strings. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
+  - [6.1](#strings--quotes) برای رشته ها از `''` از نقل قول های تک استفاده کنید. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
 
     ```javascript
     // bad
@@ -585,9 +585,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="strings--line-length"></a><a name="6.2"></a>
-  - [6.2](#strings--line-length) Strings that cause the line to go over 100 characters should not be written across multiple lines using string concatenation.
+  - [6.2](#strings--line-length) رشته هایی که باعث می شوند خط بیش از 100 کاراکتر باشد، نباید با استفاده از الحاق رشته ها در چندین خط نوشته شوند.
 
-    > Why? Broken strings are painful to work with and make code less searchable.
+    > چرا؟ کار با رشته های شکسته عذاب آور است و باعث می شود که کد کمتر قابل جستجو باشد.
 
     ```javascript
     // bad
@@ -606,9 +606,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es6-template-literals"></a><a name="6.4"></a>
-  - [6.3](#es6-template-literals) When programmatically building up strings, use template strings instead of concatenation. eslint: [`prefer-template`](https://eslint.org/docs/rules/prefer-template) [`template-curly-spacing`](https://eslint.org/docs/rules/template-curly-spacing)
+  - [6.3](#es6-template-literals) هنگام ساختن رشته ها از طریق برنامه، از رشته های الگویی به جای الحاق استفاده کنید. eslint: [`prefer-template`](https://eslint.org/docs/rules/prefer-template) [`template-curly-spacing`](https://eslint.org/docs/rules/template-curly-spacing)
 
-    > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
+    > چرا؟ رشته های الگویی به شما یک سینتکس خوانا و مختصر با خطوط جدید مناسب و ویژگی های درون یابی رشته ای می دهد.
 
     ```javascript
     // bad
@@ -633,12 +633,12 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="strings--eval"></a><a name="6.5"></a>
-  - [6.4](#strings--eval) Never use `eval()` on a string, it opens too many vulnerabilities. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
+  - [6.4](#strings--eval) در یک رشته هرگز از `()eval` استفاده نکنید زیرا آسیب پذیری های زیادی را به برنامه اضافه میکند. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
 
   <a name="strings--escaping"></a>
-  - [6.5](#strings--escaping) Do not unnecessarily escape characters in strings. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
+  - [6.5](#strings--escaping) بی جهت از کاراکتر `\` در رشته ها استفاده نکنید. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
 
-    > Why? Backslashes harm readability, thus they should only be present when necessary.
+    > چرا؟ `\` به خوانایی کد آسیب می‌رسانند، بنابراین فقط در صورت لزوم باید وجود داشته باشند.
 
     ```javascript
     // bad
