@@ -1,22 +1,19 @@
+Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
+
 # Airbnb JavaScript Style Guide() {
 
-*A mostly reasonable approach to JavaScript*
+*یک رویکرد عمدتاً معقول برای جاوا اسکریپت*
 
-> **Note**: this guide assumes you are using [Babel](https://babeljs.io), and requires that you use [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) or the equivalent. It also assumes you are installing shims/polyfills in your app, with [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) or the equivalent.
+> **نکته**: این راهنما فرض می کند که شما در حال استفاده از [Babel](https://babeljs.io) هستید، و مستلزم این است که از [babel-preset-airbnb](https://npmjs.com/babel-preset-airbnb) یا معادل آن استفاده کنید. این راهنما همچنین فرض می‌کند که در حال استفاده از shims/polyfills در برنامه خود هستید, به همراه [airbnb-browser-shims](https://npmjs.com/airbnb-browser-shims) یا معادل آن.
 
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+سایر راهنماها:
 
-This guide is available in other languages too. See [Translation](#translation)
-
-Other Style Guides
-
-  - [ES5 (Deprecated)](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
+  - [ES5 (منسوخ شده)](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
   - [React](react/)
   - [CSS-in-JavaScript](css-in-javascript/)
   - [CSS & Sass](https://github.com/airbnb/css)
   - [Ruby](https://github.com/airbnb/ruby)
+
 
 ## Table of Contents
 
