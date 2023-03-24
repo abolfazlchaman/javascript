@@ -80,8 +80,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     console.log(foo, bar); // => 1, 9
     ```
-
-    - Symbols و BigInts نمی توان به طرز درستی چند پر کرد، بنابراین نباید هنگام هدف قرار دادن مرورگرها/محیط هایی که به صورت بومی از آنها پشتیبانی نمی کنند استفاده شوند.
+    
+نمی توان به طرز درستی `Symbols` و `BigInts` ها را polyfill کرد، بنابراین نباید هنگام هدف قرار دادن مرورگرها/محیط هایی که به صورت بومی از آنها پشتیبانی نمی کنند استفاده شوند.
 
   <a name="types--complex"></a><a name="1.2"></a>
   - [1.2](#types--complex)  **انواع پیچیده**: هنگامی که به یک نوع پیچیده دسترسی پیدا می کنید، با یک مرجع به مقدار آن کار کنید.
@@ -106,24 +106,24 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## مراجع
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
-  - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
+  - [2.1](#references--prefer-const) از `const` برای همه مراجع خود استفاده کنید; از استفاده از `var` اجتناب کنید. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
 
-    > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
+    > چرا؟ این کار تضمین می کند که نتوانید مراجع خود را مجدداً اختصاص دهید، که این کار می تواند منجر به اشکالات و درک کد دشوارتر شود.
 
     ```javascript
-    // بد
+    // bad
     var a = 1;
     var b = 2;
 
-    // خوب
+    // good
     const a = 1;
     const b = 2;
     ```
 
   <a name="references--disallow-var"></a><a name="2.2"></a>
-  - [2.2](#references--disallow-var) If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](https://eslint.org/docs/rules/no-var)
+  - [2.2](#references--disallow-var) اگر باید مراجع را دوباره اختصاص دهید, از `let` به جای `var` استفاده کنید. eslint: [`no-var`](https://eslint.org/docs/rules/no-var)
 
-    > Why? `let` is block-scoped rather than function-scoped like `var`.
+    >چرا؟ `let` به جای محدوده تابعی مانند `var` دارای محدوده بلوکی است.
 
     ```javascript
     // bad
@@ -140,7 +140,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped, whereas `var` is function-scoped.
+  - [2.3](#references--block-scope) توجه داشته باشید که هر دو `let` و `const` دارای محدوده بلوکی هستند، در حالی که `var` دارای محدوده تابعی است.
 
     ```javascript
     // const and let only exist in the blocks they are defined in.
@@ -154,7 +154,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     console.log(c); // Prints 1
     ```
 
-    In the above code, you can see that referencing `a` and `b` will produce a ReferenceError, while `c` contains the number. This is because `a` and `b` are block scoped, while `c` is scoped to the containing function.
+    در کد بالا، می‌بینید که ارجاع `a` و `b` یک ReferenceError ایجاد می‌کند، در حالی که `c` حاوی عدد است. این به این دلیل است که `a` و `b` دارای محدوده بلوکی هستند، در حالی که `c` به تابع حاوی آن محدوده است.
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
