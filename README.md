@@ -111,11 +111,11 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 
     ```javascript
-    // bad
+    // بد
     var a = 1;
     var b = 2;
 
-    // good
+    // خوب
     const a = 1;
     const b = 2;
     ```
