@@ -1,6 +1,6 @@
-Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
+مخزن اصلی: [airbnb/javascript](https://github.com/airbnb/javascript)
 
-# Airbnb JavaScript Style Guide() {
+# راهنمای سبک جاوا اسکریپت Airbnb() {
 
 *یک رویکرد عمدتاً معقول برای جاوا اسکریپت*
 
@@ -3853,7 +3853,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 ## موارد استفاده در دنیای واقعی
 
-  This is a list of organizations that are using this style guide. Send us a pull request and we'll add you to the list.
+  این لیستی از سازمان هایی است که از این راهنمای سبک استفاده می کنند. یک درخواست `pull` برای ما ارسال کنید و ما شما را به لیست اضافه خواهیم کرد.
 
   - **123erfasst**: [123erfasst/javascript](https://github.com/123erfasst/javascript)
   - **4Catalyzer**: [4Catalyzer/javascript](https://github.com/4Catalyzer/javascript)
@@ -3949,40 +3949,40 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 ## ترجمه
 
-  This style guide is also available in other languages:
+  این راهنمای سبک به زبان های دیگر نیز موجود است:
 
-  - ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Brazilian Portuguese**: [armoucar/javascript-style-guide](https://github.com/armoucar/javascript-style-guide)
-  - ![bg](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Bulgaria.png) **Bulgarian**: [borislavvv/javascript](https://github.com/borislavvv/javascript)
-  - ![ca](https://raw.githubusercontent.com/fpmweb/javascript-style-guide/master/img/catala.png) **Catalan**: [fpmweb/javascript-style-guide](https://github.com/fpmweb/javascript-style-guide)
-  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese (Simplified)**: [lin-123/javascript](https://github.com/lin-123/javascript)
-  - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Chinese (Traditional)**: [jigsawye/javascript](https://github.com/jigsawye/javascript)
-  - ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **French**: [nmussy/javascript-style-guide](https://github.com/nmussy/javascript-style-guide)
-  - ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **German**: [timofurrer/javascript-style-guide](https://github.com/timofurrer/javascript-style-guide)
-  - ![it](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **Italian**: [sinkswim/javascript-style-guide](https://github.com/sinkswim/javascript-style-guide)
-  - ![jp](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **Japanese**: [mitsuruog/javascript-style-guide](https://github.com/mitsuruog/javascript-style-guide)
-  - ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **Korean**: [ParkSB/javascript-style-guide](https://github.com/ParkSB/javascript-style-guide)
-  - ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **Russian**: [leonidlebedev/javascript-airbnb](https://github.com/leonidlebedev/javascript-airbnb)
-  - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Spanish**: [paolocarrasco/javascript-style-guide](https://github.com/paolocarrasco/javascript-style-guide)
-  - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **Thai**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide)
-  - ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **Turkish**: [eraycetinay/javascript](https://github.com/eraycetinay/javascript)
-  - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Ukrainian**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript)
-  - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnam**: [dangkyokhoang/javascript-style-guide](https://github.com/dangkyokhoang/javascript-style-guide)
+  - ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **پرتغالی برزیل**: [armoucar/javascript-style-guide](https://github.com/armoucar/javascript-style-guide)
+  - ![bg](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Bulgaria.png) **بلغاری**: [borislavvv/javascript](https://github.com/borislavvv/javascript)
+  - ![ca](https://raw.githubusercontent.com/fpmweb/javascript-style-guide/master/img/catala.png) **کاتالان**: [fpmweb/javascript-style-guide](https://github.com/fpmweb/javascript-style-guide)
+  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **چینی ساده شده**: [lin-123/javascript](https://github.com/lin-123/javascript)
+  - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **چینی (سنتی)**: [jigsawye/javascript](https://github.com/jigsawye/javascript)
+  - ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **فرانسوی**: [nmussy/javascript-style-guide](https://github.com/nmussy/javascript-style-guide)
+  - ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **آلمانی**: [timofurrer/javascript-style-guide](https://github.com/timofurrer/javascript-style-guide)
+  - ![it](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **ایتالیایی**: [sinkswim/javascript-style-guide](https://github.com/sinkswim/javascript-style-guide)
+  - ![jp](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **ژاپنی**: [mitsuruog/javascript-style-guide](https://github.com/mitsuruog/javascript-style-guide)
+  - ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **کره ای**: [ParkSB/javascript-style-guide](https://github.com/ParkSB/javascript-style-guide)
+  - ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **روسی**: [leonidlebedev/javascript-airbnb](https://github.com/leonidlebedev/javascript-airbnb)
+  - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **اسپانیایی**: [paolocarrasco/javascript-style-guide](https://github.com/paolocarrasco/javascript-style-guide)
+  - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **تایلندی**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide)
+  - ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **ترکی**: [eraycetinay/javascript](https://github.com/eraycetinay/javascript)
+  - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **اوکراینی**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript)
+  - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **ویتنامی**: [dangkyokhoang/javascript-style-guide](https://github.com/dangkyokhoang/javascript-style-guide)
 
 ## راهنمای راهنمای سبک جاوا اسکریپت
 
-  - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
+  - [ارجاع](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
 
 ## درباره جاوا اسکریپت با ما گپ بزنید
 
-  - Find us on [gitter](https://gitter.im/airbnb/javascript).
+  - ما را در [gitter](https://gitter.im/airbnb/javascript) پیدا کنید.
 
 ## مشارکت کنندگان
 
-  - [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
+  - [مشاهده مشارکت کنندگان](https://github.com/airbnb/javascript/graphs/contributors)
 
 ## مجوز
 
-(The MIT License)
+(مجوز MIT)
 
 Copyright (c) 2012 Airbnb
 
@@ -4009,6 +4009,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## اصلاحیه ها
 
-We encourage you to fork this guide and change the rules to fit your team’s style guide. Below, you may list some amendments to the style guide. This allows you to periodically update your style guide without having to deal with merge conflicts.
+ما شما را تشویق می کنیم که این راهنما را `fork` کنید و قوانین را متناسب با راهنمای سبک تیم خود تغییر دهید. در زیر، ممکن است برخی از اصلاحات در راهنمای سبک را فهرست کنید. این به شما این امکان را می دهد که به طور دوره ای راهنمای سبک خود را بدون نیاز به مقابله با تضادهای ادغام به روز کنید.
 
-# };
+# ;{
