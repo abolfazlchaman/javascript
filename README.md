@@ -2150,7 +2150,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## بلوک ها
 
   <a name="blocks--braces"></a><a name="16.1"></a>
-  - [16.1](#blocks--braces) Use braces with all multiline blocks. eslint: [`nonblock-statement-body-position`](https://eslint.org/docs/rules/nonblock-statement-body-position)
+  - [16.1](#blocks--braces) در تمام بلوک های چند خطی از بریس ها استفاده کنید. eslint: [`nonblock-statement-body-position`](https://eslint.org/docs/rules/nonblock-statement-body-position)
 
     ```javascript
     // bad
@@ -2175,7 +2175,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="blocks--cuddled-elses"></a><a name="16.2"></a>
-  - [16.2](#blocks--cuddled-elses) If you’re using multiline blocks with `if` and `else`, put `else` on the same line as your `if` block’s closing brace. eslint: [`brace-style`](https://eslint.org/docs/rules/brace-style)
+  - [16.2](#blocks--cuddled-elses) اگر از بلوک‌های چند خطی با `if` و `else` استفاده می‌کنید، `else` را در همان خط مهاربند بسته شدن بلوک `if` خود قرار دهید. eslint: [`brace-style`](https://eslint.org/docs/rules/brace-style)
 
     ```javascript
     // bad
@@ -2197,7 +2197,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="blocks--no-else-return"></a><a name="16.3"></a>
-  - [16.3](#blocks--no-else-return) If an `if` block always executes a `return` statement, the subsequent `else` block is unnecessary. A `return` in an `else if` block following an `if` block that contains a `return` can be separated into multiple `if` blocks. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
+  - [16.3](#blocks--no-else-return) اگر یک بلوک `if` همیشه عبارت `return` را اجرا می‌کند، بلوک `else` بعدی ضروری نیست. یک `بازگشت` در بلوک `اگر دیگر` به دنبال بلوک `اگر` که حاوی `بازگشت` است، می‌تواند به بلوک‌های `اگر` متعدد جدا شود. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
 
     ```javascript
     // bad
@@ -2266,9 +2266,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## بیانیه های کنترلی
 
   <a name="control-statements"></a>
-  - [17.1](#control-statements) In case your control statement (`if`, `while` etc.) gets too long or exceeds the maximum line length, each (grouped) condition could be put into a new line. The logical operator should begin the line.
+  - [17.1](#control-statements) در صورتی که دستور کنترل شما (`if`, `while`  و غیره) بیش از حد طولانی شود یا از حداکثر طول خط فراتر رود، هر شرط (گروه‌بندی شده) را می‌توان در یک خط جدید قرار داد. عملگر منطقی باید خط را شروع کند.
 
-    > Why? Requiring operators at the beginning of the line keeps the operators aligned and follows a pattern similar to method chaining. This also improves readability by making it easier to visually follow complex logic.
+    > چرا؟ نیاز به عملگرها در ابتدای خط، عملگرها را در یک راستا نگه می‌دارد و از الگوی مشابه زنجیره‌بندی متد پیروی می‌کند. این همچنین خوانایی را با تسهیل بصری پیروی از منطق پیچیده بهبود می بخشد.
 
     ```javascript
     // bad
@@ -2320,7 +2320,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="control-statement--value-selection"></a><a name="control-statements--value-selection"></a>
-  - [17.2](#control-statements--value-selection) Don't use selection operators in place of control statements.
+  - [17.2](#control-statements--value-selection) از عملگرهای انتخاب به جای دستورات کنترلی استفاده نکنید.
 
     ```javascript
     // bad
@@ -2337,7 +2337,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## توضیح نویسی
 
   <a name="comments--multiline"></a><a name="17.1"></a>
-  - [18.1](#comments--multiline) Use `/** ... */` for multiline comments.
+  - [18.1](#comments--multiline) برای نظرات چند خطی از `/** ... */` استفاده کنید.
 
     ```javascript
     // bad
@@ -2367,7 +2367,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comments--singleline"></a><a name="17.2"></a>
-  - [18.2](#comments--singleline) Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment unless it’s on the first line of a block.
+  - [18.2](#comments--singleline) برای نظرات تک خطی از `//` استفاده کنید. نظرات تک خطی را در خط جدید بالای موضوع نظر قرار دهید. یک خط خالی قبل از نظر قرار دهید مگر اینکه در اولین خط یک بلوک باشد.
 
     ```javascript
     // bad
@@ -2406,7 +2406,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comments--spaces"></a>
-  - [18.3](#comments--spaces) Start all comments with a space to make it easier to read. eslint: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
+  - [18.3](#comments--spaces) همه نظرات را با یک فاصله شروع کنید تا خواندن آن آسان تر شود. eslint: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
 
     ```javascript
     // bad
@@ -2443,10 +2443,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comments--actionitems"></a><a name="17.3"></a>
-  - [18.4](#comments--actionitems) Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you’re pointing out a problem that needs to be revisited, or if you’re suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
+  - [18.4](#comments--actionitems) قرار دادن پیشوند نظرات خود با `FIXME` یا `TODO` به سایر برنامه‌نویسان کمک می‌کند تا به سرعت متوجه شوند که آیا به مشکلی اشاره می‌کنید که باید دوباره بررسی شود یا راه‌حلی برای مشکلی پیشنهاد می‌کنید که باید اجرا شود. اینها با نظرات معمولی متفاوت هستند زیرا قابل اجرا هستند. اقدامات عبارتند از: `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
 
   <a name="comments--fixme"></a><a name="17.4"></a>
-  - [18.5](#comments--fixme) Use `// FIXME:` to annotate problems.
+  - [18.5](#comments--fixme) برای حاشیه نویسی مشکلات از `// FIXME:` استفاده کنید.
 
     ```javascript
     class Calculator extends Abacus {
@@ -2460,7 +2460,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comments--todo"></a><a name="17.5"></a>
-  - [18.6](#comments--todo) Use `// TODO:` to annotate solutions to problems.
+  - [18.6](#comments--todo) از `// TODO:` برای حاشیه نویسی راه حل های مشکلات استفاده کنید.
 
     ```javascript
     class Calculator extends Abacus {
@@ -2478,7 +2478,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## فضای سفید
 
   <a name="whitespace--spaces"></a><a name="18.1"></a>
-  - [19.1](#whitespace--spaces) Use soft tabs (space character) set to 2 spaces. eslint: [`indent`](https://eslint.org/docs/rules/indent)
+  - [19.1](#whitespace--spaces) از زبانه های نرم (نویسه فاصله) با 2 فاصله استفاده کنید. eslint: [`indent`](https://eslint.org/docs/rules/indent)
 
     ```javascript
     // bad
@@ -2498,7 +2498,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--before-blocks"></a><a name="18.2"></a>
-  - [19.2](#whitespace--before-blocks) Place 1 space before the leading brace. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
+  - [19.2](#whitespace--before-blocks) 1 فاصله قبل از بریس پیشرو قرار دهید. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
 
     ```javascript
     // bad
@@ -2525,7 +2525,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--around-keywords"></a><a name="18.3"></a>
-  - [19.3](#whitespace--around-keywords) Place 1 space before the opening parenthesis in control statements (`if`, `while` etc.). Place no space between the argument list and the function name in function calls and declarations. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing)
+  - [19.3](#whitespace--around-keywords)  فاصله قبل از پرانتز آغازین در دستورات کنترل (`if`، `while` و غیره) قرار دهید. هیچ فاصله ای بین لیست آرگومان و نام تابع در فراخوانی ها و اعلان های تابع قرار ندهید. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing)
 
     ```javascript
     // bad
@@ -2550,7 +2550,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--infix-ops"></a><a name="18.4"></a>
-  - [19.4](#whitespace--infix-ops) Set off operators with spaces. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops)
+  - [19.4](#whitespace--infix-ops) عملگرها را با فاصله تنظیم کنید. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops)
 
     ```javascript
     // bad
@@ -2561,7 +2561,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--newline-at-end"></a><a name="18.5"></a>
-  - [19.5](#whitespace--newline-at-end) End files with a single newline character. eslint: [`eol-last`](https://eslint.org/docs/rules/eol-last)
+  - [19.5](#whitespace--newline-at-end) فایل ها را با یک نویسه خط جدید پایان دهید. eslint: [`eol-last`](https://eslint.org/docs/rules/eol-last)
 
     ```javascript
     // bad
@@ -2586,8 +2586,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--chains"></a><a name="18.6"></a>
-  - [19.6](#whitespace--chains) Use indentation when making long method chains (more than 2 method chains). Use a leading dot, which
-    emphasizes that the line is a method call, not a new statement. eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
+  - [19.6](#whitespace--chains) هنگام ساخت زنجیرهای متد بلند (بیش از 2 زنجیره متد) از تورفتگی استفاده کنید. از یک نقطه پیشرو استفاده کنید که
+     تاکید می کند که خط یک فراخوانی متد است، نه یک دستور جدید. eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
 
     ```javascript
     // bad
@@ -2634,7 +2634,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--after-blocks"></a><a name="18.7"></a>
-  - [19.7](#whitespace--after-blocks) Leave a blank line after blocks and before the next statement.
+  - [19.7](#whitespace--after-blocks) بعد از بلوک ها و قبل از عبارت بعدی یک خط خالی بگذارید.
 
     ```javascript
     // bad
@@ -2692,7 +2692,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--padded-blocks"></a><a name="18.8"></a>
-  - [19.8](#whitespace--padded-blocks) Do not pad your blocks with blank lines. eslint: [`padded-blocks`](https://eslint.org/docs/rules/padded-blocks)
+  - [19.8](#whitespace--padded-blocks) بلوک های خود را با خطوط خالی پر نکنید. eslint: [`padded-blocks`](https://eslint.org/docs/rules/padded-blocks)
 
     ```javascript
     // bad
@@ -2733,7 +2733,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--no-multiple-blanks"></a>
-  - [19.9](#whitespace--no-multiple-blanks) Do not use multiple blank lines to pad your code. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
+  - [19.9](#whitespace--no-multiple-blanks) برای اضافه کردن کد خود از چندین خط خالی استفاده نکنید. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
 
     <!-- markdownlint-disable MD012 -->
     ```javascript
@@ -2787,7 +2787,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--in-parens"></a><a name="18.9"></a>
-  - [19.10](#whitespace--in-parens) Do not add spaces inside parentheses. eslint: [`space-in-parens`](https://eslint.org/docs/rules/space-in-parens)
+  - [19.10](#whitespace--in-parens) داخل پرانتز فاصله اضافه نکنید. eslint: [`space-in-parens`](https://eslint.org/docs/rules/space-in-parens)
 
     ```javascript
     // bad
@@ -2812,7 +2812,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--in-brackets"></a><a name="18.10"></a>
-  - [19.11](#whitespace--in-brackets) Do not add spaces inside brackets. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing)
+  - [19.11](#whitespace--in-brackets) داخل براکت ها فاصله اضافه نکنید. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing)
 
     ```javascript
     // bad
@@ -2825,7 +2825,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--in-braces"></a><a name="18.11"></a>
-  - [19.12](#whitespace--in-braces) Add spaces inside curly braces. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing)
+  - [19.12](#whitespace--in-braces) فضاهای داخل کرلی بریس ها را اضافه کنید. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing)
 
     ```javascript
     // bad
@@ -2836,9 +2836,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--max-len"></a><a name="18.12"></a>
-  - [19.13](#whitespace--max-len) Avoid having lines of code that are longer than 100 characters (including whitespace). Note: per [above](#strings--line-length), long strings are exempt from this rule, and should not be broken up. eslint: [`max-len`](https://eslint.org/docs/rules/max-len)
+  - [19.13](#whitespace--max-len) از داشتن خطوط کد بیشتر از 100 کاراکتر (شامل فضای خالی) خودداری کنید. توجه: در [بالا](#strings--line-length)، رشته های طولانی از این قانون مستثنی هستند و نباید شکسته شوند. eslint: [`max-len`](https://eslint.org/docs/rules/max-len)
 
-    > Why? This ensures readability and maintainability.
+    > چرا؟ این خوانایی و قابلیت نگهداری را تضمین می کند.
 
     ```javascript
     // bad
@@ -2874,7 +2874,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--block-spacing"></a>
-  - [19.14](#whitespace--block-spacing) Require consistent spacing inside an open block token and the next token on the same line. This rule also enforces consistent spacing inside a close block token and previous token on the same line. eslint: [`block-spacing`](https://eslint.org/docs/rules/block-spacing)
+  - [19.14](#whitespace--block-spacing) نیاز به فاصله ثابت در داخل یک نشانه بلوک باز و نشانه بعدی در همان خط است. این قانون همچنین فاصله ثابتی را در داخل یک نشانه بلوک نزدیک و توکن قبلی در همان خط اعمال می کند. eslint: [`block-spacing`](https://eslint.org/docs/rules/block-spacing)
 
     ```javascript
     // bad
@@ -2887,7 +2887,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--comma-spacing"></a>
-  - [19.15](#whitespace--comma-spacing) Avoid spaces before commas and require a space after commas. eslint: [`comma-spacing`](https://eslint.org/docs/rules/comma-spacing)
+  - [19.15](#whitespace--comma-spacing) از فاصله قبل از کاما اجتناب کنید و نیاز به فاصله بعد از کاما دارید. eslint: [`comma-spacing`](https://eslint.org/docs/rules/comma-spacing)
 
     ```javascript
     // bad
@@ -2900,7 +2900,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--computed-property-spacing"></a>
-  - [19.16](#whitespace--computed-property-spacing) Enforce spacing inside of computed property brackets. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
+  - [19.16](#whitespace--computed-property-spacing) اعمال فاصله در داخل براکت های ویژگی محاسبه شده. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
 
     ```javascript
     // bad
@@ -2917,7 +2917,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--func-call-spacing"></a>
-  - [19.17](#whitespace--func-call-spacing) Avoid spaces between functions and their invocations. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
+  - [19.17](#whitespace--func-call-spacing) از فاصله بین توابع و فراخوانی آنها اجتناب کنید. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
 
     ```javascript
     // bad
@@ -2931,7 +2931,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--key-spacing"></a>
-  - [19.18](#whitespace--key-spacing) Enforce spacing between keys and values in object literal properties. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
+  - [19.18](#whitespace--key-spacing) اعمال فاصله بین کلیدها و مقادیر در ویژگی های لغوی شیء. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
 
     ```javascript
     // bad
@@ -2943,10 +2943,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="whitespace--no-trailing-spaces"></a>
-  - [19.19](#whitespace--no-trailing-spaces) Avoid trailing spaces at the end of lines. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
+  - [19.19](#whitespace--no-trailing-spaces) از فضاهای انتهایی در انتهای خطوط خودداری کنید. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
 
   <a name="whitespace--no-multiple-empty-lines"></a>
-  - [19.20](#whitespace--no-multiple-empty-lines) Avoid multiple empty lines, only allow one newline at the end of files, and avoid a newline at the beginning of files. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
+  - [19.20](#whitespace--no-multiple-empty-lines) از چند خط خالی اجتناب کنید، فقط یک خط جدید در انتهای فایل ها مجاز کنید و از خط جدید در ابتدای فایل ها اجتناب کنید. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
 
     <!-- markdownlint-disable MD012 -->
     ```javascript
@@ -2978,7 +2978,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## ویرگول ها
 
   <a name="commas--leading-trailing"></a><a name="19.1"></a>
-  - [20.1](#commas--leading-trailing) Leading commas: **Nope.** eslint: [`comma-style`](https://eslint.org/docs/rules/comma-style)
+  - [20.1](#commas--leading-trailing) ویرگول اول: **جواب منفیست.** eslint: [`comma-style`](https://eslint.org/docs/rules/comma-style)
 
     ```javascript
     // bad
@@ -3013,9 +3013,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="commas--dangling"></a><a name="19.2"></a>
-  - [20.2](#commas--dangling) Additional trailing comma: **Yup.** eslint: [`comma-dangle`](https://eslint.org/docs/rules/comma-dangle)
+  - [20.2](#commas--dangling) کاما انتهایی اضافی: **آره.** eslint: [`comma-dangle`](https://eslint.org/docs/rules/comma-dangle)
 
-    > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don’t have to worry about the [trailing comma problem](https://github.com/airbnb/javascript/blob/es5-deprecated/es5/README.md#commas) in legacy browsers.
+    > چرا؟ این منجر به تفاوت های تمیزتر در git  می شود. همچنین، ترانسپایلرهایی مانند Babel، کامای انتهایی اضافی را در کد ترجمه شده حذف می‌کنند، به این معنی که شما لازم نیست نگران [مشکل کامای انتهایی](https://github.com/airbnb/javascript/blob/es5-deprecated/ es5/README.md#commas) باشید در مرورگرهای قدیمی.
 
     ```diff
     // bad - git diff without trailing comma
@@ -3113,9 +3113,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## نقطه ویرگول ها
 
   <a name="semicolons--required"></a><a name="20.1"></a>
-  - [21.1](#semicolons--required) **Yup.** eslint: [`semi`](https://eslint.org/docs/rules/semi)
+  - [21.1](#semicolons--required) **آره.** eslint: [`semi`](https://eslint.org/docs/rules/semi)
 
-    > Why? When JavaScript encounters a line break without a semicolon, it uses a set of rules called [Automatic Semicolon Insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) to determine whether it should regard that line break as the end of a statement, and (as the name implies) place a semicolon into your code before the line break if it thinks so. ASI contains a few eccentric behaviors, though, and your code will break if JavaScript misinterprets your line break. These rules will become more complicated as new features become a part of JavaScript. Explicitly terminating your statements and configuring your linter to catch missing semicolons will help prevent you from encountering issues.
+    > چرا؟ هنگامی که جاوا اسکریپت با شکست خط بدون نقطه ویرگول مواجه می شود، از مجموعه قوانینی به نام [درج خودکار نقطه ویرگول](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) استفاده می کند تا تعیین کند که آیا باید یک خط منتهی در نظر گرفته شود یا خیر. آن خط را به عنوان پایان یک عبارت شکسته و (همانطور که از نام آن پیداست) قبل از خط شکستن یک نقطه ویرگول در کد خود قرار دهید، اگر چنین فکر می کند. با این حال، ASI حاوی چند رفتار غیرعادی است و اگر جاوا اسکریپت شکست خط شما را اشتباه تفسیر کند، کد شما خراب می‌شود. این قوانین با تبدیل شدن ویژگی های جدید به بخشی از جاوا اسکریپت پیچیده تر می شوند. خاتمه دادن صریح عبارات خود و پیکربندی لیتر خود برای گرفتن نقطه ویرگول های گم شده به شما کمک می کند تا با مشکلاتی مواجه نشوید.
 
     ```javascript
     // bad - raises exception
@@ -3130,7 +3130,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       // ...
     }())
 
-    // bad - returns `undefined` instead of the value on the next line - always happens when `return` is on a line by itself because of ASI!
+    // بد - به جای مقدار خط بعدی، `undefined` را برمی گرداند - همیشه زمانی اتفاق می افتد که `return` به خودی خود به دلیل ASI روی یک خط باشد!
     function foo() {
       return
         'search your feelings, you know it to be foo'
@@ -3163,10 +3163,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## نوع ریختگی و اجبار
 
   <a name="coercion--explicit"></a><a name="21.1"></a>
-  - [22.1](#coercion--explicit) Perform type coercion at the beginning of the statement.
+  - [22.1](#coercion--explicit) اجبار نوع را در ابتدای بیانیه انجام دهید.
 
   <a name="coercion--strings"></a><a name="21.2"></a>
-  - [22.2](#coercion--strings) Strings: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+  - [22.2](#coercion--strings) رشته ها: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
     ```javascript
     // => this.reviewScore = 9;
@@ -3185,9 +3185,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="coercion--numbers"></a><a name="21.3"></a>
-  - [22.3](#coercion--numbers) Numbers: Use `Number` for type casting and `parseInt` always with a radix for parsing strings. eslint: [`radix`](https://eslint.org/docs/rules/radix) [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+  - [22.3](#coercion--numbers) اعداد: از `Number` برای ریختن نوع و از `parseInt` همیشه با یک ریشه برای تجزیه رشته ها استفاده کنید. eslint: [`radix`](https://eslint.org/docs/rules/radix) [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
-    > Why? The `parseInt` function produces an integer value dictated by interpretation of the contents of the string argument according to the specified radix. Leading whitespace in string is ignored. If radix is `undefined` or `0`, it is assumed to be `10` except when the number begins with the character pairs `0x` or `0X`, in which case a radix of 16 is assumed. This differs from ECMAScript 3, which merely discouraged (but allowed) octal interpretation. Many implementations have not adopted this behavior as of 2013. And, because older browsers must be supported, always specify a radix.
+    > چرا؟ تابع 'parseInt' یک مقدار صحیح تولید می کند که توسط تفسیر محتویات آرگومان رشته با توجه به ریشه مشخص شده دیکته می شود. فضای سفید پیشرو در رشته نادیده گرفته می شود. اگر ریشه `undefined` یا `0` باشد، `10` در نظر گرفته می‌شود، به جز زمانی که عدد با جفت‌های کاراکتر `0x` یا `0X` شروع می‌شود، در این صورت، ریشه 16 در نظر گرفته می‌شود. این با ECMAScript 3 متفاوت است، که صرفاً تفسیر اکتالی را منع می کرد (اما مجاز می دانست). بسیاری از پیاده‌سازی‌ها از سال 2013 این رفتار را اتخاذ نکرده‌اند. و چون مرورگرهای قدیمی‌تر باید پشتیبانی شوند، همیشه یک رادیکس مشخص کنید.
 
     ```javascript
     const inputValue = '4';
@@ -3212,7 +3212,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="coercion--comment-deviations"></a><a name="21.4"></a>
-  - [22.4](#coercion--comment-deviations) If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [performance reasons](https://web.archive.org/web/20200414205431/https://jsperf.com/coercion-vs-casting/3), leave a comment explaining why and what you’re doing.
+  - [22.4](#coercion--comment-deviations) اگر به هر دلیلی در حال انجام کاری غرمعمول هستید و `parseInt` تنگنای شماست و به دلیل [دلایل عملکرد](https://web.archive.org/web/20200414205431/https://jsperf.com/coercion -vs-casting/3) باید از Bitshift استفاده کنید، یک نظر بگذارید و توضیح دهید که چرا و چه کاری انجام می دهید.
 
     ```javascript
     // good
@@ -3225,7 +3225,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="coercion--bitwise"></a><a name="21.5"></a>
-  - [22.5](#coercion--bitwise) **Note:** Be careful when using bitshift operations. Numbers are represented as [64-bit values](https://es5.github.io/#x4.3.19), but bitshift operations always return a 32-bit integer ([source](https://es5.github.io/#x11.7)). Bitshift can lead to unexpected behavior for integer values larger than 32 bits. [Discussion](https://github.com/airbnb/javascript/issues/109). Largest signed 32-bit Int is 2,147,483,647:
+  - [22.5](#coercion--bitwise) **نکته:** هنگام استفاده از عملیات bitshift مراقب باشید. اعداد به صورت [مقادیر 64 بیتی](https://es5.github.io/#x4.3.19) نشان داده می شوند، اما عملیات bitshift همیشه یک عدد صحیح 32 بیتی ([source](https://es5.github. io/#x11.7)). Bitshift می تواند منجر به رفتار غیرمنتظره برای مقادیر صحیح بزرگتر از 32 بیت شود. [بحث](https://github.com/airbnb/javascript/issues/109). بزرگترین Int 32 بیتی امضا شده 2,147,483,647 است:
 
     ```javascript
     2147483647 >> 0; // => 2147483647
@@ -3234,7 +3234,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="coercion--booleans"></a><a name="21.6"></a>
-  - [22.6](#coercion--booleans) Booleans: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+  - [22.6](#coercion--booleans) بولی ها:(Booleans) eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
     ```javascript
     const age = 0;
@@ -3254,7 +3254,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## قراردادهای نامگذاری
 
   <a name="naming--descriptive"></a><a name="22.1"></a>
-  - [23.1](#naming--descriptive) Avoid single letter names. Be descriptive with your naming. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
+  - [23.1](#naming--descriptive) از نام های تک حرفی خودداری کنید. در نامگذاری توصیفی تر باشید. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
 
     ```javascript
     // bad
@@ -3269,7 +3269,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--camelCase"></a><a name="22.2"></a>
-  - [23.2](#naming--camelCase) Use camelCase when naming objects, functions, and instances. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase)
+  - [23.2](#naming--camelCase) هنگام نامگذاری اشیا، توابع و نمونه ها از camelCase استفاده کنید. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase)
 
     ```javascript
     // bad
@@ -3283,7 +3283,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--PascalCase"></a><a name="22.3"></a>
-  - [23.3](#naming--PascalCase) Use PascalCase only when naming constructors or classes. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
+  - [23.3](#naming--PascalCase) فقط هنگام نامگذاری سازنده ها یا کلاس ها از PascalCase استفاده کنید. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
 
     ```javascript
     // bad
@@ -3308,12 +3308,12 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--leading-underscore"></a><a name="22.4"></a>
-  - [23.4](#naming--leading-underscore) Do not use trailing or leading underscores. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle)
+  - [23.4](#naming--leading-underscore) از زیرخط های انتهایی یا پیشرو استفاده نکنید. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle)
 
-    > Why? JavaScript does not have the concept of privacy in terms of properties or methods. Although a leading underscore is a common convention to mean “private”, in fact, these properties are fully public, and as such, are part of your public API contract. This convention might lead developers to wrongly think that a change won’t count as breaking, or that tests aren’t needed. tl;dr: if you want something to be “private”, it must not be observably present.
+    > چرا؟ جاوا اسکریپت از نظر ویژگی ها یا روش ها مفهوم حریم خصوصی را ندارد. اگر چه یک زیرخط پیشرو یک قرارداد رایج به معنای “private” است، اما در واقع، این ویژگی‌ها کاملاً عمومی هستند و به این ترتیب، بخشی از قرارداد عمومی API شما هستند. این قرارداد ممکن است باعث شود توسعه دهندگان به اشتباه فکر کنند که تغییر به عنوان شکستگی به حساب نمی آید، یا آزمایش هایی لازم نیست. کوتاه بگوییم: اگر می‌خواهید چیزی “private” باشد، نباید به‌طور قابل مشاهده وجود داشته باشد.
 
     ```javascript
-    // bad
+    // بد
     this.__firstName__ = 'Panda';
     this.firstName_ = 'Panda';
     this._firstName = 'Panda';
@@ -3321,14 +3321,14 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // good
     this.firstName = 'Panda';
 
-    // good, in environments where WeakMaps are available
-    // see https://kangax.github.io/compat-table/es6/#test-WeakMap
+    // خوب، در محیط هایی که WeakMaps در دسترس است
+    // مشاهده کنید در https://kangax.github.io/compat-table/es6/#test-WeakMap
     const firstNames = new WeakMap();
     firstNames.set(this, 'Panda');
     ```
 
   <a name="naming--self-this"></a><a name="22.5"></a>
-  - [23.5](#naming--self-this) Don’t save references to `this`. Use arrow functions or [Function#bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
+  - [23.5](#naming--self-this) ارجاعات به `this` را ذخیره نکنید. از توابع پیکان یا [Function#bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) استفاده کنید.
 
     ```javascript
     // bad
@@ -3356,7 +3356,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--filename-matches-export"></a><a name="22.6"></a>
-  - [23.6](#naming--filename-matches-export) A base filename should exactly match the name of its default export.
+  - [23.6](#naming--filename-matches-export) نام فایل پایه باید دقیقاً با نام `export` پیش فرض آن مطابقت داشته باشد.
 
     ```javascript
     // file 1 contents
@@ -3392,7 +3392,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--camelCase-default-export"></a><a name="22.7"></a>
-  - [23.7](#naming--camelCase-default-export) Use camelCase when you export-default a function. Your filename should be identical to your function’s name.
+  - [23.7](#naming--camelCase-default-export) هنگام صادرات-پیش‌فرض (export-default) یک تابع، از camelCase استفاده کنید. نام فایل شما باید با نام تابع شما یکسان باشد.
 
     ```javascript
     function makeStyleGuide() {
@@ -3403,7 +3403,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--PascalCase-singleton"></a><a name="22.8"></a>
-  - [23.8](#naming--PascalCase-singleton) Use PascalCase when you export a constructor / class / singleton / function library / bare object.
+  - [23.8](#naming--PascalCase-singleton) هنگامی که یک سازنده / کلاس / تک تن / کتابخانه تابع / شیء خالی را صادر می کنید از PascalCase استفاده کنید.
 
     ```javascript
     const AirbnbStyleGuide = {
@@ -3415,9 +3415,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--Acronyms-and-Initialisms"></a>
-  - [23.9](#naming--Acronyms-and-Initialisms) Acronyms and initialisms should always be all uppercased, or all lowercased.
+  - [23.9](#naming--Acronyms-and-Initialisms) حروف اختصاری و حروف اولیه باید همیشه با حروف بزرگ یا کوچک باشند.
 
-    > Why? Names are for readability, not to appease a computer algorithm.
+    > چرا؟ نام ها برای خوانایی هستند، نه برای کمک کردن به مماشات یک الگوریتم رایانه ای.
 
     ```javascript
     // bad
@@ -3451,11 +3451,11 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="naming--uppercase"></a>
-  - [23.10](#naming--uppercase) You may optionally uppercase a constant only if it (1) is exported, (2) is a `const` (it can not be reassigned), and (3) the programmer can trust it (and its nested properties) to never change.
+  - [23.10](#naming--uppercase) شما می توانید به صورت اختیاری یک ثابت را با حروف بزرگ فقط در صورتی که (1) صادر شده باشد، (2) یک 'const' باشد (نمی توان آن را دوباره اختصاص داد)، و (3) برنامه نویس می تواند به آن (و خصوصیات تودرتوی آن) اعتماد کند تا هرگز تغییر نکند.
 
-    > Why? This is an additional tool to assist in situations where the programmer would be unsure if a variable might ever change. UPPERCASE_VARIABLES are letting the programmer know that they can trust the variable (and its properties) not to change.
-    - What about all `const` variables? - This is unnecessary, so uppercasing should not be used for constants within a file. It should be used for exported constants however.
-    - What about exported objects? - Uppercase at the top level of export (e.g. `EXPORTED_OBJECT.key`) and maintain that all nested properties do not change.
+    > چرا؟ این یک ابزار اضافی برای کمک به شرایطی است که برنامه نویس مطمئن نیست که آیا متغیری ممکن است تغییر کند. UPPERCASE_VARIABLES به برنامه نویس اجازه می دهد بداند که می تواند به تغییر نکردن متغیر (و خصوصیات آن) اعتماد کند.
+     - در مورد همه متغیرهای 'const' چطور؟ - این غیر ضروری است، بنابراین نباید از حروف بزرگ برای ثابت های داخل یک فایل استفاده کرد. اما باید برای ثابت های صادر شده استفاده شود.
+     - در مورد اشیاء صادراتی چطور؟ - حروف بزرگ در سطح بالای صادرات (به عنوان مثال `EXPORTED_OBJECT.key`) و حفظ کنید که همه ویژگی‌های تودرتو تغییر نمی‌کنند.
 
     ```javascript
     // bad
@@ -3477,7 +3477,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     // ---
 
-    // bad - unnecessarily uppercases key while adding no semantic value
+    // بد - نیاز نبدون به حروف بزرگ کلید در حالی که هیچ ارزش معنایی اضافه نمی کند
     export const MAPPING = {
       KEY: 'value'
     };
