@@ -3493,10 +3493,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## دسترسی گیرنده / دهنده ها
 
   <a name="accessors--not-required"></a><a name="23.1"></a>
-  - [24.1](#accessors--not-required) Accessor functions for properties are not required.
+  - [24.1](#accessors--not-required) توابع Accessor برای خواص مورد نیاز نیست.
 
   <a name="accessors--no-getters-setters"></a><a name="23.2"></a>
-  - [24.2](#accessors--no-getters-setters) Do not use JavaScript getters/setters as they cause unexpected side effects and are harder to test, maintain, and reason about. Instead, if you do make accessor functions, use `getVal()` and `setVal('hello')`.
+  - [24.2](#accessors--no-getters-setters) از دریافت کننده/تنظیم کننده های جاوا اسکریپت استفاده نکنید زیرا باعث ایجاد عوارض جانبی غیرمنتظره می شوند و آزمایش، نگهداری و استدلال در مورد آنها سخت تر است. در عوض، اگر توابع دسترسی را ایجاد می‌کنید، از `()getVal` و `("سلام")setVal` استفاده کنید.
 
     ```javascript
     // bad
@@ -3523,7 +3523,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="accessors--boolean-prefix"></a><a name="23.3"></a>
-  - [24.3](#accessors--boolean-prefix) If the property/method is a `boolean`, use `isVal()` or `hasVal()`.
+  - [24.3](#accessors--boolean-prefix) اگر ویژگی/متدی `boolean` است، از `()isVal` یا `()hasVal` استفاده کنید.
 
     ```javascript
     // bad
@@ -3538,7 +3538,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="accessors--consistent"></a><a name="23.4"></a>
-  - [24.4](#accessors--consistent) It’s okay to create `get()` and `set()` functions, but be consistent.
+  - [24.4](#accessors--consistent) ایجاد توابع `()get` و `()set` اشکالی ندارد، اما سازگار باشید.
 
     ```javascript
     class Jedi {
@@ -3562,7 +3562,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## رویدادها
 
   <a name="events--hash"></a><a name="24.1"></a>
-  - [25.1](#events--hash) When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass an object literal (also known as a "hash") instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
+  - [25.1](#events--hash) هنگام پیوست کردن محموله‌های داده به رویدادها (چه رویدادهای DOM یا چیزهای اختصاصی‌تر مانند رویدادهای Backbone)، به جای مقدار خام، یک شی را به صورت تحت اللفظی (همچنین به عنوان "hash" شناخته می‌شود) ارسال کنید. این به مشارکت‌کننده بعدی اجازه می‌دهد تا داده‌های بیشتری را بدون یافتن و به‌روزرسانی هر کنترل‌کننده رویداد به بار رویداد اضافه کند. به عنوان مثال، به جای:
 
     ```javascript
     // bad
@@ -3575,7 +3575,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     });
     ```
 
-    prefer:
+    ترجیح بدهید:
 
     ```javascript
     // good
@@ -3593,7 +3593,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## جی کوئری
 
   <a name="jquery--dollar-prefix"></a><a name="25.1"></a>
-  - [26.1](#jquery--dollar-prefix) Prefix jQuery object variables with a `$`.
+  - [26.1](#jquery--dollar-prefix) متغیرهای شی jQuery را با یک `$` پیشوند کنید.
 
     ```javascript
     // bad
@@ -3607,7 +3607,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="jquery--cache"></a><a name="25.2"></a>
-  - [26.2](#jquery--cache) Cache jQuery lookups.
+  - [26.2](#jquery--cache) جستجوهای jQuery را ذخیره کنید.
 
     ```javascript
     // bad
@@ -3635,10 +3635,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="jquery--queries"></a><a name="25.3"></a>
-  - [26.3](#jquery--queries) For DOM queries use Cascading `$('.sidebar ul')` or parent > child `$('.sidebar > ul')`. [jsPerf](https://web.archive.org/web/20200414183810/https://jsperf.com/jquery-find-vs-context-sel/16)
+  - [26.3](#jquery--queries) برای جستارهای DOM از `$('.sidebar ul')` آبشاری یا والد > فرزند `$('.sidebar > ul')` استفاده کنید. [jsPerf](https://web.archive.org/web/20200414183810/https://jsperf.com/jquery-find-vs-context-sel/16)
 
   <a name="jquery--find"></a><a name="25.4"></a>
-  - [26.4](#jquery--find) Use `find` with scoped jQuery object queries.
+  - [26.4](#jquery--find) از `find` با پرس و جوهای شیء jQuery با محدوده استفاده کنید.
 
     ```javascript
     // bad
@@ -3662,48 +3662,48 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## سازگاری با ECMAScript 5
 
   <a name="es5-compat--kangax"></a><a name="26.1"></a>
-  - [27.1](#es5-compat--kangax) Refer to [Kangax](https://twitter.com/kangax/)’s ES5 [compatibility table](https://kangax.github.io/es5-compat-table/).
+  - [27.1](#es5-compat--kangax) به [Kangax](https://twitter.com/kangax/) ES5 [جدول سازگاری](https://kangax.github.io/es5-compat-table/) مراجعه کنید.
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 <a name="ecmascript-6-styles"></a>
 ## سبک های ECMAScript 6+ (ES 2015+)
   <a name="es6-styles"></a><a name="27.1"></a>
-  - [28.1](#es6-styles) This is a collection of links to the various ES6+ features.
+  - [28.1](#es6-styles) این مجموعه ای از پیوندها به ویژگی های مختلف ES6+ است.
 
-1. [Arrow Functions](#arrow-functions)
-1. [Classes](#classes--constructors)
-1. [Object Shorthand](#es6-object-shorthand)
-1. [Object Concise](#es6-object-concise)
-1. [Object Computed Properties](#es6-computed-properties)
-1. [Template Strings](#es6-template-literals)
-1. [Destructuring](#destructuring)
-1. [Default Parameters](#es6-default-parameters)
-1. [Rest](#es6-rest)
-1. [Array Spreads](#es6-array-spreads)
-1. [Let and Const](#references)
-1. [Exponentiation Operator](#es2016-properties--exponentiation-operator)
-1. [Iterators and Generators](#iterators-and-generators)
-1. [Modules](#modules)
+1. [توابع پیکانی](#arrow-functions)
+1. [کلاس ها](#classes--constructors)
+1. [مخفف شیء ها](#es6-object-shorthand)
+1. [شیء مختصر](#es6-object-concise)
+1. [ویژگی های محاسبه شده شیء](#es6-computed-properties)
+1. [رشته های الگویی](#es6-template-literals)
+1. [استخراج کردن(destructuring)](#destructuring)
+1. [پارامترهای پیش فرض](#es6-default-parameters)
+1. [رست(Rest)](#es6-rest)
+1. [گسترش آرایه](#es6-array-spreads)
+1. [متغییر های Let و Const](#references)
+1. [اپراتور توان](#es2016-properties--exponentiation-operator)
+1. [تکرار کننده ها و مولدها](#iterators-and-generators)
+1. [ماژول ها](#modules)
 
   <a name="tc39-proposals"></a>
-  - [28.2](#tc39-proposals) Do not use [TC39 proposals](https://github.com/tc39/proposals) that have not reached stage 3.
+  - [28.2](#tc39-proposals) از [پیشنهادات TC39](https://github.com/tc39/proposals) که به مرحله 3 نرسیده‌اند استفاده نکنید.
 
-    > Why? [They are not finalized](https://tc39.github.io/process-document/), and they are subject to change or to be withdrawn entirely. We want to use JavaScript, and proposals are not JavaScript yet.
+    > چرا؟ [آنها نهایی نشده اند](https://tc39.github.io/process-document/)، و ممکن است تغییر کنند یا به طور کامل پس گرفته شوند. ما می خواهیم از جاوا اسکریپت استفاده کنیم و پیشنهادات هنوز جاوا اسکریپت نیستند.
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## کتابخانه استاندارد
 
-  The [Standard Library](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects)
-  contains utilities that are functionally broken but remain for legacy reasons.
+  [کتابخانه استاندارد](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects)
+   شامل ابزارهایی است که از نظر عملکردی خراب هستند اما به دلایل قدیمی باقی می مانند.
 
   <a name="standard-library--isnan"></a>
-  - [29.1](#standard-library--isnan) Use `Number.isNaN` instead of global `isNaN`.
-    eslint: [`no-restricted-globals`](https://eslint.org/docs/rules/no-restricted-globals)
+  - [29.1](#standard-library--isnan) از `Number.isNaN` به جای `isNaN` جهانی استفاده کنید.
+     eslint: ['no-restricted-globals'](https://eslint.org/docs/rules/no-restricted-globals)
 
-    > Why? The global `isNaN` coerces non-numbers to numbers, returning true for anything that coerces to NaN.
-    > If this behavior is desired, make it explicit.
+    > چرا؟ `isNaN` جهانی، غیر اعداد را به اعداد وادار می‌کند، و برای هر چیزی که به NaN وادار می‌شود، `true` برمی‌گردد.
+    > اگر این رفتار مورد نظر است، آن را به صراحت بیان کنید.
 
     ```javascript
     // bad
@@ -3716,11 +3716,11 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="standard-library--isfinite"></a>
-  - [29.2](#standard-library--isfinite) Use `Number.isFinite` instead of global `isFinite`.
-    eslint: [`no-restricted-globals`](https://eslint.org/docs/rules/no-restricted-globals)
+  - [29.2](#standard-library--isfinite) از `Number.isFinite` به جای `isFinite` سراسری استفاده کنید.
+     eslint: ['no-restricted-globals'](https://eslint.org/docs/rules/no-restricted-globals)
 
-    > Why? The global `isFinite` coerces non-numbers to numbers, returning true for anything that coerces to a finite number.
-    > If this behavior is desired, make it explicit.
+    > چرا؟ `isFinite` سراسری، غیر اعداد را به اعداد وادار می کند، و برای هر چیزی که به یک عدد متناهی وادار می شود، `true` برمی گردد.
+    > اگر این رفتار مورد نظر است، آن را به صراحت بیان کنید.
 
     ```javascript
     // bad
@@ -3736,7 +3736,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## آزمایش کردن
 
   <a name="testing--yup"></a><a name="28.1"></a>
-  - [30.1](#testing--yup) **Yup.**
+  - [30.1](#testing--yup) **آره.**
 
     ```javascript
     function foo() {
@@ -3745,109 +3745,109 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="testing--for-real"></a><a name="28.2"></a>
-  - [30.2](#testing--for-real) **No, but seriously**:
-    - Whichever testing framework you use, you should be writing tests!
-    - Strive to write many small pure functions, and minimize where mutations occur.
-    - Be cautious about stubs and mocks - they can make your tests more brittle.
-    - We primarily use [`mocha`](https://www.npmjs.com/package/mocha) and [`jest`](https://www.npmjs.com/package/jest) at Airbnb. [`tape`](https://www.npmjs.com/package/tape) is also used occasionally for small, separate modules.
-    - 100% test coverage is a good goal to strive for, even if it’s not always practical to reach it.
-    - Whenever you fix a bug, *write a regression test*. A bug fixed without a regression test is almost certainly going to break again in the future.
+  - [30.2](#testing--for-real) **نه ولی جدی**:
+    - از هر چارچوب تستی که استفاده می کنید، باید تست بنویسید!
+    - سعی کنید بسیاری از توابع خالص کوچک را بنویسید و مکان هایی که جهش ها رخ می دهند را به حداقل برسانید.
+    - در مورد موارد خرد و تمسخر محتاط باشید - آنها می توانند تست های شما را شکننده تر کنند.
+    - ما در اصل از [`mocha`](https://www.npmjs.com/package/mocha) و [`jest`](https://www.npmjs.com/package/jest) در Airbnb استفاده می کنیم. ['tape'](https://www.npmjs.com/package/tape) نیز گهگاه برای ماژول های کوچک و جداگانه استفاده می شود.
+    - پوشش 100% آزمون هدف خوبی برای تلاش کردن است، حتی اگر رسیدن به آن همیشه عملی نباشد.
+    - هر زمان که اشکالی را برطرف کردید، *یک تست رگرسیون* بنویسید. باگ رفع شده بدون تست رگرسیون تقریباً مطمئناً در آینده دوباره از بین خواهد رفت.
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## کارایی
 
-  - [On Layout & Web Performance](https://www.kellegous.com/j/2013/01/26/layout-performance/)
-  - [String vs Array Concat](https://web.archive.org/web/20200414200857/https://jsperf.com/string-vs-array-concat/2)
-  - [Try/Catch Cost In a Loop](https://web.archive.org/web/20200414190827/https://jsperf.com/try-catch-in-loop-cost/12)
-  - [Bang Function](https://web.archive.org/web/20200414205426/https://jsperf.com/bang-function)
-  - [jQuery Find vs Context, Selector](https://web.archive.org/web/20200414200850/https://jsperf.com/jquery-find-vs-context-sel/164)
-  - [innerHTML vs textContent for script text](https://web.archive.org/web/20200414205428/https://jsperf.com/innerhtml-vs-textcontent-for-script-text)
-  - [Long String Concatenation](https://web.archive.org/web/20200414203914/https://jsperf.com/ya-string-concat/38)
-  - [Are JavaScript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
-  - Loading...
+  - [در مورد چیدمان و عملکرد وب](https://www.kellegous.com/j/2013/01/26/layout-performance/)
+  - [رشته در مقابل Concat آرایه](https://web.archive.org/web/20200414200857/https://jsperf.com/string-vs-array-concat/2)
+  - [در یک حلقه امتحان کنید/دریافت کنید](https://web.archive.org/web/20200414190827/https://jsperf.com/try-catch-in-loop-cost/12)
+  - [عملکرد انفجاری](https://web.archive.org/web/20200414205426/https://jsperf.com/bang-function)
+  - [در jQuery Find vs Context, Selector](https://web.archive.org/web/20200414200850/https://jsperf.com/jquery-find-vs-context-sel/164)
+  - [اچ تی ام ال داحلی در مقابل محتوای متنی برای متن اسکریپت](https://web.archive.org/web/20200414205428/https://jsperf.com/innerhtml-vs-textcontent-for-script-text)
+  - [الحاق رشته بلند](https://web.archive.org/web/20200414203914/https://jsperf.com/ya-string-concat/38)
+  - [آیا توابع جاوا اسکریپتی مانند `map`، `()reduce()` و `filter()` برای عبور از آرایه ها بهینه شده اند؟](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
+  - موضوعات جدید در حال بارگیری...
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## منابع
 
-**Learning ES6+**
+**یادگیری ES6+**
 
-  - [Latest ECMA spec](https://tc39.github.io/ecma262/)
-  - [ExploringJS](https://exploringjs.com/)
-  - [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/)
-  - [Comprehensive Overview of ES6 Features](http://es6-features.org/)
-  - [JavaScript Roadmap](https://roadmap.sh/javascript)
+  - [آخرین مشخصات ECMA](https://tc39.github.io/ecma262/)
+  - [کاوش جی اس](https://exploringjs.com/)
+  - [جدول سازگاری ES6](https://kangax.github.io/compat-table/es6/)
+  - [مروری جامع بر ویژگی های ES6](http://es6-features.org/)
+  - [نقشه راه جاوا اسکریپت](https://roadmap.sh/javascript)
 
-**Read This**
+**این را بخوانید**
 
-  - [Standard ECMA-262](https://www.ecma-international.org/ecma-262/6.0/index.html)
+  - [استاندارد ECMA-262](https://www.ecma-international.org/ecma-262/6.0/index.html)
 
-**Tools**
+**ابزارها**
 
-  - Code Style Linters
+  - لینترهای سبک کد
     - [ESlint](https://eslint.org/) - [Airbnb Style .eslintrc](https://github.com/airbnb/javascript/blob/master/linters/.eslintrc)
     - [JSHint](https://jshint.com/) - [Airbnb Style .jshintrc](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc)
-  - Neutrino Preset - [@neutrinojs/airbnb](https://neutrinojs.org/packages/airbnb/)
+  - پیش تنظیم نوترینو - [@neutrinojs/airbnb](https://neutrinojs.org/packages/airbnb/)
 
-**Other Style Guides**
+**سایر راهنماهای سبک کد**
 
-  - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
-  - [Google JavaScript Style Guide (Old)](https://google.github.io/styleguide/javascriptguide.xml)
-  - [jQuery Core Style Guidelines](https://contribute.jquery.org/style-guide/js/)
-  - [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js)
-  - [StandardJS](https://standardjs.com)
+  - [راهنمای سبک جاوا اسکریپت گوگل](https://google.github.io/styleguide/jsguide.html)
+  - [راهنمای سبک جاوا اسکریپت گوگل (قدیمی)](https://google.github.io/styleguide/javascriptguide.xml)
+  - [دستورالعمل های سبک هسته جی کوئری](https://contribute.jquery.org/style-guide/js/)
+  - [اصول نوشتن جاوا اسکریپت سازگار و اصطلاحی](https://github.com/rwaldron/idiomatic.js)
+  - [استاندارد JS](https://standardjs.com)
 
-**Other Styles**
+**سبک های دیگر**
 
-  - [Naming this in nested functions](https://gist.github.com/cjohansen/4135065) - Christian Johansen
-  - [Conditional Callbacks](https://github.com/airbnb/javascript/issues/52) - Ross Allen
-  - [Popular JavaScript Coding Conventions on GitHub](http://sideeffect.kr/popularconvention/#javascript) - JeongHoon Byun
-  - [Multiple var statements in JavaScript, not superfluous](https://benalman.com/news/2012/05/multiple-var-statements-javascript/) - Ben Alman
+  - [نامگذاری این در توابع تو در تو](https://gist.github.com/cjohansen/4135065) - Christian Johansen
+  - [تماس های مشروط](https://github.com/airbnb/javascript/issues/52) - Ross Allen
+  - [قراردادهای کدنویسی محبوب جاوا اسکریپت در GitHub](http://sideeffect.kr/popularconvention/#javascript) - JeongHoon Byun
+  - [چند عبارت var در جاوا اسکریپت، اضافی نیست](https://benalman.com/news/2012/05/multiple-var-statements-javascript/) - Ben Alman
 
-**Further Reading**
+**بیشتر خواندن**
 
-  - [Understanding JavaScript Closures](https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
-  - [Basic JavaScript for the impatient programmer](https://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
-  - [You Might Not Need jQuery](https://youmightnotneedjquery.com/) - Zack Bloom & Adam Schwartz
-  - [ES6 Features](https://github.com/lukehoban/es6features) - Luke Hoban
-  - [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
+  - [آشنایی با بسته شدن در جاوا اسکریپت](https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
+  - [جاوا اسکریپت اولیه برای برنامه نویس بی حوصله](https://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
+  - [ممکن است به jQuery نیاز نداشته باشید](https://youmightnotneedjquery.com/) - Zack Bloom & Adam Schwartz
+  - [ویژگی های ES6](https://github.com/lukehoban/es6features) - Luke Hoban
+  - [دستورالعمل های Frontend](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
 
-**Books**
+**کتاب ها**
 
-  - [JavaScript: The Good Parts](https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
-  - [JavaScript Patterns](https://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
-  - [Pro JavaScript Design Patterns](https://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X) - Ross Harmes and Dustin Diaz
-  - [High Performance Web Sites: Essential Knowledge for Front-End Engineers](https://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
-  - [Maintainable JavaScript](https://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
-  - [JavaScript Web Applications](https://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
-  - [Pro JavaScript Techniques](https://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
-  - [Smashing Node.js: JavaScript Everywhere](https://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
-  - [Secrets of the JavaScript Ninja](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X) - John Resig and Bear Bibeault
-  - [Human JavaScript](http://humanjavascript.com/) - Henrik Joreteg
+  - [جاوا اسکریپت: قسمت های خوب](https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
+  - [الگوهای جاوا اسکریپت](https://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
+  - [الگوهای طراحی حرفه ای جاوا اسکریپت](https://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X) - Ross Harmes and Dustin Diaz
+  - [وب سایت های با کارایی بالا: دانش ضروری برای مهندسان فرانت اند](https://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
+  - [جاوا اسکریپت قابل نگهداری](https://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
+  - [برنامه های کاربردی وب جاوا اسکریپت](https://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
+  - [تکنیک های جاوا اسکریپت حرفه ای](https://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
+  - [ جاوا اسکریپت همه جا :Smashing Node.js](https://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
+  - [اسرار جاوا اسکریپت نینجا](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X) - John Resig and Bear Bibeault
+  - [جاوا اسکریپت انسانی](http://humanjavascript.com/) - Henrik Joreteg
   - [Superhero.js](http://superherojs.com/) - Kim Joar Bekkelund, Mads Mobæk, & Olav Bjorkoy
-  - [JSBooks](https://jsbooks.revolunet.com/) - Julien Bouquillon
-  - [Third Party JavaScript](https://www.manning.com/books/third-party-javascript) - Ben Vinegar and Anton Kovalyov
-  - [Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript](https://amzn.com/dp/0321812182) - David Herman
-  - [Eloquent JavaScript](https://eloquentjavascript.net/) - Marijn Haverbeke
-  - [You Don’t Know JS: ES6 & Beyond](https://shop.oreilly.com/product/0636920033769.do) - Kyle Simpson
+  - [جی اس بوک ها](https://jsbooks.revolunet.com/) - Julien Bouquillon
+  - [جاوا اسکریپت شخص ثالث](https://www.manning.com/books/third-party-javascript) - Ben Vinegar and Anton Kovalyov
+  - [جاوا اسکریپت موثر: 68 روش خاص برای استفاده از قدرت جاوا اسکریپت](https://amzn.com/dp/0321812182) - David Herman
+  - [جاوا اسکریپت شیوا](https://eloquentjavascript.net/) - Marijn Haverbeke
+  - [شما JS: ES6 و فراتر از آن را نمی دانید](https://shop.oreilly.com/product/0636920033769.do) - Kyle Simpson
 
-**Blogs**
+**وبلاگ ها**
 
-  - [JavaScript Weekly](https://javascriptweekly.com/)
-  - [JavaScript, JavaScript...](https://javascriptweblog.wordpress.com/)
-  - [Bocoup Weblog](https://bocoup.com/weblog)
-  - [Adequately Good](https://www.adequatelygood.com/)
-  - [NCZOnline](https://www.nczonline.net/)
-  - [Perfection Kills](http://perfectionkills.com/)
-  - [Ben Alman](https://benalman.com/)
-  - [Dmitry Baranovskiy](http://dmitry.baranovskiy.com/)
-  - [nettuts](https://code.tutsplus.com/?s=javascript)
+  - [هفته نامه جاوا اسکریپت](https://javascriptweekly.com/)
+  - [جاوا اسکریپت، جاوا اسکریپت...](https://javascriptweblog.wordpress.com/)
+  - [وبلاگ Bocoup](https://bocoup.com/weblog)
+  - [به اندازه کافی خوب است](https://www.adequatelygood.com/)
+  - [آنلاین NCZOn](https://www.nczonline.net/)
+  - [کمال می کشد](http://perfectionkills.com/)
+  - [بن المان](https://benalman.com/)
+  - [دیمیتری بارانوفسکی](http://dmitry.baranovskiy.com/)
+  - [توری](https://code.tutsplus.com/?s=javascript)
 
-**Podcasts**
+**پادکست ها**
 
-  - [JavaScript Air](https://javascriptair.com/)
-  - [JavaScript Jabber](https://devchat.tv/js-jabber/)
+  - [جاوا اسکریپت ایر](https://javascriptair.com/)
+  - [جاوا اسکریپت Jabber](https://devchat.tv/js-jabber/)
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
