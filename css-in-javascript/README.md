@@ -1,43 +1,43 @@
-# Airbnb CSS-in-JavaScript Style Guide
+# راهنمای سبک CSS در جاوا اسکریپت Airbnb
 
-*A mostly reasonable approach to CSS-in-JavaScript*
+*یک رویکرد عمدتاً معقول برای CSS نویسی در جاوا اسکریپت*
 
-## Table of Contents
+## فهرست مطالب
 
-1. [Naming](#naming)
-1. [Ordering](#ordering)
-1. [Nesting](#nesting)
-1. [Inline](#inline)
-1. [Themes](#themes)
+1. [نامگذاری](#نامگذاری)
+1. [مرتب سازی](#مرتب-سازی)
+1. [لانه سازی](#لانه-سازی)
+1. [درون خطی](#درون-خطی)
+1. [تم ها](#تم-ها)
 
-## Naming
+## نامگذاری
 
-  - Use camelCase for object keys (i.e. "selectors").
+  - از camelCase برای کلیدهای شیء (به عنوان مثال "selectors") استفاده کنید.
 
-    > Why? We access these keys as properties on the `styles` object in the component, so it is most convenient to use camelCase.
+    > چرا؟ ما به این کلیدها به عنوان ویژگی‌های شیء `styles` در مؤلفه دسترسی داریم، بنابراین استفاده از camelCase راحت‌تر است.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     {
       'bermuda-triangle': {
         display: 'none',
       },
     }
 
-    // good
+    // ‎خوب
     {
       bermudaTriangle: {
         display: 'none',
       },
     }
-    ```
+```
 
-  - Use an underscore for modifiers to other styles.
+  - از خط زیر برای اصلاح کننده های سبک های دیگر استفاده کنید.
 
-    > Why? Similar to BEM, this naming convention makes it clear that the styles are intended to modify the element preceded by the underscore. Underscores do not need to be quoted, so they are preferred over other characters, such as dashes.
+    > چرا؟ مشابه BEM، این قرارداد نام‌گذاری روشن می‌سازد که سبک‌ها برای اصلاح عنصری که قبل از خط زیر قرار دارد، در نظر گرفته شده‌اند. زیرخط ها نیازی به نقل قول ندارند، بنابراین بر سایر کاراکترها مانند خط تیره ترجیح داده می شوند.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     {
       bruceBanner: {
         color: 'pink',
@@ -49,7 +49,7 @@
       },
     }
 
-    // good
+    // ‎خوب
     {
       bruceBanner: {
         color: 'pink',
@@ -60,14 +60,14 @@
         color: 'green',
       },
     }
-    ```
+```
 
-  - Use `selectorName_fallback` for sets of fallback styles.
+  - از `selectorName_fallback` برای مجموعه‌ای از سبک‌های بازگشتی استفاده کنید.
 
-    > Why? Similar to modifiers, keeping the naming consistent helps reveal the relationship of these styles to the styles that override them in more adequate browsers.
+    > چرا؟ مانند اصلاح‌کننده‌ها، ثابت نگه داشتن نام‌گذاری به آشکار شدن رابطه این سبک‌ها با سبک‌هایی که در مرورگرهای مناسب‌تر آنها را نادیده می‌گیرند، کمک می‌کند.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     {
       muscles: {
         display: 'flex',
@@ -78,7 +78,7 @@
       },
     }
 
-    // good
+    // ‎خوب
     {
       muscles: {
         display: 'flex',
@@ -88,14 +88,14 @@
         width: '100%',
       },
     }
-    ```
+```
 
-  - Use a separate selector for sets of fallback styles.
+  - از یک انتخابگر جداگانه برای مجموعه ای از سبک های بازگشتی استفاده کنید.
 
-    > Why? Keeping fallback styles contained in a separate object clarifies their purpose, which improves readability.
+    > ا؟ نگه داشتن سبک های بازگشتی در یک شیء جداگانه، هدف آنها را روشن می کند، که خوانایی را بهبود می بخشد.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     {
       muscles: {
         display: 'flex',
@@ -111,7 +111,7 @@
       },
     }
 
-    // good
+    // ‎خوب
     {
       muscles: {
         display: 'flex',
@@ -129,36 +129,36 @@
         display: 'inline-block',
       },
     }
-    ```
+```
 
-  - Use device-agnostic names (e.g. "small", "medium", and "large") to name media query breakpoints.
+  - برای نام‌گذاری نقاط شکست درخواست رسانه، از نام‌های تشخیص‌ دهنده دستگاه (مانند "small", "medium", و "large") استفاده کنید.
 
-    > Why? Commonly used names like "phone", "tablet", and "desktop" do not match the characteristics of the devices in the real world. Using these names sets the wrong expectations.
+    > چرا؟ نام‌های معمولی مانند "phone", "tablet", و "desktop" با ویژگی‌های دستگاه‌ها در دنیای واقعی مطابقت ندارند. استفاده از این نام ها انتظارات نادرستی ایجاد می کند.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     const breakpoints = {
       mobile: '@media (max-width: 639px)',
       tablet: '@media (max-width: 1047px)',
       desktop: '@media (min-width: 1048px)',
     };
 
-    // good
+    // ‎خوب
     const breakpoints = {
       small: '@media (max-width: 639px)',
       medium: '@media (max-width: 1047px)',
       large: '@media (min-width: 1048px)',
     };
-    ```
+```
 
-## Ordering
+## مرتب سازی
 
-  - Define styles after the component.
+  - بعد از کامپوننت استایل ها را تعریف کنید.
 
-    > Why? We use a higher-order component to theme our styles, which is naturally used after the component definition. Passing the styles object directly to this function reduces indirection.
+    > چرا؟ ما از یک جزء درجه بالاتر برای تم استایل های خود استفاده می کنیم که به طور طبیعی پس از تعریف کامپوننت استفاده می شود. ارسال شیء استایل ها به طور مستقیم به این تابع باعث کاهش غیرمستقیم می شود.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     const styles = {
       container: {
         display: 'inline-block',
@@ -176,7 +176,7 @@
 
     export default withStyles(() => styles)(MyComponent);
 
-    // good
+    // ‎خوب
     function MyComponent({ styles }) {
       return (
         <div {...css(styles.container)}>
@@ -191,16 +191,16 @@
         display: 'inline-block',
       },
     }))(MyComponent);
-    ```
+```
 
-## Nesting
+## لانه سازی
 
-  - Leave a blank line between adjacent blocks at the same indentation level.
+  - یک خط خالی بین بلوک های مجاور در همان سطح تورفتگی بگذارید.
 
-    > Why? The whitespace improves readability and reduces the likelihood of merge conflicts.
+    > چرا؟ فضای خالی خوانایی را بهبود می بخشد و احتمال تداخل ادغام را کاهش می دهد.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     {
       bigBang: {
         display: 'inline-block',
@@ -213,7 +213,7 @@
       },
     }
 
-    // good
+    // ‎خوب
     {
       bigBang: {
         display: 'inline-block',
@@ -227,23 +227,23 @@
         border: 'none',
       },
     }
-    ```
+```
 
-## Inline
+## درون خطی
 
-  - Use inline styles for styles that have a high cardinality (e.g. uses the value of a prop) and not for styles that have a low cardinality.
+  - از استایل‌های درون خطی برای سبک‌هایی استفاده کنید که کاردینالیته بالایی دارند (مثلاً از ارزش پایه استفاده می‌کند) و نه برای سبک‌هایی که کاردینالیته پایینی دارند.
 
-    > Why? Generating themed stylesheets can be expensive, so they are best for discrete sets of styles.
+    > چرا؟ ایجاد شیوه نامه های مضمون می تواند گران باشد، بنابراین برای مجموعه های مجزا از سبک ها بهترین هستند.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     export default function MyComponent({ spacing }) {
       return (
         <div style={{ display: 'table', margin: spacing }} />
       );
     }
 
-    // good
+    // ‎خوب
     function MyComponent({ styles, spacing }) {
       return (
         <div {...css(styles.periodic, { margin: spacing })} />
@@ -254,54 +254,54 @@
         display: 'table',
       },
     }))(MyComponent);
-    ```
+```
 
-## Themes
+## تم ها
 
-  - Use an abstraction layer such as [react-with-styles](https://github.com/airbnb/react-with-styles) that enables theming. *react-with-styles gives us things like `withStyles()`, `ThemedStyleSheet`, and `css()` which are used in some of the examples in this document.*
+  - از یک لایه انتزاعی مانند [react-with-styles](https://github.com/airbnb/react-with-styles) استفاده کنید که قالب‌بندی را فعال می‌کند. *react-with-styles مواردی مانند `()withStyles` و `ThemedStyleSheet` و `()css` را به ما می‌دهد که در برخی از مثال‌های این سند استفاده می‌شوند.*
 
-  > Why? It is useful to have a set of shared variables for styling your components. Using an abstraction layer makes this more convenient. Additionally, this can help prevent your components from being tightly coupled to any particular underlying implementation, which gives you more freedom.
+  > چرا؟ داشتن مجموعه ای از متغیرهای مشترک برای استایل دادن به اجزای خود مفید است. استفاده از یک لایه انتزاعی این کار را راحت تر می کند. علاوه بر این، این می تواند به جلوگیری از اتصال محکم اجزای شما به هر پیاده سازی زیربنایی خاصی کمک کند، که به شما آزادی بیشتری می دهد.
 
-  - Define colors only in themes.
+  - رنگ ها را فقط در تم ها تعریف کنید.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     export default withStyles(() => ({
       chuckNorris: {
         color: '#bada55',
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ color }) => ({
       chuckNorris: {
         color: color.badass,
       },
     }))(MyComponent);
-    ```
+```
 
-  - Define fonts only in themes.
+  - فونت ها را فقط در تم ها تعریف کنید.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     export default withStyles(() => ({
       towerOfPisa: {
         fontStyle: 'italic',
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ font }) => ({
       towerOfPisa: {
         fontStyle: font.italic,
       },
     }))(MyComponent);
-    ```
+```
 
-  - Define fonts as sets of related styles.
+  - فونت ها را به عنوان مجموعه ای از سبک های مرتبط تعریف کنید.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     export default withStyles(() => ({
       towerOfPisa: {
         fontFamily: 'Italiana, "Times New Roman", serif',
@@ -311,43 +311,43 @@
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ font }) => ({
       towerOfPisa: {
         ...font.italian,
       },
     }))(MyComponent);
-    ```
+```
 
-  - Define base grid units in theme (either as a value or a function that takes a multiplier).
+  - واحدهای `Grid` را در موضوع تعریف کنید (به عنوان یک مقدار یا تابعی که یک ضریب می گیرد).
 
-    ```js
-    // bad
+```js
+    // ‎بد
     export default withStyles(() => ({
       rip: {
         bottom: '-6912px', // 6 feet
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ units }) => ({
       rip: {
         bottom: units(864), // 6 feet, assuming our unit is 8px
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ unit }) => ({
       rip: {
         bottom: 864 * unit, // 6 feet, assuming our unit is 8px
       },
     }))(MyComponent);
-    ```
+```
 
-  - Define media queries only in themes.
+  - پرس و جوهای رسانه ای را فقط در مضامین تعریف کنید.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     export default withStyles(() => ({
       container: {
         width: '100%',
@@ -358,7 +358,7 @@
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ breakpoint }) => ({
       container: {
         width: '100%',
@@ -368,14 +368,14 @@
         },
       },
     }))(MyComponent);
-    ```
+```
 
-  - Define tricky fallback properties in themes.
+  - ویژگی های بازگشتی پیچیده را در تم ها تعریف کنید.
 
-    > Why? Many CSS-in-JavaScript implementations merge style objects together which makes specifying fallbacks for the same property (e.g. `display`) a little tricky. To keep the approach unified, put these fallbacks in the theme.
+    > چرا؟ بسیاری از پیاده‌سازی‌های CSS در جاوا اسکریپت، اشیاء سبک را با هم ادغام می‌کنند که مشخص کردن پس‌اندازها برای یک ویژگی (مانند `display`) کمی دشوار می‌شود. برای یکپارچه نگه داشتن رویکرد، این موارد جایگزین را در موضوع قرار دهید.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     export default withStyles(() => ({
       .muscles {
         display: 'flex',
@@ -386,7 +386,7 @@
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ fallbacks }) => ({
       .muscles {
         display: 'flex',
@@ -397,7 +397,7 @@
       },
     }))(MyComponent);
 
-    // good
+    // ‎خوب
     export default withStyles(({ fallback }) => ({
       .muscles {
         display: 'flex',
@@ -407,26 +407,26 @@
         [fallback('display')]: 'table',
       },
     }))(MyComponent);
-    ```
+```
 
-  - Create as few custom themes as possible. Many applications may only have one theme.
+  - تا حد امکان کمتر تم سفارشی ایجاد کنید. بسیاری از برنامه ها ممکن است فقط یک موضوع داشته باشند.
 
-  - Namespace custom theme settings under a nested object with a unique and descriptive key.
+  - تنظیمات تم سفارشی فضای نام تحت یک شیء تودرتو با یک کلید منحصر به فرد و توصیفی.
 
-    ```js
-    // bad
+```js
+    // ‎بد
     ThemedStyleSheet.registerTheme('mySection', {
       mySectionPrimaryColor: 'green',
     });
 
-    // good
+    // ‎خوب
     ThemedStyleSheet.registerTheme('mySection', {
       mySection: {
         primaryColor: 'green',
       },
     });
-    ```
+```
 
 ---
 
-CSS puns adapted from [Saijo George](https://saijogeorge.com/css-puns/).
+جناس های CSS الگوبرداری شده از [Saijo George](https://saijogeorge.com/css-puns/).
