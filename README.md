@@ -1866,7 +1866,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## بالا بردن
 
   <a name="hoisting--about"></a><a name="14.1"></a>
-  - [14.1](#hoisting--about) `var` declarations get hoisted to the top of their closest enclosing function scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz). It’s important to know why [typeof is no longer safe](https://web.archive.org/web/20200121061528/http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
+  - [14.1](#hoisting--about) اعلان‌های `var` به بالای نزدیک‌ترین محدوده تابع محصورکننده خود بالا می‌روند، اما تخصیص آنها اینطور نیست. اعلان‌های `const` و `let` با مفهوم جدیدی به نام [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) همراه هستند، مهم است بدانیم چرا [`typeof` ایمن نیست](https://web.archive.org/web/20200121061528/http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
 
     ```javascript
     // we know this wouldn’t work (assuming there
@@ -1902,7 +1902,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="hoisting--anon-expressions"></a><a name="14.2"></a>
-  - [14.2](#hoisting--anon-expressions) Anonymous function expressions hoist their variable name, but not the function assignment.
+  - [14.2](#hoisting--anon-expressions) عبارات تابع ناشناس نام متغیر خود را بالا می برند، اما تخصیص تابع نه.
 
     ```javascript
     function example() {
@@ -1917,7 +1917,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="hoisting--named-expresions"></a><a name="hoisting--named-expressions"></a><a name="14.3"></a>
-  - [14.3](#hoisting--named-expressions) Named function expressions hoist the variable name, not the function name or the function body.
+  - [14.3](#hoisting--named-expressions) عبارات تابع نامگذاری شده نام متغیر را بالا می برند، نه نام تابع یا بدنه تابع.
 
     ```javascript
     function example() {
@@ -1946,7 +1946,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="hoisting--declarations"></a><a name="14.4"></a>
-  - [14.4](#hoisting--declarations) Function declarations hoist their name and the function body.
+  - [14.4](#hoisting--declarations) اعلان های تابع نام و بدنه عملکرد را بالا می برند.
 
     ```javascript
     function example() {
@@ -1958,34 +1958,34 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-  - For more information refer to [JavaScript Scoping & Hoisting](https://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) by [Ben Cherry](https://www.adequatelygood.com/).
+  - برای اطلاعات بیشتر به [جاوا اسکریپت Scoping and Hoisting](https://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) مراجعه کنید. توسط [Ben Cherry](https://www.adequatelygood.com/).
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 ## اپراتورهای مقایسه و برابری
 
   <a name="comparison--eqeqeq"></a><a name="15.1"></a>
-  - [15.1](#comparison--eqeqeq) Use `===` and `!==` over `==` and `!=`. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq)
+  - [15.1](#comparison--eqeqeq) از `===` و `!==` مقابل `==` و `!=` استفاده کنید. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq)
 
   <a name="comparison--if"></a><a name="15.2"></a>
-  - [15.2](#comparison--if) Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
+  - [15.2](#comparison--if) عبارات شرطی مانند عبارت `if` بیان خود را با استفاده از اجبار با روش انتزاعی `ToBoolean` ارزیابی می کنند و همیشه از این قوانین ساده پیروی می کنند.:
 
-    - **Objects** evaluate to **true**
-    - **Undefined** evaluates to **false**
-    - **Null** evaluates to **false**
-    - **Booleans** evaluate to **the value of the boolean**
-    - **Numbers** evaluate to **false** if **+0, -0, or NaN**, otherwise **true**
-    - **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
+    - **Objects** میشود **true**
+    - **Undefined** میشود **false**
+    - **Null** میشود **false**
+    - **Booleans** میشود **مقدار boolean**
+    - **Numbers** میشود **false** اگر **+0, -0, or NaN**, در غیر این صورت **true**
+    - **Strings** میشود **false** اگر یک رشته خالی `''`, در غیر این صورت **true**
 
     ```javascript
     if ([0] && []) {
       // true
-      // an array (even an empty one) is an object, objects will evaluate to true
+      // یک آرایه (حتی یک آرایه خالی) یک شیء است، اشیاء به درستی ارزیابی می شوند
     }
     ```
 
   <a name="comparison--shortcuts"></a><a name="15.3"></a>
-  - [15.3](#comparison--shortcuts) Use shortcuts for booleans, but explicit comparisons for strings and numbers.
+  - [15.3](#comparison--shortcuts) از میانبرها برای `Boolean` ها استفاده کنید، اما از مقایسه صریح برای رشته ها و اعداد استفاده کنید.
 
     ```javascript
     // bad
@@ -2020,12 +2020,12 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comparison--moreinfo"></a><a name="15.4"></a>
-  - [15.4](#comparison--moreinfo) For more information see [Truth Equality and JavaScript](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll.
+  - [15.4](#comparison--moreinfo) برای اطلاعات بیشتر به [برابری حقیقت و جاوا اسکریپت](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) مراجعه کنید. توسط Angus Croll.
 
   <a name="comparison--switch-blocks"></a><a name="15.5"></a>
-  - [15.5](#comparison--switch-blocks) Use braces to create blocks in `case` and `default` clauses that contain lexical declarations (e.g. `let`, `const`, `function`, and `class`). eslint: [`no-case-declarations`](https://eslint.org/docs/rules/no-case-declarations)
+  - [15.5](#comparison--switch-blocks) ز پرانتزها برای ایجاد بلوک‌هایی در عبارت‌های `case` و `default` استفاده کنید که حاوی اعلان‌های لغوی هستند (مثلاً `let`، `const`، `function` و `class`). eslint: [`no-case-declarations`](https://eslint.org/docs/rules/no-case-declarations)
 
-    > Why? Lexical declarations are visible in the entire `switch` block but only get initialized when assigned, which only happens when its `case` is reached. This causes problems when multiple `case` clauses attempt to define the same thing.
+    > چرا؟ سینتکس های واژگانی در کل بلوک سوئیچ قابل مشاهده هستند، اما فقط زمانی که تخصیص داده می‌شوند، مقداردهی اولیه می‌شوند، که تنها زمانی اتفاق می‌افتد که به `حرف` آن برسد. زمانی که چندین بند `مورد` سعی می‌کنند یک چیز را تعریف کنند، این مشکل ایجاد می‌کند.
 
     ```javascript
     // bad
@@ -2071,7 +2071,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comparison--nested-ternaries"></a><a name="15.6"></a>
-  - [15.6](#comparison--nested-ternaries) Ternaries should not be nested and generally be single line expressions. eslint: [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
+  - [15.6](#comparison--nested-ternaries) ترنری ها نباید تودرتو باشند و عموماً باید عبارت های تک خطی باشند. eslint: [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
 
     ```javascript
     // bad
@@ -2092,7 +2092,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comparison--unneeded-ternary"></a><a name="15.7"></a>
-  - [15.7](#comparison--unneeded-ternary) Avoid unneeded ternary statements. eslint: [`no-unneeded-ternary`](https://eslint.org/docs/rules/no-unneeded-ternary)
+  - [15.7](#comparison--unneeded-ternary) از اظهارات سه تایی غیر ضروری خودداری کنید. eslint: [`no-unneeded-ternary`](https://eslint.org/docs/rules/no-unneeded-ternary)
 
     ```javascript
     // bad
@@ -2109,10 +2109,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="comparison--no-mixed-operators"></a>
-  - [15.8](#comparison--no-mixed-operators) When mixing operators, enclose them in parentheses. The only exception is the standard arithmetic operators: `+`, `-`, and `**` since their precedence is broadly understood. We recommend enclosing `/` and `*` in parentheses because their precedence can be ambiguous when they are mixed.
+  - [15.8](#comparison--no-mixed-operators) هنگام مخلوط کردن عملگرها، آنها را داخل پرانتز قرار دهید. تنها استثنا عملگرهای حسابی استاندارد هستند: `+`، `-`، و `**` زیرا تقدم آنها به طور گسترده درک شده است. توصیه می‌کنیم `/` و `*` را در پرانتز قرار دهید زیرا اولویت آنها ممکن است زمانی که با هم مخلوط می‌شوند مبهم باشد.
   eslint: [`no-mixed-operators`](https://eslint.org/docs/rules/no-mixed-operators)
 
-    > Why? This improves readability and clarifies the developer’s intention.
+    > چرا؟ این خوانایی را بهبود می بخشد و قصد توسعه دهنده را روشن می کند.
 
     ```javascript
     // bad
