@@ -1472,11 +1472,11 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## تکرار کننده ها و مولدها
 
   <a name="iterators--nope"></a><a name="11.1"></a>
-  - [11.1](#iterators--nope) Don’t use iterators. Prefer JavaScript’s higher-order functions instead of loops like `for-in` or `for-of`. eslint: [`no-iterator`](https://eslint.org/docs/rules/no-iterator) [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
+  - [11.1](#iterators--nope) از تکرار کننده ها استفاده نکنید توابع مرتبه بالاتر جاوا اسکریپت را به جای حلقه هایی مانند `for-in` یا `for-of` ترجیح دهید.<br/>eslint: [`no-iterator`](https://eslint.org/docs/rules/no-iterator) [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
 
-    > Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side effects.
+    > چرا؟ این قانون تغییر ناپذیری ما را اجرا می کند. پرداختن به توابع خالصی که مقادیر را برمی گرداند آسان تر از داشتن عوارض جانبی است.
 
-    > Use `map()` / `every()` / `filter()` / `find()` / `findIndex()` / `reduce()` / `some()` / ... to iterate over arrays, and `Object.keys()` / `Object.values()` / `Object.entries()` to produce arrays so you can iterate over objects.
+    > از`()map()` / `every()` / `filter()` / `find()` / `findIndex()` / `reduce()` / `some` / ... برای تکرار روی آرایه ها استفاده کنید و از `()Object.keys()` / `Object.values()` / `Object.entries` برای تولید آرایه‌ها تا بتوانید روی اشیادستوراتتان را تکرار کنید.
 
     ```javascript
     const numbers = [1, 2, 3, 4, 5];
@@ -1516,14 +1516,14 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="generators--nope"></a><a name="11.2"></a>
-  - [11.2](#generators--nope) Don’t use generators for now.
+  - [11.2](#generators--nope) فعلا از ژنراتور استفاده نکنید.
 
-    > Why? They don’t transpile well to ES5.
+    > چرا؟ آنها به خوبی به ES5 منتقل نمی شوند.
 
   <a name="generators--spacing"></a>
-  - [11.3](#generators--spacing) If you must use generators, or if you disregard [our advice](#generators--nope), make sure their function signature is spaced properly. eslint: [`generator-star-spacing`](https://eslint.org/docs/rules/generator-star-spacing)
+  - [11.3](#generators--spacing) اگر باید از ژنراتورها استفاده کنید، یا اگر [توصیه ما](#generators--nope)را نادیده می‌گیرید، مطمئن شوید که امضای عملکرد آن‌ها به درستی فاصله دارد. eslint: [`generator-star-spacing`](https://eslint.org/docs/rules/generator-star-spacing)
 
-    > Why? `function` and `*` are part of the same conceptual keyword - `*` is not a modifier for `function`, `function*` is a unique construct, different from `function`.
+    > چرا؟ `function` و `*` بخشی از یک کلمه کلیدی مفهومی هستند - "*" یک اصلاح کننده برای `function` نیست، `function*` یک ساختار منحصر به فرد است، متفاوت از `function`.
 
     ```javascript
     // bad
@@ -1586,7 +1586,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## خصوصیات
 
   <a name="properties--dot"></a><a name="12.1"></a>
-  - [12.1](#properties--dot) Use dot notation when accessing properties. eslint: [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
+  - [12.1](#properties--dot) هنگام دسترسی به ویژگی ها از نماد نقطه استفاده کنید. eslint: [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
 
     ```javascript
     const luke = {
@@ -1602,7 +1602,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="properties--bracket"></a><a name="12.2"></a>
-  - [12.2](#properties--bracket) Use bracket notation `[]` when accessing properties with a variable.
+  - [12.2](#properties--bracket) هنگام دسترسی به خصوصیات با یک متغیر، از علامت براکت `[]` استفاده کنید.
 
     ```javascript
     const luke = {
@@ -1618,7 +1618,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="es2016-properties--exponentiation-operator"></a>
-  - [12.3](#es2016-properties--exponentiation-operator) Use exponentiation operator `**` when calculating exponentiations. eslint: [`no-restricted-properties`](https://eslint.org/docs/rules/no-restricted-properties).
+  - [12.3](#es2016-properties--exponentiation-operator) هنگام محاسبه توان از عملگر توانی `**` استفاده کنید. eslint: [`no-restricted-properties`](https://eslint.org/docs/rules/no-restricted-properties).
 
     ```javascript
     // bad
@@ -1633,7 +1633,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## متغیرها
 
   <a name="variables--const"></a><a name="13.1"></a>
-  - [13.1](#variables--const) Always use `const` or `let` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that. eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
+  - [13.1](#variables--const) همیشه از `const` یا `let` برای اعلام متغیرها استفاده کنید. عدم انجام این کار باعث ایجاد متغیرهای سراسری می شود. ما می خواهیم از آلودگی فضای نام جهانی جلوگیری کنیم.جلوتر به شما در این مورد هشدار داده ایم. eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
 
     ```javascript
     // bad
@@ -1644,9 +1644,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="variables--one-const"></a><a name="13.2"></a>
-  - [13.2](#variables--one-const) Use one `const` or `let` declaration per variable or assignment. eslint: [`one-var`](https://eslint.org/docs/rules/one-var)
+  - [13.2](#variables--one-const) برای هر متغیر یا تخصیص از یک اعلان `const` یا `let` استفاده کنید. eslint: [`one-var`](https://eslint.org/docs/rules/one-var)
 
-    > Why? It’s easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs. You can also step through each declaration with the debugger, instead of jumping through all of them at once.
+    > چرا؟ اضافه کردن اعلان‌های متغیر جدید از این طریق آسان‌تر است، و هرگز لازم نیست نگران تعویض یک `;` با `,` یا معرفی تفاوت‌های فقط نشانه‌گذاری باشید. همچنین می‌توانید به‌جای اینکه به‌طور هم‌زمان از همه آن‌ها عبور کنید، با دیباگر از هر اعلان عبور کنید.
 
     ```javascript
     // bad
@@ -1667,9 +1667,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="variables--const-let-group"></a><a name="13.3"></a>
-  - [13.3](#variables--const-let-group) Group all your `const`s and then group all your `let`s.
+  - [13.3](#variables--const-let-group) همه `const` های خود را گروه بندی کنید و سپس همه `let` های خود را گروه بندی کنید.
 
-    > Why? This is helpful when later on you might need to assign a variable depending on one of the previously assigned variables.
+    > چرا؟ این زمانی مفید است که بعداً ممکن است لازم باشد متغیری را بسته به یکی از متغیرهای قبلاً اختصاص داده شده تغییر دهید.
 
     ```javascript
     // bad
@@ -1693,9 +1693,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="variables--define-where-used"></a><a name="13.4"></a>
-  - [13.4](#variables--define-where-used) Assign variables where you need them, but place them in a reasonable place.
+  - [13.4](#variables--define-where-used) متغیرها را در جایی که به آنها نیاز دارید اختصاص دهید، اما آنها را در مکانی معقول قرار دهید.
 
-    > Why? `let` and `const` are block scoped and not function scoped.
+    > چرا؟ `let` و `const` دارای محدوده بلوکی هستند و محدوده عملکردی ندارند.
 
     ```javascript
     // bad - unnecessary function call
@@ -1732,9 +1732,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="variables--no-chain-assignment"></a><a name="13.5"></a>
-  - [13.5](#variables--no-chain-assignment) Don’t chain variable assignments. eslint: [`no-multi-assign`](https://eslint.org/docs/rules/no-multi-assign)
+  - [13.5](#variables--no-chain-assignment) تعاریف متغیر ها را زنجیره ای نکنید. eslint: [`no-multi-assign`](https://eslint.org/docs/rules/no-multi-assign)
 
-    > Why? Chaining variable assignments creates implicit global variables.
+    > چرا؟ تخصیص متغیرهای زنجیره ای، متغیرهای جهانی ضمنی ایجاد می کند.
 
     ```javascript
     // bad
@@ -1765,9 +1765,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
   <a name="variables--unary-increment-decrement"></a><a name="13.6"></a>
-  - [13.6](#variables--unary-increment-decrement) Avoid using unary increments and decrements (`++`, `--`). eslint [`no-plusplus`](https://eslint.org/docs/rules/no-plusplus)
+  - [13.6](#variables--unary-increment-decrement) از استفاده از افزایش و کاهش یکنواخت خودداری کنید (`++`، `--`). eslint [`no-plusplus`](https://eslint.org/docs/rules/no-plusplus)
 
-    > Why? Per the eslint documentation, unary increment and decrement statements are subject to automatic semicolon insertion and can cause silent errors with incrementing or decrementing values within an application. It is also more expressive to mutate your values with statements like `num += 1` instead of `num++` or `num ++`. Disallowing unary increment and decrement statements also prevents you from pre-incrementing/pre-decrementing values unintentionally which can also cause unexpected behavior in your programs.
+    > چرا؟ طبق مستندات Eslint، گزاره‌های افزایش و کاهش یکنواخت مشمول درج خودکار نقطه ویرگول هستند و می‌توانند باعث خطاهای بی‌صدا با مقادیر افزایش یا کاهش در یک برنامه شوند. همچنین جهش دادن مقادیر خود با عباراتی مانند `num += 1` به جای `num++` یا `num ++` گویاتر است. عدم اجازه دادن به گزاره‌های افزایش و کاهش یکنواخت همچنین مانع از افزایش/پیش کاهش مقادیر غیرعمدی می‌شود که می‌تواند باعث رفتار غیرمنتظره در برنامه‌های شما شود.
 
     ```javascript
     // bad
@@ -1799,9 +1799,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
 <a name="variables--linebreak"></a>
-  - [13.7](#variables--linebreak) Avoid linebreaks before or after `=` in an assignment. If your assignment violates [`max-len`](https://eslint.org/docs/rules/max-len), surround the value in parens. eslint [`operator-linebreak`](https://eslint.org/docs/rules/operator-linebreak).
+  - [13.7](#variables--linebreak) از شکستن خط قبل یا بعد از `=` در تعریف یک متغیر اجتناب کنید. If your assignment violates [`max-len`](https://eslint.org/docs/rules/max-len), مقدار را در پرانتز احاطه کنید. eslint [`operator-linebreak`](https://eslint.org/docs/rules/operator-linebreak).
 
-    > Why? Linebreaks surrounding `=` can obfuscate the value of an assignment.
+    > چرا؟ شکستن خط ها اطراف `=` می تواند مقدار یک انتساب را مبهم کند.
 
     ```javascript
     // bad
@@ -1822,9 +1822,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```
 
 <a name="variables--no-unused-vars"></a>
-  - [13.8](#variables--no-unused-vars) Disallow unused variables. eslint: [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars)
+  - [13.8](#variables--no-unused-vars) متغیرهای استفاده نشده را مجاز نکنید. eslint: [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars)
 
-    > Why? Variables that are declared and not used anywhere in the code are most likely an error due to incomplete refactoring. Such variables take up space in the code and can lead to confusion by readers.
+    > چرا؟ متغیرهایی که اعلان می شوند و در هیچ کجای کد مورد استفاده قرار نمی گیرند، به احتمال زیاد یک خطای ناقص هستند. چنین متغیرهایی فضایی را در کد اشغال می کنند و می توانند منجر به سردرگمی خوانندگان شوند.
 
     ```javascript
     // bad
