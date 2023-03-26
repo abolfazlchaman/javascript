@@ -8,12 +8,9 @@
 
 سایر راهنماها:
 
-  - [ES5 (منسوخ شده)](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
-  - [React](react/)
-  - [CSS-in-JavaScript](css-in-javascript/)
-  - [CSS & Sass](https://github.com/airbnb/css)
-  - [Ruby](https://github.com/airbnb/ruby)
-
+  - [راهنمای سبک React به فارسی](react/)
+  - [راهنمای سبک CSS-in-JavaScript به فارسی](css-in-javascript/)
+  - [راهنمای سبک CSS & Sass به فارسی](https://github.com/abolfazlchaman/css)
 
 ## فهرست مطالب
 
