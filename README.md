@@ -10,7 +10,7 @@
 
   - [راهنمای سبک React به فارسی](react/)
   - [راهنمای سبک CSS-in-JavaScript به فارسی](css-in-javascript/)
-  - [راهنمای سبک CSS & Sass به فارسی](https://github.com/abolfazlchaman/css)
+  - [راهنمای سبک CSS و Sass به فارسی](https://github.com/abolfazlchaman/css)
 
 ## فهرست مطالب
 
