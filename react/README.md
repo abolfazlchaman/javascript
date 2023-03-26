@@ -729,7 +729,7 @@
 1. ‏*روش های رندر اختیاری* مانند `()renderNavigation` یا `()renderProfilePicture`
 1. ‏`render`
 
-## `isMounted`
+## ‏`isMounted`
 
   - از `isMounted` استفاده نکنید. eslint: [`react/no-is-mounted`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
 
