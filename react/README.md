@@ -1,41 +1,41 @@
-# Airbnb React/JSX Style Guide
+# راهنمای سبک Airbnb React/JSX
 
-*A mostly reasonable approach to React and JSX*
+*یک رویکرد عمدتا معقول برای React و JSX*
 
-This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on a case-by-case basis. Currently, anything prior to stage 3 is not included nor recommended in this guide.
+این راهنمای سبک عمدتاً مبتنی بر استانداردهایی است که در حال حاضر در جاوا اسکریپت رایج است، اگرچه برخی از قراردادها (مانند فیلدهای کلاس async/wait یا ثابت) ممکن است همچنان به صورت موردی شامل یا ممنوع شوند. در حال حاضر، هر چیزی قبل از مرحله 3 در این راهنما گنجانده نشده و توصیه نمی شود.
 
-## Table of Contents
+## فهرست مطالب
 
-  1. [Basic Rules](#basic-rules)
-  1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
-  1. [Mixins](#mixins)
-  1. [Naming](#naming)
-  1. [Declaration](#declaration)
-  1. [Alignment](#alignment)
-  1. [Quotes](#quotes)
-  1. [Spacing](#spacing)
-  1. [Props](#props)
-  1. [Refs](#refs)
-  1. [Parentheses](#parentheses)
-  1. [Tags](#tags)
-  1. [Methods](#methods)
-  1. [Ordering](#ordering)
+  1. [قوانین پایه](#قوانین-پایه)
+  1. [Class در مقابل `React.createClass` در مقابل stateless](#class-در-مقابل-reactcreateclass-در-مقابل-stateless)
+  1. [میکسین ها(Mixins)](#میکسین-هاmixins)
+  1. [نامگذاری](#نامگذاری)
+  1. [اعلام(Declaration)](#declaration)
+  1. [تراز](#تراز)
+  1. [نقل قول ها](#نقل-قول-ها)
+  1. [فاصله گذاری](#فاصله-گذاری)
+  1. [ویژگی ها](#ویژگی-ها)
+  1. [مراجع](#مراجع)
+  1. [پرانتز ها](#پرانتز-ها)
+  1. [برچسب ها](#برچسب-ها)
+  1. [متد ها](#متد-ها)
+  1. [مرتب سازی](#مرتب-سازی)
   1. [`isMounted`](#ismounted)
 
-## Basic Rules
+## قوانین پایه
 
-  - Only include one React component per file.
-    - However, multiple [Stateless, or Pure, Components](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions) are allowed per file. eslint: [`react/no-multi-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless).
-  - Always use JSX syntax.
-  - Do not use `React.createElement` unless you’re initializing the app from a file that is not JSX.
-  - [`react/forbid-prop-types`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md) will allow `arrays` and `objects` only if it is explicitly noted what `array` and `object` contains, using `arrayOf`, `objectOf`, or `shape`.
+  - در هر فایل فقط یک کامپوننت React قرار دهید.
+    - با این حال، چندین [Stateless, or Pure, Components](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions) در هر فایل مجاز است. eslint: [`react/no-multi-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless)
+  - همیشه از syntax JSX استفاده کنید.
+  - از `React.createElement` استفاده نکنید مگر اینکه برنامه را از فایلی که JSX نیست مقداردهی اولیه کنید.
+  - [`react/forbid-prop-types`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md) `array` و `objects` را تنها در صورتی مجاز می‌سازد که به صراحت اشاره شود که `arrays` و `object` حاوی `arrayOf`، `objectOf` یا `shape` هستند.
 
-## Class vs `React.createClass` vs stateless
+## ‏Class در مقابل `React.createClass` در مقابل stateless
 
-  - If you have internal state and/or refs, prefer `class extends React.Component` over `React.createClass`. eslint: [`react/prefer-es6-class`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md) [`react/prefer-stateless-function`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
+- اگر حالت داخلی و/یا ref دارید، `class extends React.Component` را به `React.createClass` ترجیح دهید.</br> eslint: [`react/prefer-es6-class`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md) [`react/prefer-stateless-function`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     const Listing = React.createClass({
       // ...
       render() {
@@ -43,88 +43,88 @@ This style guide is mostly based on the standards that are currently prevalent i
       }
     });
 
-    // good
+    // ‎خوب
     class Listing extends React.Component {
       // ...
       render() {
         return <div>{this.state.hello}</div>;
       }
     }
-    ```
+```
 
-    And if you don’t have state or refs, prefer normal functions (not arrow functions) over classes:
+و اگر state یا ref ندارید، توابع عادی (نه توابع پیکانی) را به کلاس ها ترجیح دهید:
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     class Listing extends React.Component {
       render() {
         return <div>{this.props.hello}</div>;
       }
     }
 
-    // bad (relying on function name inference is discouraged)
+    // ‎بد (اتکا به استنتاج نام تابع ممنوع است)
     const Listing = ({ hello }) => (
       <div>{hello}</div>
     );
 
-    // good
+    // ‎خوب
     function Listing({ hello }) {
       return <div>{hello}</div>;
     }
-    ```
+```
 
-## Mixins
+## میکسین ها(Mixins)
 
-  - [Do not use mixins](https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html).
+  - [از میکسین ها استفاده نکنید](https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html).
 
-  > Why? Mixins introduce implicit dependencies, cause name clashes, and cause snowballing complexity. Most use cases for mixins can be accomplished in better ways via components, higher-order components, or utility modules.
+  > چرا؟ Mixin ها وابستگی های ضمنی را معرفی می کنند، باعث درگیری نام ها می شوند و باعث پیچیدگی به مرور شدیدتر می شوند. بیشتر موارد استفاده برای میکسین ها را می توان به روش های بهتری از طریق کامپوننت ها، اجزای درجه بالاتر یا ماژول های کاربردی انجام داد.
 
-## Naming
+## نامگذاری
 
-  - **Extensions**: Use `.jsx` extension for React components. eslint: [`react/jsx-filename-extension`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
-  - **Filename**: Use PascalCase for filenames. E.g., `ReservationCard.jsx`.
-  - **Reference Naming**: Use PascalCase for React components and camelCase for their instances. eslint: [`react/jsx-pascal-case`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
+  - **افزودنی ها**: برای اجزای React از پسوند `.jsx` استفاده کنید. eslint: [`react/jsx-filename-extension`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
+  - **نام فایل**: از PascalCase برای نام فایل ها استفاده کنید. به عنوان مثال، `ReservationCard.jsx`.
+  - **نامگذاری مرجع**: از PascalCase برای اجزای React و camelCase برای instance های آنها استفاده کنید. eslint: [`react/jsx-pascal-case`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     import reservationCard from './ReservationCard';
 
-    // good
+    // ‎خوب
     import ReservationCard from './ReservationCard';
 
-    // bad
+    // ‎بد
     const ReservationItem = <ReservationCard />;
 
-    // good
+    // ‎خوب
     const reservationItem = <ReservationCard />;
-    ```
+```
 
-  - **Component Naming**: Use the filename as the component name. For example, `ReservationCard.jsx` should have a reference name of `ReservationCard`. However, for root components of a directory, use `index.jsx` as the filename and use the directory name as the component name:
+  - **نامگذاری کامپوننت**: از نام فایل به عنوان نام کامپوننت استفاده کنید. برای مثال، `ReservationCard.jsx` باید نام مرجع `ReservationCard` داشته باشد. با این حال، برای اجزای ریشه یک فهرست، از `index.jsx` به عنوان نام فایل و از نام دایرکتوری به عنوان نام کامپوننت استفاده کنید:
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     import Footer from './Footer/Footer';
 
-    // bad
+    // ‎بد
     import Footer from './Footer/index';
 
-    // good
+    // ‎خوب
     import Footer from './Footer';
-    ```
+```
 
-  - **Higher-order Component Naming**: Use a composite of the higher-order component’s name and the passed-in component’s name as the `displayName` on the generated component. For example, the higher-order component `withFoo()`, when passed a component `Bar` should produce a component with a `displayName` of `withFoo(Bar)`.
+  - **نامگذاری کامپوننت های مرتبه بالاتر**: از ترکیبی از نام کامپوننت مرتبه بالاتر و نام کامپوننت منتقل شده به عنوان `displayName` در کامپوننت تولید شده استفاده کنید. برای مثال، مولفه مرتبه بالاتر `()withFoo`، هنگامی که یک کامپوننت `Bar` ارسال می‌شود، باید مؤلفه‌ای با `displayName` `withFoo(Bar)` تولید کند.
 
-    > Why? A component’s `displayName` may be used by developer tools or in error messages, and having a value that clearly expresses this relationship helps people understand what is happening.
+    > چرا؟ `displayName` یک کامپوننت ممکن است توسط ابزارهای برنامه‌نویس یا در پیام‌های خطا استفاده شود، و داشتن مقداری که به وضوح این رابطه را بیان می‌کند به افراد کمک می‌کند بفهمند چه اتفاقی می‌افتد.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     export default function withFoo(WrappedComponent) {
       return function WithFoo(props) {
         return <WrappedComponent {...props} foo />;
       }
     }
 
-    // good
+    // ‎خوب
     export default function withFoo(WrappedComponent) {
       function WithFoo(props) {
         return <WrappedComponent {...props} foo />;
@@ -137,58 +137,58 @@ This style guide is mostly based on the standards that are currently prevalent i
       WithFoo.displayName = `withFoo(${wrappedComponentName})`;
       return WithFoo;
     }
-    ```
+```
 
-  - **Props Naming**: Avoid using DOM component prop names for different purposes.
+  - **نام گذاری ویژگی ها**: از استفاده از نام های کامپوننت DOM برای اهداف مختلف خودداری کنید.
 
-    > Why? People expect props like `style` and `className` to mean one specific thing. Varying this API for a subset of your app makes the code less readable and less maintainable, and may cause bugs.
+    > چرا؟ مردم انتظار دارند وسایلی مانند `style` و `className` به معنای یک چیز خاص باشد. تغییر این API برای زیرمجموعه ای از برنامه شما باعث می شود کد خوانا و کمتر قابل نگهداری باشد و ممکن است باعث ایجاد اشکال شود.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <MyComponent style="fancy" />
 
-    // bad
+    // ‎بد
     <MyComponent className="fancy" />
 
-    // good
+    // ‎خوب
     <MyComponent variant="fancy" />
-    ```
+```
 
 ## Declaration
 
-  - Do not use `displayName` for naming components. Instead, name the component by reference.
+  - از `displayName` برای نام‌گذاری کامپوننت استفاده نکنید. در عوض، کامپوننت را با مرجع نامگذاری کنید.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     export default React.createClass({
       displayName: 'ReservationCard',
       // stuff goes here
     });
 
-    // good
+    // ‎خوب
     export default class ReservationCard extends React.Component {
     }
-    ```
+```
 
-## Alignment
+## تراز
 
-  - Follow these alignment styles for JSX syntax. eslint: [`react/jsx-closing-bracket-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md) [`react/jsx-closing-tag-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md)
+  - این سبک های تراز را برای سینتکس JSX دنبال کنید. eslint: [`react/jsx-closing-bracket-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md) [`react/jsx-closing-tag-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo superLongParam="bar"
          anotherSuperLongParam="baz" />
 
-    // good
+    // ‎خوب
     <Foo
       superLongParam="bar"
       anotherSuperLongParam="baz"
     />
 
-    // if props fit in one line then keep it on the same line
+    // ‎اگر پایه ها در یک خط قرار می گیرند، آن را در همان خط نگه دارید
     <Foo bar="bar" />
 
-    // children get indented normally
+    // ‎فرزندان به طور معمول تورفتگی دارند
     <Foo
       superLongParam="bar"
       anotherSuperLongParam="baz"
@@ -196,26 +196,26 @@ This style guide is mostly based on the standards that are currently prevalent i
       <Quux />
     </Foo>
 
-    // bad
+    // ‎بد
     {showButton &&
       <Button />
     }
 
-    // bad
+    // ‎بد
     {
       showButton &&
         <Button />
     }
 
-    // good
+    // ‎خوب
     {showButton && (
       <Button />
     )}
 
-    // good
+    // ‎خوب
     {showButton && <Button />}
 
-    // good
+    // ‎خوب
     {someReallyLongConditional
       && anotherLongConditional
       && (
@@ -226,7 +226,7 @@ This style guide is mostly based on the standards that are currently prevalent i
       )
     }
 
-    // good
+    // ‎خوب
     {someConditional ? (
       <Foo />
     ) : (
@@ -235,154 +235,154 @@ This style guide is mostly based on the standards that are currently prevalent i
         anotherSuperLongParam="baz"
       />
     )}
-    ```
+```
 
-## Quotes
+## نقل قول ها
 
-  - Always use double quotes (`"`) for JSX attributes, but single quotes (`'`) for all other JS. eslint: [`jsx-quotes`](https://eslint.org/docs/rules/jsx-quotes)
+  - همیشه از دو نقل قول (`"`) برای ویژگی های JSX، اما از نقل قول های تکی (`'`) برای همه جاوا اسکریپت های دیگر استفاده کنید.</br> eslint: [`jsx-quotes`](https://eslint.org/docs/rules/jsx-quotes)
 
-    > Why? Regular HTML attributes also typically use double quotes instead of single, so JSX attributes mirror this convention.
+    > چرا؟ ویژگی‌های معمولی HTML نیز معمولاً از نقل قول‌های دوگانه به جای تک استفاده می‌کنند، بنابراین ویژگی‌های JSX این قرارداد را منعکس می‌کنند.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo bar='bar' />
 
-    // good
+    // ‎خوب
     <Foo bar="bar" />
 
-    // bad
+    // ‎بد
     <Foo style={{ left: "20px" }} />
 
-    // good
+    // ‎خوب
     <Foo style={{ left: '20px' }} />
-    ```
+```
 
-## Spacing
+## فاصله-گذاری
 
-  - Always include a single space in your self-closing tag. eslint: [`no-multi-spaces`](https://eslint.org/docs/rules/no-multi-spaces), [`react/jsx-tag-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
+  - همیشه یک فضای منفرد را در تگ بسته شده خود قرار دهید. eslint: [`no-multi-spaces`](https://eslint.org/docs/rules/no-multi-spaces), [`react/jsx-tag-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo/>
 
-    // very bad
+    // ‎خیلی بد
     <Foo                 />
 
-    // bad
+    // ‎بد
     <Foo
      />
 
-    // good
+    // ‎خوب
     <Foo />
-    ```
+```
 
-  - Do not pad JSX curly braces with spaces. eslint: [`react/jsx-curly-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md)
+  - کرلی بریس ها JSX را با فاصله قرار ندهید. eslint: [`react/jsx-curly-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo bar={ baz } />
 
-    // good
+    // ‎خوب
     <Foo bar={baz} />
-    ```
+```
 
-## Props
+## ویژگی ها
 
-  - Always use camelCase for prop names, or PascalCase if the prop value is a React component.
+  - همیشه از camelCase برای نام های prop استفاده کنید یا از PascalCase اگر مقدار prop یک کامپوننت React است استفاده کنید.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo
       UserName="hello"
       phone_number={12345678}
     />
 
-    // good
+    // ‎خوب
     <Foo
       userName="hello"
       phoneNumber={12345678}
       Component={SomeComponent}
     />
-    ```
+```
 
-  - Omit the value of the prop when it is explicitly `true`. eslint: [`react/jsx-boolean-value`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md)
+  - هنگامی که به صراحت `true` است، مقدار prop را حذف کنید. eslint: [`react/jsx-boolean-value`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo
       hidden={true}
     />
 
-    // good
+    // ‎خوب
     <Foo
       hidden
     />
 
-    // good
+    // ‎خوب
     <Foo hidden />
-    ```
+```
 
-  - Always include an `alt` prop on `<img>` tags. If the image is presentational, `alt` can be an empty string or the `<img>` must have `role="presentation"`. eslint: [`jsx-a11y/alt-text`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md)
+  - همیشه در تگ های `<img>` یک `alt` قرار دهید. اگر تصویر نمایشی است، `alt` می‌تواند یک رشته خالی باشد یا `<img>` باید `role="presentation"` باشد.</br> eslint: [`jsx-a11y/alt-text`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <img src="hello.jpg" />
 
-    // good
+    // ‎خوب
     <img src="hello.jpg" alt="Me waving hello" />
 
-    // good
+    // ‎خوب
     <img src="hello.jpg" alt="" />
 
-    // good
+    // ‎خوب
     <img src="hello.jpg" role="presentation" />
-    ```
+```
 
-  - Do not use words like "image", "photo", or "picture" in `<img>` `alt` props. eslint: [`jsx-a11y/img-redundant-alt`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md)
+  - از کلماتی مانند "image"، "photo" یا "picture" در `<img>` `alt` استفاده نکنید. eslint: [`jsx-a11y/img-redundant-alt`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md)
 
-    > Why? Screenreaders already announce `img` elements as images, so there is no need to include this information in the alt text.
+    > چرا؟ صفحه‌خوان‌ها همیشه عناصر `img` را به عنوان تصویر اعلام می‌کنند، بنابراین نیازی به گنجاندن این اطلاعات در متن جایگزین نیست.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <img src="hello.jpg" alt="Picture of me waving hello" />
 
-    // good
+    // ‎خوب
     <img src="hello.jpg" alt="Me waving hello" />
-    ```
+```
 
-  - Use only valid, non-abstract [ARIA roles](https://www.w3.org/TR/wai-aria/#usage_intro). eslint: [`jsx-a11y/aria-role`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md)
+  - فقط از [ARIA roles](https://www.w3.org/TR/wai-aria/#usage_intro) معتبر و غیر انتزاعی استفاده کنید. eslint: [`jsx-a11y/aria-role`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md)
 
-    ```jsx
-    // bad - not an ARIA role
+```jsx
+    // ‎بد - not an ARIA role
     <div role="datepicker" />
 
-    // bad - abstract ARIA role
+    // ‎بد - abstract ARIA role
     <div role="range" />
 
-    // good
+    // ‎خوب
     <div role="button" />
-    ```
+```
 
-  - Do not use `accessKey` on elements. eslint: [`jsx-a11y/no-access-key`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md)
+  - از `accessKey` روی عناصر استفاده نکنید. eslint: [`jsx-a11y/no-access-key`](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md)
 
-  > Why? Inconsistencies between keyboard shortcuts and keyboard commands used by people using screenreaders and keyboards complicate accessibility.
+  > چرا؟ ناسازگاری بین میانبرهای صفحه کلید و دستورات صفحه کلید که توسط افرادی که از صفحه‌خوان‌ها و صفحه‌کلید استفاده می‌کنند، دسترسی را پیچیده می‌کند.
 
-  ```jsx
-  // bad
+```jsx
+    // ‎بد
   <div accessKey="h" />
 
-  // good
+    // ‎خوب
   <div />
-  ```
+```
 
-  - Avoid using an array index as `key` prop, prefer a stable ID. eslint: [`react/no-array-index-key`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md)
+  - از استفاده از شاخص آرایه به عنوان پایه `key` اجتناب کنید، شناسه پایدار را ترجیح دهید. eslint: [`react/no-array-index-key`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md)
 
-> Why? Not using a stable ID [is an anti-pattern](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318) because it can negatively impact performance and cause issues with component state.
+> چرا؟ عدم استفاده از شناسه پایدار [یک ضد الگو است](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318) زیرا می تواند بر عملکرد تأثیر منفی بگذارد و باعث شود مشکلات مربوط به وضعیت component
 
-We don’t recommend using indexes for keys if the order of items may change.
+اگر ترتیب آیتم‌ها تغییر کند، استفاده از شاخص‌ها را برای کلیدها توصیه نمی‌کنیم.
 
-  ```jsx
-  // bad
+```jsx
+    // ‎بد
   {todos.map((todo, index) =>
     <Todo
       {...todo}
@@ -390,21 +390,21 @@ We don’t recommend using indexes for keys if the order of items may change.
     />
   )}
 
-  // good
+    // ‎خوب
   {todos.map(todo => (
     <Todo
       {...todo}
       key={todo.id}
     />
   ))}
-  ```
+```
 
-  - Always define explicit defaultProps for all non-required props.
+  - همیشه DefaultProps صریح را برای همه prop ها غیر ضروری تعریف کنید.
 
-  > Why? propTypes are a form of documentation, and providing defaultProps means the reader of your code doesn’t have to assume as much. In addition, it can mean that your code can omit certain type checks.
+  > چرا؟ propType ها شکلی از مستندات هستند و ارائه defaultProps به این معنی است که خواننده کد شما مجبور نیست آنقدرها را فرض کند. علاوه بر این، می تواند به این معنی باشد که کد شما می تواند بررسی های نوع خاصی را حذف کند.
 
-  ```jsx
-  // bad
+```jsx
+    // ‎بد
   function SFC({ foo, bar, children }) {
     return <div>{foo}{bar}{children}</div>;
   }
@@ -414,7 +414,7 @@ We don’t recommend using indexes for keys if the order of items may change.
     children: PropTypes.node,
   };
 
-  // good
+    // ‎خوب
   function SFC({ foo, bar, children }) {
     return <div>{foo}{bar}{children}</div>;
   }
@@ -427,16 +427,16 @@ We don’t recommend using indexes for keys if the order of items may change.
     bar: '',
     children: null,
   };
-  ```
+```
 
-  - Use spread props sparingly.
-  > Why? Otherwise you’re more likely to pass unnecessary props down to components. And for React v15.6.1 and older, you could [pass invalid HTML attributes to the DOM](https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html).
+  - از spread props به مقدار کم استفاده کنید.
+  > چرا؟ در غیر این صورت احتمال بیشتری وجود دارد که وسایل غیرضروری را به کامپوننت ها منتقل کنید. و برای React نسخه 15.6.1 و قدیمی تر، می توانید [ویژگی های نامعتبر HTML را به DOM منتقل کنید](https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html).
 
-  Exceptions:
+  استثناها:
 
-  - HOCs that proxy down props and hoist propTypes
+  - HOC هایی که proxy down props و hoist propTypes را انجام می دهند
 
-  ```jsx
+```jsx
   function HOC(WrappedComponent) {
     return class Proxy extends React.Component {
       Proxy.propTypes = {
@@ -449,11 +449,11 @@ We don’t recommend using indexes for keys if the order of items may change.
       }
     }
   }
-  ```
+```
 
-  - Spreading objects with known, explicit props. This can be particularly useful when testing React components with Mocha’s beforeEach construct.
+  - استخراج اشیاء با ویژگی‌های شناخته شده و واضح. این کار می تواند به ویژه هنگام آزمایش کامپوننت های React با سازه Mocha's BeforeEach مفید باشد.
 
-  ```jsx
+```jsx
   export default function Foo {
     const props = {
       text: '',
@@ -462,54 +462,54 @@ We don’t recommend using indexes for keys if the order of items may change.
 
     return (<div {...props} />);
   }
-  ```
+```
 
-  Notes for use:
-  Filter out unnecessary props when possible. Also, use [prop-types-exact](https://www.npmjs.com/package/prop-types-exact) to help prevent bugs.
+  نکاتی برای استفاده:
+  در صورت امکان وسایل غیر ضروری را فیلتر کنید. همچنین، استفاده کنید از [prop-types-exact](https://www.npmjs.com/package/prop-types-exact) برای کمک به جلوگیری از اشکالات.
 
-  ```jsx
-  // bad
+```jsx
+    // ‎بد
   render() {
     const { irrelevantProp, ...relevantProps } = this.props;
     return <WrappedComponent {...this.props} />
   }
 
-  // good
+    // ‎خوب
   render() {
     const { irrelevantProp, ...relevantProps } = this.props;
     return <WrappedComponent {...relevantProps} />
   }
-  ```
+```
 
-## Refs
+## مراجع
 
-  - Always use ref callbacks. eslint: [`react/no-string-refs`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
+  - همیشه از ref callbacks استفاده کنید. eslint: [`react/no-string-refs`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo
       ref="myRef"
     />
 
-    // good
+    // ‎خوب
     <Foo
       ref={(ref) => { this.myRef = ref; }}
     />
-    ```
+```
 
-## Parentheses
+## پرانتز-ها
 
-  - Wrap JSX tags in parentheses when they span more than one line. eslint: [`react/jsx-wrap-multilines`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md)
+  - وقتی تگ های JSX بیش از یک خط را در بر می گیرند، آن ها را در پرانتز قرار دهید. eslint: [`react/jsx-wrap-multilines`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     render() {
       return <MyComponent variant="long body" foo="bar">
                <MyChild />
              </MyComponent>;
     }
 
-    // good
+    // ‎خوب
     render() {
       return (
         <MyComponent variant="long body" foo="bar">
@@ -518,45 +518,45 @@ We don’t recommend using indexes for keys if the order of items may change.
       );
     }
 
-    // good, when single line
+    // ‎خوب، وقتی تک خطی باشد
     render() {
       const body = <div>hello</div>;
       return <MyComponent>{body}</MyComponent>;
     }
-    ```
+```
 
-## Tags
+## برچسب ها
 
-  - Always self-close tags that have no children. eslint: [`react/self-closing-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
+  - همیشه برچسب هایی را که فرزند ندارند، خود ببندی کنید. eslint: [`react/self-closing-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo variant="stuff"></Foo>
 
-    // good
+    // ‎خوب
     <Foo variant="stuff" />
-    ```
+```
 
-  - If your component has multiline properties, close its tag on a new line. eslint: [`react/jsx-closing-bracket-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
+  - اگر کامپوننت شما دارای ویژگی های چند خطی است، برچسب آن را روی یک خط جدید ببندید. eslint: [`react/jsx-closing-bracket-location`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     <Foo
       bar="bar"
       baz="baz" />
 
-    // good
+    // ‎خوب
     <Foo
       bar="bar"
       baz="baz"
     />
-    ```
+```
 
-## Methods
+## متد ها
 
-  - Use arrow functions to close over local variables. It is handy when you need to pass additional data to an event handler. Although, make sure they [do not massively hurt performance](https://www.bignerdranch.com/blog/choosing-the-best-approach-for-react-event-handlers/), in particular when passed to custom components that might be PureComponents, because they will trigger a possibly needless rerender every time.
+  - از توابع پیکانی برای بستن روی متغیرهای محلی استفاده کنید. زمانی که نیاز دارید داده های اضافی را به یک کنترل کننده رویداد ارسال کنید مفید است. اگرچه، مطمئن شوید که آنها [به عملکرد آسیب زیادی وارد نمی‌کنند](https://www.bignerdranch.com/blog/choosing-the-best-approach-for-react-event-handlers/)، به‌ویژه زمانی که به کامپوننت های سفارشی منتقل می‌شوند. که ممکن است PureComponents باشند، زیرا هر بار یک رندر احتمالاً بی‌ مورد را راه‌اندازی می‌کنند.
 
-    ```jsx
+```jsx
     function ItemList(props) {
       return (
         <ul>
@@ -569,17 +569,17 @@ We don’t recommend using indexes for keys if the order of items may change.
         </ul>
       );
     }
-    ```
+```
 
-  - Bind event handlers for the render method in the constructor. eslint: [`react/jsx-no-bind`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
+  - کنترل کننده های رویداد را به متد رندر در سازنده پیوند دهید. eslint: [`react/jsx-no-bind`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
 
-    > Why? A bind call in the render path creates a brand new function on every single render. Do not use arrow functions in class fields, because it makes them [challenging to test and debug, and can negatively impact performance](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1), and because conceptually, class fields are for data, not logic.
+    > چرا؟ یک فراخوانی bind در مسیر رندر یک تابع کاملاً جدید هربار یک رندر ایجاد می کند. از توابع پیکانی در فیلدهای کلاس استفاده نکنید، زیرا آنها را [آزمایش و اشکال زدایی چالش برانگیز می کند و می تواند بر عملکرد تأثیر منفی بگذارد](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)، و چون از نظر مفهومی، فیلدهای کلاس برای داده ها هستند نه منطق.
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     class extends React.Component {
       onClickDiv() {
-        // do stuff
+        // ‎انجام عملیات
       }
 
       render() {
@@ -587,10 +587,10 @@ We don’t recommend using indexes for keys if the order of items may change.
       }
     }
 
-    // very bad
+    // ‎خیلی بد
     class extends React.Component {
       onClickDiv = () => {
-        // do stuff
+        // ‎انجام عملیات
       }
 
       render() {
@@ -598,7 +598,7 @@ We don’t recommend using indexes for keys if the order of items may change.
       }
     }
 
-    // good
+    // ‎خوب
     class extends React.Component {
       constructor(props) {
         super(props);
@@ -607,75 +607,75 @@ We don’t recommend using indexes for keys if the order of items may change.
       }
 
       onClickDiv() {
-        // do stuff
+        // ‎انجام عملیات
       }
 
       render() {
         return <div onClick={this.onClickDiv} />;
       }
     }
-    ```
+```
 
-  - Do not use underscore prefix for internal methods of a React component.
-    > Why? Underscore prefixes are sometimes used as a convention in other languages to denote privacy. But, unlike those languages, there is no native support for privacy in JavaScript, everything is public. Regardless of your intentions, adding underscore prefixes to your properties does not actually make them private, and any property (underscore-prefixed or not) should be treated as being public. See issues [#1024](https://github.com/airbnb/javascript/issues/1024), and [#490](https://github.com/airbnb/javascript/issues/490) for a more in-depth discussion.
+  - برای روش های داخلی یک کامپوننت React از پیشوند زیر خط استفاده نکنید.
+     > چرا؟ پیشوندهای زیر خط گاهی به عنوان یک قرارداد در زبان های دیگر برای نشان دادن حریم خصوصی استفاده می شوند. اما برخلاف آن زبان ها، هیچ پشتیبانی بومی برای حفظ حریم خصوصی در جاوا اسکریپت وجود ندارد، همه چیز عمومی است. صرف نظر از قصد شما، افزودن پیشوندهای زیرخط به دارایی‌های شما در واقع آن‌ها را خصوصی نمی‌کند و هر ویژگی (با پیشوند زیر خط یا نه) باید عمومی تلقی شود. برای اطلاعات بیشتر به مسائل [#1024](https://github.com/airbnb/javascript/issues/1024) و [#490](https://github.com/airbnb/javascript/issues/490) مراجعه کنید -بحث عمیق
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     React.createClass({
       _onClickSubmit() {
-        // do stuff
+        // ‎انجام عملیات
       },
 
-      // other stuff
+        // ‎انجام عملیات دیگر
     });
 
-    // good
+    // ‎خوب
     class extends React.Component {
       onClickSubmit() {
-        // do stuff
+        // ‎انجام عملیات
       }
 
-      // other stuff
+        // ‎انجام عملیات دیگر
     }
-    ```
+```
 
-  - Be sure to return a value in your `render` methods. eslint: [`react/require-render-return`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
+  - مطمئن شوید که مقداری را در متد های `render` خود برگردانید. eslint: [`react/require-render-return`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
 
-    ```jsx
-    // bad
+```jsx
+    // ‎بد
     render() {
       (<div />);
     }
 
-    // good
+    // ‎خوب
     render() {
       return (<div />);
     }
-    ```
+```
 
-## Ordering
+## مرتب سازی
 
-  - Ordering for `class extends React.Component`:
+- مرتب سازی برای `class extends React.Component`:
 
-  1. optional `static` methods
-  1. `constructor`
-  1. `getChildContext`
-  1. `componentWillMount`
-  1. `componentDidMount`
-  1. `componentWillReceiveProps`
-  1. `shouldComponentUpdate`
-  1. `componentWillUpdate`
-  1. `componentDidUpdate`
-  1. `componentWillUnmount`
-  1. *event handlers starting with 'handle'* like `handleSubmit()` or `handleChangeDescription()`
-  1. *event handlers starting with 'on'* like `onClickSubmit()` or `onChangeDescription()`
-  1. *getter methods for `render`* like `getSelectReason()` or `getFooterContent()`
-  1. *optional render methods* like `renderNavigation()` or `renderProfilePicture()`
-  1. `render`
+1. ‏متد های `static` اختیاری
+1. ‏`constructor`
+1. ‏`getChildContext`
+1. ‏`componentWillMount`
+1. ‏`componentDidMount`
+1. ‏`componentWillReceiveProps`
+1. ‏`shouldComponentUpdate`
+1. ‏`componentWillUpdate`
+1. ‏`componentDidUpdate`
+1. ‏`componentWillUnmount`
+1. ‏*گردانندگان رویداد که با 'handle' شروع می‌شوند* مانند `()handleSubmit` یا `()handleChangeDescription`
+1. ‏*کنترل کننده رویداد که با 'on' شروع می شود* مانند `()onClickSubmit` یا `()onChangeDescription`
+1. ‏*متدهای دریافت کننده برای `render`.* مانند `()getSelectReason` یا `()getFooterContent`
+1. ‏*متد های رندر اختیاری* مانند `()renderNavigation` یا `()renderProfilePicture`
+1. ‏`render`
 
-  - How to define `propTypes`, `defaultProps`, `contextTypes`, etc...
+  - چگونه `propTypes`, `defaultProps`, `contextTypes`, ... ها را تعریف کنیم؟
 
-    ```jsx
+```jsx
     import React from 'react';
     import PropTypes from 'prop-types';
 
@@ -703,55 +703,55 @@ We don’t recommend using indexes for keys if the order of items may change.
     Link.defaultProps = defaultProps;
 
     export default Link;
-    ```
+```
 
-  - Ordering for `React.createClass`: eslint: [`react/sort-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)
+- مرتب سازی برای `React.createClass`:</br> eslint: [`react/sort-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)
 
-  1. `displayName`
-  1. `propTypes`
-  1. `contextTypes`
-  1. `childContextTypes`
-  1. `mixins`
-  1. `statics`
-  1. `defaultProps`
-  1. `getDefaultProps`
-  1. `getInitialState`
-  1. `getChildContext`
-  1. `componentWillMount`
-  1. `componentDidMount`
-  1. `componentWillReceiveProps`
-  1. `shouldComponentUpdate`
-  1. `componentWillUpdate`
-  1. `componentDidUpdate`
-  1. `componentWillUnmount`
-  1. *clickHandlers or eventHandlers* like `onClickSubmit()` or `onChangeDescription()`
-  1. *getter methods for `render`* like `getSelectReason()` or `getFooterContent()`
-  1. *optional render methods* like `renderNavigation()` or `renderProfilePicture()`
-  1. `render`
+1. ‏`displayName`
+1. ‏`propTypes`
+1. ‏`contextTypes`
+1. ‏`childContextTypes`
+1. ‏`mixins`
+1. ‏`statics`
+1. ‏`defaultProps`
+1. ‏`getDefaultProps`
+1. ‏`getInitialState`
+1. ‏`getChildContext`
+1. ‏`componentWillMount`
+1. ‏`componentDidMount`
+1. ‏`componentWillReceiveProps`
+1. ‏`shouldComponentUpdate`
+1. ‏`componentWillUpdate`
+1. ‏`componentDidUpdate`
+1. ‏`componentWillUnmount`
+1. ‏*clickHandlers یا eventHandlers* مانند `()onClickSubmit` یا `()onChangeDescription`
+1. ‏*متدهای دریافت کننده برای `render`* مانند `()getSelectReason` یا `()getFooterContent`
+1. ‏*روش های رندر اختیاری* مانند `()renderNavigation` یا `()renderProfilePicture`
+1. ‏`render`
 
 ## `isMounted`
 
-  - Do not use `isMounted`. eslint: [`react/no-is-mounted`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
+  - از `isMounted` استفاده نکنید. eslint: [`react/no-is-mounted`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
 
-  > Why? [`isMounted` is an anti-pattern][anti-pattern], is not available when using ES6 classes, and is on its way to being officially deprecated.
+  > چرا؟ `isMounted` یک [ضد الگو](https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html) است، هنگام استفاده از کلاس‌های ES6 در دسترس نیست و در راه است تا رسماً منسوخ شود.
 
-  [anti-pattern]: https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html
+  [ضد-الگو]: https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html
 
-## Translation
+## ترجمه ها
 
-  This JSX/React style guide is also available in other languages:
+  این راهنمای سبک JSX/React به زبان های دیگر نیز موجود است:
 
-  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese (Simplified)**: [jhcccc/javascript](https://github.com/jhcccc/javascript/tree/master/react)
-  - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Chinese (Traditional)**: [jigsawye/javascript](https://github.com/jigsawye/javascript/tree/master/react)
-  - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Español**: [agrcrobles/javascript](https://github.com/agrcrobles/javascript/tree/master/react)
-  - ![jp](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **Japanese**: [mitsuruog/javascript-style-guide](https://github.com/mitsuruog/javascript-style-guide/tree/master/react)
-  - ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **Korean**: [apple77y/javascript](https://github.com/apple77y/javascript/tree/master/react)
-  - ![pl](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png) **Polish**: [pietraszekl/javascript](https://github.com/pietraszekl/javascript/tree/master/react)
-  - ![Br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Portuguese**: [ronal2do/javascript](https://github.com/ronal2do/airbnb-react-styleguide)
-  - ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **Russian**: [leonidlebedev/javascript-airbnb](https://github.com/leonidlebedev/javascript-airbnb/tree/master/react)
-  - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **Thai**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide/tree/master/react)
-  - ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **Turkish**: [alioguzhan/react-style-guide](https://github.com/alioguzhan/react-style-guide)
-  - ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Ukrainian**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript/tree/master/react)
-  - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnam**: [uetcodecamp/jsx-style-guide](https://github.com/UETCodeCamp/jsx-style-guide)
+- ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **زبان چینی ساده شده**: [jhcccc/javascript](https://github.com/jhcccc/javascript/tree/master/react)
+- ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **چینی (سنتی)**: [jigsawye/javascript](https://github.com/jigsawye/javascript/tree/master/react)
+- ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **اسپانیایی**: [agrcrobles/javascript](https://github.com/agrcrobles/javascript/tree/master/react)
+- ![jp](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **ژاپنی**: [mitsuruog/javascript-style-guide](https://github.com/mitsuruog/javascript-style-guide/tree/master/react)
+- ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **کره ای**: [apple77y/javascript](https://github.com/apple77y/javascript/tree/master/react)
+- ![pl](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png) **لهستانی**: [pietraszekl/javascript](https://github.com/pietraszekl/javascript/tree/master/react)
+- ![Br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **پرتغالی**: [ronal2do/javascript](https://github.com/ronal2do/airbnb-react-styleguide)
+- ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **روسی**: [leonidlebedev/javascript-airbnb](https://github.com/leonidlebedev/javascript-airbnb/tree/master/react)
+- ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **تایلندی**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide/tree/master/react)
+- ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **ترکی**: [alioguzhan/react-style-guide](https://github.com/alioguzhan/react-style-guide)
+- ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **اوکراینی**: [ivanzusko/javascript](https://github.com/ivanzusko/javascript/tree/master/react)
+- ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **ویتنامی**: [uetcodecamp/jsx-style-guide](https://github.com/UETCodeCamp/jsx-style-guide)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ بازگشت به بالا](#فهرست-مطالب)**
