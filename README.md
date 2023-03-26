@@ -1,6 +1,6 @@
 مخزن اصلی: [airbnb/javascript](https://github.com/airbnb/javascript)
 
-# راهنمای سبک جاوا اسکریپت Airbnb() {
+# راهنمای سبک جاوا اسکریپت ()Airbnb {
 
 *یک رویکرد عمدتاً معقول برای جاوا اسکریپت*
 
@@ -103,7 +103,7 @@
 ## مراجع
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
-- ‏[2.1](#references--prefer-const) از `const` برای همه مراجع خود استفاده کنید; از استفاده از `var` اجتناب کنید. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
+- ‏[2.1](#references--prefer-const) از `const` برای همه مراجع خود استفاده کنید; از استفاده از `var` اجتناب کنید. </br> eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
 
     > چرا؟ این کار تضمین می کند که نتوانید مراجع خود را مجدداً اختصاص دهید، که این کار می تواند منجر به اشکالات و درک کد دشوارتر شود.
 
@@ -3793,7 +3793,7 @@
   - [جاوا اسکریپت اولیه برای برنامه نویس بی حوصله](https://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
   - [ممکن است به jQuery نیاز نداشته باشید](https://youmightnotneedjquery.com/) - Zack Bloom & Adam Schwartz
   - [ویژگی های ES6](https://github.com/lukehoban/es6features) - Luke Hoban
-  - [دستورالعمل های Frontend](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
+  - ‏[دستورالعمل های Frontend](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
 
 **کتاب ها**
 
@@ -3804,10 +3804,10 @@
   - [جاوا اسکریپت قابل نگهداری](https://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
   - [برنامه های کاربردی وب جاوا اسکریپت](https://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
   - [تکنیک های جاوا اسکریپت حرفه ای](https://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
-  - [ جاوا اسکریپت همه جا :Smashing Node.js](https://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
+  - ‏[ جاوا اسکریپت همه جا :Smashing Node.js](https://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
   - [اسرار جاوا اسکریپت نینجا](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X) - John Resig and Bear Bibeault
   - [جاوا اسکریپت انسانی](http://humanjavascript.com/) - Henrik Joreteg
-  - [Superhero.js](http://superherojs.com/) - Kim Joar Bekkelund, Mads Mobæk, & Olav Bjorkoy
+  - ‏[Superhero.js](http://superherojs.com/) - Kim Joar Bekkelund, Mads Mobæk, & Olav Bjorkoy
   - [جی اس بوک ها](https://jsbooks.revolunet.com/) - Julien Bouquillon
   - [جاوا اسکریپت شخص ثالث](https://www.manning.com/books/third-party-javascript) - Ben Vinegar and Anton Kovalyov
   - [جاوا اسکریپت موثر: 68 روش خاص برای استفاده از قدرت جاوا اسکریپت](https://amzn.com/dp/0321812182) - David Herman
