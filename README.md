@@ -137,7 +137,7 @@
 ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope) توجه داشته باشید که هر دو `let` و `const` دارای محدوده بلوکی هستند، در حالی که `var` دارای محدوده تابعی است.
+- ‏[2.3](#references--block-scope) توجه داشته باشید که هر دو `let` و `const` دارای محدوده بلوکی هستند، در حالی که `var` دارای محدوده تابعی است.
 
 ```javascript
     // ‎const و let فقط در بلوک هایی که در آنها تعریف شده اند وجود دارند.
@@ -158,7 +158,7 @@
 ## اشیاء
 
   <a name="objects--no-new"></a><a name="3.1"></a>
-  - [3.1](#objects--no-new) از literal syntax برای ایجاد شیء ها استفاده کنید. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
+- ‏[3.1](#objects--no-new) از literal syntax برای ایجاد شیء ها استفاده کنید. eslint: [`no-new-object`](https://eslint.org/docs/rules/no-new-object)
 
 ```javascript
     // ‎بد
@@ -195,7 +195,7 @@
 ```
 
   <a name="es6-object-shorthand"></a><a name="3.5"></a>
-  - [3.3](#es6-object-shorthand) از روش اختصار شیء استفاده کنید. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
+- ‏[3.3](#es6-object-shorthand) از روش اختصار شیء استفاده کنید. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand)
 
 ```javascript
     // ‎بد
@@ -288,7 +288,7 @@
 ```
 
   <a name="objects--prototype-builtins"></a>
-  - [3.7](#objects--prototype-builtins) هیچوقت `Object.prototype` را مستقیماً فراخوانی نکنید , مثلا `hasOwnProperty`, `propertyIsEnumerable`, و `isPrototypeOf`. <br/> eslint: [`no-prototype-builtins`](https://eslint.org/docs/rules/no-prototype-builtins)
+- ‏[3.7](#objects--prototype-builtins) هیچوقت `Object.prototype` را مستقیماً فراخوانی نکنید , مثلا `hasOwnProperty`, `propertyIsEnumerable`, و `isPrototypeOf`. <br/> eslint: [`no-prototype-builtins`](https://eslint.org/docs/rules/no-prototype-builtins)
 
     > چرا؟ این متدها ممکن است با ویژگی‌های شیء مورد نظر تداخل داشته باشند - `{ hasOwnProperty: false }` را در نظر بگیرید - یا شی، ممکن است یک شی، تهی باشد (`Object.create(null)`).
 
@@ -310,7 +310,7 @@
 ```
 
   <a name="objects--rest-spread"></a>
-  - [3.8](#objects--rest-spread) برای کپی کردن اشیاء [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) سینتکس گسترش شیء را ترجیح دهید. از سینتکس گسترش شیء استفاده کنید تا یک شیء جدید با ویژگی های خاصی حذف شده باشد. eslint: [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
+- ‏[3.8](#objects--rest-spread) برای کپی کردن اشیاء [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) سینتکس گسترش شیء را ترجیح دهید. از سینتکس گسترش شیء استفاده کنید تا یک شیء جدید با ویژگی های خاصی حذف شده باشد. eslint: [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
 
 ```javascript
     // ‎خیلی بد
@@ -334,7 +334,7 @@
 ## آرایه ها
 
   <a name="arrays--literals"></a><a name="4.1"></a>
-  - [4.1](#arrays--literals) برای ایجاد آرایه از literal syntax استفاده کنید. eslint: [`no-array-constructor`](https://eslint.org/docs/rules/no-array-constructor)
+- ‏[4.1](#arrays--literals) برای ایجاد آرایه از literal syntax استفاده کنید. eslint: [`no-array-constructor`](https://eslint.org/docs/rules/no-array-constructor)
 
 ```javascript
     // ‎بد
@@ -345,7 +345,7 @@
 ```
 
   <a name="arrays--push"></a><a name="4.2"></a>
-  - [4.2](#arrays--push) به جای انتساب مستقیم برای افزودن آیتم ها به یک آرایه از [`Array.push`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) استفاده کنید.
+- ‏[4.2](#arrays--push) به جای انتساب مستقیم برای افزودن آیتم ها به یک آرایه از [`Array.push`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) استفاده کنید.
 
 ```javascript
     const someStack = [];
@@ -358,7 +358,7 @@
 ```
 
   <a name="es6-array-spreads"></a><a name="4.3"></a>
-  - [4.3](#es6-array-spreads) برای کپی کردن آرایه ها از `...`  گسترش آرایه استفاده کنید.
+- ‏[4.3](#es6-array-spreads) برای کپی کردن آرایه ها از `...`  گسترش آرایه استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -376,7 +376,7 @@
 
   <a name="arrays--from"></a>
   <a name="arrays--from-iterable"></a><a name="4.4"></a>
-  - [4.4](#arrays--from-iterable) برای تبدیل یک شیء تکرارپذیر به آرایه, از اسپرد `...` به جای [`Array.from`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) استفاده کنید.
+- ‏[4.4](#arrays--from-iterable) برای تبدیل یک شیء تکرارپذیر به آرایه, از اسپرد `...` به جای [`Array.from`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) استفاده کنید.
 
 ```javascript
     const foo = document.querySelectorAll('.foo');
@@ -402,7 +402,7 @@
 ```
 
   <a name="arrays--mapping"></a>
-  - [4.6](#arrays--mapping) برای نگاشت روی تکرارپذیرها از [`Array.from`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from)  به جای اسپرد `...` استفاده کنید، زیرا از ایجاد یک آرایه میانی جلوگیری می کند.
+- ‏[4.6](#arrays--mapping) برای نگاشت روی تکرارپذیرها از [`Array.from`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from)  به جای اسپرد `...` استفاده کنید، زیرا از ایجاد یک آرایه میانی جلوگیری می کند.
 
 ```javascript
     // ‎بد
@@ -413,7 +413,7 @@
 ```
 
   <a name="arrays--callback-return"></a><a name="4.5"></a>
-  - [4.7](#arrays--callback-return) از عبارات بازگشتی در فراخوانی متد آرایه ها استفاده کنید. اگر بدنه تابع از یک عبارت واحد تشکیل شده باشد که یک عبارت را بدون عوارض جانبی برمی گرداند، حذف `return` اشکالی ندارد. eslint: [`array-callback-return`](https://eslint.org/docs/rules/array-callback-return)
+- ‏[4.7](#arrays--callback-return) از عبارات بازگشتی در فراخوانی متد آرایه ها استفاده کنید. اگر بدنه تابع از یک عبارت واحد تشکیل شده باشد که یک عبارت را بدون عوارض جانبی برمی گرداند، حذف `return` اشکالی ندارد. eslint: [`array-callback-return`](https://eslint.org/docs/rules/array-callback-return)
 
 ```javascript
     // ‎خوب
@@ -458,7 +458,7 @@
 ```
 
   <a name="arrays--bracket-newline"></a>
-  - [4.8](#arrays--bracket-newline) اگر یک آرایه دارای چندین خط است، پس از باز کردن و قبل از بستن پرانتزهای آرایه، از شکستن خط استفاده کنید.
+- ‏[4.8](#arrays--bracket-newline) اگر یک آرایه دارای چندین خط است، پس از باز کردن و قبل از بستن پرانتزهای آرایه، از شکستن خط استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -525,7 +525,7 @@
 ```
 
   <a name="destructuring--array"></a><a name="5.2"></a>
-  - [5.2](#destructuring--array) از استخراج آرایه استفاده کنید. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+- ‏[5.2](#destructuring--array) از استخراج آرایه استفاده کنید. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
 
 ```javascript
     const arr = [1, 2, 3, 4];
@@ -568,7 +568,7 @@
 ## رشته ها
 
   <a name="strings--quotes"></a><a name="6.1"></a>
-  - [6.1](#strings--quotes) برای رشته ها از `''` از نقل قول های تک استفاده کنید. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
+- ‏[6.1](#strings--quotes) برای رشته ها از `''` از نقل قول های تک استفاده کنید. eslint: [`quotes`](https://eslint.org/docs/rules/quotes)
 
 ```javascript
     // ‎بد
@@ -630,7 +630,7 @@
 ```
 
   <a name="strings--eval"></a><a name="6.5"></a>
-  - [6.4](#strings--eval) در یک رشته هرگز از `()eval` استفاده نکنید زیرا آسیب پذیری های زیادی را به برنامه اضافه میکند.</br> eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
+- ‏[6.4](#strings--eval) در یک رشته هرگز از `()eval` استفاده نکنید زیرا آسیب پذیری های زیادی را به برنامه اضافه میکند.</br> eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
 
   <a name="strings--escaping"></a>
 - ‏[6.5](#strings--escaping) بی جهت از کاراکتر `\` در رشته ها استفاده نکنید. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
@@ -686,10 +686,10 @@
 ```
 
   <a name="functions--in-blocks"></a><a name="7.3"></a>
-  - [7.3](#functions--in-blocks) هرگز یک تابع را در یک بلوک غیر تابعی (`if`، `while` و غیره) اعلام نکنید. به جای آن تابع را به یک متغیر اختصاص دهید. مرورگرها به شما اجازه انجام این کار را می‌دهند، اما همه آن‌ها آن را متفاوت تفسیر می‌کنند، که خبر بدی است. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func)
+- ‏[7.3](#functions--in-blocks) هرگز یک تابع را در یک بلوک غیر تابعی (`if`، `while` و غیره) اعلام نکنید. به جای آن تابع را به یک متغیر اختصاص دهید. مرورگرها به شما اجازه انجام این کار را می‌دهند، اما همه آن‌ها آن را متفاوت تفسیر می‌کنند، که خبر بدی است. eslint: [`no-loop-func`](https://eslint.org/docs/rules/no-loop-func)
 
   <a name="functions--note-on-blocks"></a><a name="7.4"></a>
-  - [7.4](#functions--note-on-blocks) **نکته:** ECMA-262 یک `block` را به عنوان لیستی از عبارات تعریف می کند. اعلان تابع یک عبارت نیست.
+- ‏[7.4](#functions--note-on-blocks) **نکته:** ECMA-262 یک `block` را به عنوان لیستی از عبارات تعریف می کند. اعلان تابع یک عبارت نیست.
 
 ```javascript
     // ‎بد
@@ -709,7 +709,7 @@
 ```
 
   <a name="functions--arguments-shadow"></a><a name="7.5"></a>
-  - [7.5](#functions--arguments-shadow) هرگز پارامتری را `arguments` نامگذاری نکنید. این موضوع بر شیء `arguments` که به هر محدوده تابعی داده می شود اولویت خواهد داشت.
+- ‏[7.5](#functions--arguments-shadow) هرگز پارامتری را `arguments` نامگذاری نکنید. این موضوع بر شیء `arguments` که به هر محدوده تابعی داده می شود اولویت خواهد داشت.
 
 ```javascript
     // ‎بد
@@ -742,7 +742,7 @@
 ```
 
   <a name="es6-default-parameters"></a><a name="7.7"></a>
-  - [7.7](#es6-default-parameters) به جای تغییر (mutate) در آرگومان های تابع، از نحو پارامتر پیش فرض استفاده کنید.
+- ‏[7.7](#es6-default-parameters) به جای تغییر (mutate) در آرگومان های تابع، از نحو پارامتر پیش فرض استفاده کنید.
 
 ```javascript
     // ‎بسیار بد
@@ -786,7 +786,7 @@
 ```
 
   <a name="functions--defaults-last"></a><a name="7.9"></a>
-  - [7.9](#functions--defaults-last) همیشه پارامترهای پیش فرض را در آخر قرار دهید. eslint: [`default-param-last`](https://eslint.org/docs/rules/default-param-last)
+- ‏[7.9](#functions--defaults-last) همیشه پارامترهای پیش فرض را در آخر قرار دهید. eslint: [`default-param-last`](https://eslint.org/docs/rules/default-param-last)
 
 ```javascript
     // ‎بد
@@ -896,7 +896,7 @@
 ```
 
   <a name="functions--signature-invocation-indentation"></a>
-  - [7.15](#functions--signature-invocation-indentation) توابع با امضای چند خطی یا فراخوانی باید درست مانند هر فهرست چند خطی دیگر در این راهنما تورفتگی داشته باشند: با هر مورد در یک خط به تنهایی، با یک کاما انتهایی در آخرین مورد. eslint: [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
+- ‏[7.15](#functions--signature-invocation-indentation) توابع با امضای چند خطی یا فراخوانی باید درست مانند هر فهرست چند خطی دیگر در این راهنما تورفتگی داشته باشند: با هر مورد در یک خط به تنهایی، با یک کاما انتهایی در آخرین مورد. eslint: [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
 
 ```javascript
     // ‎بد
@@ -1056,7 +1056,7 @@
 ```
 
   <a name="arrows--confusing"></a><a name="8.5"></a>
-  - [8.5](#arrows--confusing) از گیج شدن نحو تابع پیکان (`=>`) با عملگرهای مقایسه (`<=`، `>=`) خودداری کنید. eslint: [`no-confusing-arrow`](https://eslint.org/docs/rules/no-confusing-arrow)
+- ‏[8.5](#arrows--confusing) از گیج شدن نحو تابع پیکان (`=>`) با عملگرهای مقایسه (`<=`، `>=`) خودداری کنید. eslint: [`no-confusing-arrow`](https://eslint.org/docs/rules/no-confusing-arrow)
 
 ```javascript
     // ‎بد
@@ -1076,7 +1076,7 @@
 ```
 
   <a name="whitespace--implicit-arrow-linebreak"></a>
-  - [8.6](#whitespace--implicit-arrow-linebreak) مکان بدنه های تابع پیکان را با بازگشت های ضمنی اعمال کنید. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
+- ‏[8.6](#whitespace--implicit-arrow-linebreak) مکان بدنه های تابع پیکان را با بازگشت های ضمنی اعمال کنید. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
 
 ```javascript
     // ‎بد
@@ -1152,7 +1152,7 @@
 ```
 
   <a name="constructors--chaining"></a><a name="9.3"></a>
-  - [9.3](#constructors--chaining) متد‌ها می‌توانند `this` را برای کمک به زنجیره‌سازی متد برگردانند.
+- ‏[9.3](#constructors--chaining) متد‌ها می‌توانند `this` را برای کمک به زنجیره‌سازی متد برگردانند.
 
 ```javascript
     // ‎بد
@@ -1189,7 +1189,7 @@
 ```
 
   <a name="constructors--tostring"></a><a name="9.4"></a>
-  - [9.4](#constructors--tostring) نوشتن یک متد سفارشی `()toString` اشکالی ندارد، فقط مطمئن شوید که با موفقیت کار می کند و عوارض جانبی ایجاد نمی کند.
+- ‏[9.4](#constructors--tostring) نوشتن یک متد سفارشی `()toString` اشکالی ندارد، فقط مطمئن شوید که با موفقیت کار می کند و عوارض جانبی ایجاد نمی کند.
 
 ```javascript
     class Jedi {
@@ -1208,7 +1208,7 @@
 ```
 
   <a name="constructors--no-useless"></a><a name="9.5"></a>
-  - [9.5](#constructors--no-useless) در صورتی که کلاس ها یک سازنده پیش فرض داشته باشند. یک تابع سازنده خالی یا تابعی که فقط به یک کلاس والد واگذار می شود، ضروری نیست. eslint: [`no-useless-constructor`](https://eslint.org/docs/rules/no-useless-constructor)
+- ‏[9.5](#constructors--no-useless) در صورتی که کلاس ها یک سازنده پیش فرض داشته باشند. یک تابع سازنده خالی یا تابعی که فقط به یک کلاس والد واگذار می شود، ضروری نیست. eslint: [`no-useless-constructor`](https://eslint.org/docs/rules/no-useless-constructor)
 
 ```javascript
     // ‎بد
@@ -1260,7 +1260,7 @@
 ```
 
   <a name="classes--methods-use-this"></a>
-  - [9.7](#classes--methods-use-this) متدهای کلاس باید از `this` استفاده کنند یا به یک روش ثابت تبدیل شوند، مگر اینکه یک کتابخانه یا چارچوب خارجی نیاز به استفاده از روش‌های غیراستاتیک خاصی داشته باشد. یک روش نمونه بودن باید نشان دهد که بر اساس ویژگی های گیرنده رفتار متفاوتی دارد. </br> eslint: [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
+- ‏[9.7](#classes--methods-use-this) متدهای کلاس باید از `this` استفاده کنند یا به یک روش ثابت تبدیل شوند، مگر اینکه یک کتابخانه یا چارچوب خارجی نیاز به استفاده از روش‌های غیراستاتیک خاصی داشته باشد. یک روش نمونه بودن باید نشان دهد که بر اساس ویژگی های گیرنده رفتار متفاوتی دارد. </br> eslint: [`class-methods-use-this`](https://eslint.org/docs/rules/class-methods-use-this)
 
 ```javascript
     // ‎بد
@@ -1345,7 +1345,7 @@
 ```
 
   <a name="modules--no-duplicate-imports"></a>
-  - [10.4](#modules--no-duplicate-imports) فقط از یک مسیر در یک مکان وارد کنید.
+- ‏[10.4](#modules--no-duplicate-imports) فقط از یک مسیر در یک مکان وارد کنید.
  eslint: [`no-duplicate-imports`](https://eslint.org/docs/rules/no-duplicate-imports)
     > چرا؟ داشتن چندین خط که از یک مسیر وارد می شوند، می تواند حفظ کد را سخت تر کند.
 
@@ -1366,7 +1366,7 @@
 ```
 
   <a name="modules--no-mutable-exports"></a>
-  - [10.5](#modules--no-mutable-exports) پیوندهای قابل تغییر صادر نکنید.
+- ‏[10.5](#modules--no-mutable-exports) پیوندهای قابل تغییر صادر نکنید.
  eslint: [`import/no-mutable-exports`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md)
     > چرا؟ باید از mutation به طور کلی اجتناب شود، اما به طور خاص هنگام صادرات اتصالات قابل تغییر، در حالی که ممکن است این تکنیک برای برخی موارد خاص مورد نیاز باشد، به طور کلی، فقط مراجع ثابت باید صادر شوند.
 
@@ -1381,7 +1381,7 @@
 ```
 
   <a name="modules--prefer-default-export"></a>
-  - [10.6](#modules--prefer-default-export) در ماژول‌هایی با یک صادرات، صادرات پیش‌فرض را به صادرات نام‌گذاری شده ترجیح دهید.
+- ‏[10.6](#modules--prefer-default-export) در ماژول‌هایی با یک صادرات، صادرات پیش‌فرض را به صادرات نام‌گذاری شده ترجیح دهید.
  eslint: [`import/prefer-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
     > چرا؟ برای تشویق فایل های بیشتری که فقط یک چیز را صادر می کنند، که برای خوانایی و نگهداری بهتر است.
 
@@ -1394,7 +1394,7 @@
 ```
 
   <a name="modules--imports-first"></a>
-  - [10.7](#modules--imports-first) همه `import` ها را بالای عبارات غیروارداتی قرار دهید.
+- ‏[10.7](#modules--imports-first) همه `import` ها را بالای عبارات غیروارداتی قرار دهید.
  eslint: [`import/first`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
     > چرا؟ از آنجایی که `import` ها بالا میروند، نگه داشتن همه آنها در بالا از رفتار غیر منتظرانه کد جلوگیری می‌کند.
 
@@ -1433,7 +1433,7 @@
 ```
 
   <a name="modules--no-webpack-loader-syntax"></a>
-  - [10.9](#modules--no-webpack-loader-syntax) دستور لودر Webpack را در دستورات وارد کردن ماژول مجاز نکنید.
+- ‏[10.9](#modules--no-webpack-loader-syntax) دستور لودر Webpack را در دستورات وارد کردن ماژول مجاز نکنید.
  eslint: [`import/no-webpack-loader-syntax`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)
     > چرا؟ از آنجایی که استفاده از سینتکس Webpack در واردات، کد را به یک بسته‌کننده ماژول جفت می‌کند. ترجیحاً از سینتکس لودر در `webpack.config.js` استفاده کنید.
 
@@ -1448,7 +1448,7 @@
 ```
 
   <a name="modules--import-extensions"></a>
-  - [10.10](#modules--import-extensions) پسوندهای نام فایل جاوا اسکریپت را درج نکنید
+- ‏[10.10](#modules--import-extensions) پسوندهای نام فایل جاوا اسکریپت را درج نکنید
  eslint: [`import/extensions`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md)
     > چرا؟ گنجاندن پسوندها از بازآفرینی کد جلوگیری می‌کند و به‌طور نامناسب جزئیات پیاده‌سازی ماژولی را که وارد می‌کنید در هر مصرف‌کننده‌ای را کدگذاری می‌کند.
 
@@ -1583,7 +1583,7 @@
 ## خصوصیات
 
   <a name="properties--dot"></a><a name="12.1"></a>
-  - [12.1](#properties--dot) هنگام دسترسی به ویژگی ها از نماد نقطه استفاده کنید. eslint: [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
+- ‏[12.1](#properties--dot) هنگام دسترسی به ویژگی ها از نماد نقطه استفاده کنید. eslint: [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
 
 ```javascript
     const luke = {
@@ -1599,7 +1599,7 @@
 ```
 
   <a name="properties--bracket"></a><a name="12.2"></a>
-  - [12.2](#properties--bracket) هنگام دسترسی به خصوصیات با یک متغیر، از علامت براکت `[]` استفاده کنید.
+- ‏[12.2](#properties--bracket) هنگام دسترسی به خصوصیات با یک متغیر، از علامت براکت `[]` استفاده کنید.
 
 ```javascript
     const luke = {
@@ -1615,7 +1615,7 @@
 ```
 
   <a name="es2016-properties--exponentiation-operator"></a>
-  - [12.3](#es2016-properties--exponentiation-operator) هنگام محاسبه توان از عملگر توانی `**` استفاده کنید. eslint: [`no-restricted-properties`](https://eslint.org/docs/rules/no-restricted-properties).
+- ‏[12.3](#es2016-properties--exponentiation-operator) هنگام محاسبه توان از عملگر توانی `**` استفاده کنید. eslint: [`no-restricted-properties`](https://eslint.org/docs/rules/no-restricted-properties).
 
 ```javascript
     // ‎بد
@@ -1630,7 +1630,7 @@
 ## متغیرها
 
   <a name="variables--const"></a><a name="13.1"></a>
-  - [13.1](#variables--const) همیشه از `const` یا `let` برای اعلام متغیرها استفاده کنید. عدم انجام این کار باعث ایجاد متغیرهای سراسری می شود. ما می خواهیم از آلودگی فضای نام جهانی جلوگیری کنیم.جلوتر به شما در این مورد هشدار داده ایم.</br> eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
+- ‏[13.1](#variables--const) همیشه از `const` یا `let` برای اعلام متغیرها استفاده کنید. عدم انجام این کار باعث ایجاد متغیرهای سراسری می شود. ما می خواهیم از آلودگی فضای نام جهانی جلوگیری کنیم.جلوتر به شما در این مورد هشدار داده ایم.</br> eslint: [`no-undef`](https://eslint.org/docs/rules/no-undef) [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
 
 ```javascript
     // ‎بد
@@ -1796,7 +1796,7 @@
 ```
 
 <a name="variables--linebreak"></a>
-  - [13.7](#variables--linebreak) از شکستن خط قبل یا بعد از `=` در تعریف یک متغیر اجتناب کنید. If your assignment violates [`max-len`](https://eslint.org/docs/rules/max-len), مقدار را در پرانتز احاطه کنید. eslint [`operator-linebreak`](https://eslint.org/docs/rules/operator-linebreak).
+- ‏[13.7](#variables--linebreak) از شکستن خط قبل یا بعد از `=` در تعریف یک متغیر اجتناب کنید. If your assignment violates [`max-len`](https://eslint.org/docs/rules/max-len), مقدار را در پرانتز احاطه کنید. eslint [`operator-linebreak`](https://eslint.org/docs/rules/operator-linebreak).
 
     > چرا؟ شکستن خط ها اطراف `=` می تواند مقدار یک انتساب را مبهم کند.
 
@@ -1863,7 +1863,7 @@
 ## بالا بردن
 
   <a name="hoisting--about"></a><a name="14.1"></a>
-  - [14.1](#hoisting--about) اعلان‌های `var` به بالای نزدیک‌ترین محدوده تابع محصورکننده خود بالا می‌روند، اما تخصیص آنها اینطور نیست. اعلان‌های `const` و `let` با مفهوم جدیدی به نام [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) همراه هستند، مهم است بدانیم چرا [`typeof` ایمن نیست](https://web.archive.org/web/20200121061528/http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
+- ‏[14.1](#hoisting--about) اعلان‌های `var` به بالای نزدیک‌ترین محدوده تابع محصورکننده خود بالا می‌روند، اما تخصیص آنها اینطور نیست. اعلان‌های `const` و `let` با مفهوم جدیدی به نام [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) همراه هستند، مهم است بدانیم چرا [`typeof` ایمن نیست](https://web.archive.org/web/20200121061528/http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
 
 ```javascript
     // ‎ما می دانیم که این کار نمی کند (با فرض وجود
@@ -1896,7 +1896,7 @@
 ```
 
   <a name="hoisting--anon-expressions"></a><a name="14.2"></a>
-  - [14.2](#hoisting--anon-expressions) عبارات تابع ناشناس نام متغیر خود را بالا می برند، اما تخصیص تابع نه.
+- ‏[14.2](#hoisting--anon-expressions) عبارات تابع ناشناس نام متغیر خود را بالا می برند، اما تخصیص تابع نه.
 
 ```javascript
     function example() {
@@ -1911,7 +1911,7 @@
 ```
 
   <a name="hoisting--named-expresions"></a><a name="hoisting--named-expressions"></a><a name="14.3"></a>
-  - [14.3](#hoisting--named-expressions) عبارات تابع نامگذاری شده نام متغیر را بالا می برند، نه نام تابع یا بدنه تابع.
+- ‏[14.3](#hoisting--named-expressions) عبارات تابع نامگذاری شده نام متغیر را بالا می برند، نه نام تابع یا بدنه تابع.
 
 ```javascript
     function example() {
@@ -1939,7 +1939,7 @@
 ```
 
   <a name="hoisting--declarations"></a><a name="14.4"></a>
-  - [14.4](#hoisting--declarations) اعلان های تابع نام و بدنه عملکرد را بالا می برند.
+- ‏[14.4](#hoisting--declarations) اعلان های تابع نام و بدنه عملکرد را بالا می برند.
 
 ```javascript
     function example() {
@@ -1958,10 +1958,10 @@
 ## اپراتورهای مقایسه و برابری
 
   <a name="comparison--eqeqeq"></a><a name="15.1"></a>
-  - [15.1](#comparison--eqeqeq) از `===` و `!==` مقابل `==` و `!=` استفاده کنید. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq)
+- ‏[15.1](#comparison--eqeqeq) از `===` و `!==` مقابل `==` و `!=` استفاده کنید. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq)
 
   <a name="comparison--if"></a><a name="15.2"></a>
-  - [15.2](#comparison--if) عبارات شرطی مانند عبارت `if` بیان خود را با استفاده از اجبار با روش انتزاعی `ToBoolean` ارزیابی می کنند و همیشه از این قوانین ساده پیروی می کنند.:
+- ‏[15.2](#comparison--if) عبارات شرطی مانند عبارت `if` بیان خود را با استفاده از اجبار با روش انتزاعی `ToBoolean` ارزیابی می کنند و همیشه از این قوانین ساده پیروی می کنند.:
 
 - **Objects** میشود **true**
 - **Undefined** میشود **false**
@@ -1978,7 +1978,7 @@
 ```
 
   <a name="comparison--shortcuts"></a><a name="15.3"></a>
-  - [15.3](#comparison--shortcuts) از میانبرها برای `Boolean` ها استفاده کنید، اما از مقایسه صریح برای رشته ها و اعداد استفاده کنید.
+- ‏[15.3](#comparison--shortcuts) از میانبرها برای `Boolean` ها استفاده کنید، اما از مقایسه صریح برای رشته ها و اعداد استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -2013,7 +2013,7 @@
 ```
 
   <a name="comparison--moreinfo"></a><a name="15.4"></a>
-  - [15.4](#comparison--moreinfo) برای اطلاعات بیشتر به [برابری حقیقت و جاوا اسکریپت](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) مراجعه کنید. توسط Angus Croll.
+- ‏[15.4](#comparison--moreinfo) برای اطلاعات بیشتر به [برابری حقیقت و جاوا اسکریپت](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) مراجعه کنید. توسط Angus Croll.
 
   <a name="comparison--switch-blocks"></a><a name="15.5"></a>
 - ‏[15.5](#comparison--switch-blocks) ز پرانتزها برای ایجاد بلوک‌هایی در عبارت‌های `case` و `default` استفاده کنید که حاوی اعلان‌های لغوی هستند (مثلاً `let`، `const`، `function` و `class`). eslint: [`no-case-declarations`](https://eslint.org/docs/rules/no-case-declarations)
@@ -2064,7 +2064,7 @@
 ```
 
   <a name="comparison--nested-ternaries"></a><a name="15.6"></a>
-  - [15.6](#comparison--nested-ternaries) ترنری ها نباید تودرتو باشند و عموماً باید عبارت های تک خطی باشند. eslint: [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
+- ‏[15.6](#comparison--nested-ternaries) ترنری ها نباید تودرتو باشند و عموماً باید عبارت های تک خطی باشند. eslint: [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
 
 ```javascript
     // ‎بد
@@ -2085,7 +2085,7 @@
 ```
 
   <a name="comparison--unneeded-ternary"></a><a name="15.7"></a>
-  - [15.7](#comparison--unneeded-ternary) از اظهارات سه تایی غیر ضروری خودداری کنید. eslint: [`no-unneeded-ternary`](https://eslint.org/docs/rules/no-unneeded-ternary)
+- ‏[15.7](#comparison--unneeded-ternary) از اظهارات سه تایی غیر ضروری خودداری کنید. eslint: [`no-unneeded-ternary`](https://eslint.org/docs/rules/no-unneeded-ternary)
 
 ```javascript
     // ‎بد
@@ -2102,7 +2102,7 @@
 ```
 
   <a name="comparison--no-mixed-operators"></a>
-  - [15.8](#comparison--no-mixed-operators) هنگام مخلوط کردن عملگرها، آنها را داخل پرانتز قرار دهید. تنها استثنا عملگرهای حسابی استاندارد هستند: `+`، `-`، و `**` زیرا تقدم آنها به طور گسترده درک شده است. توصیه می‌کنیم `/` و `*` را در پرانتز قرار دهید زیرا اولویت آنها ممکن است زمانی که با هم مخلوط می‌شوند مبهم باشد.
+- ‏[15.8](#comparison--no-mixed-operators) هنگام مخلوط کردن عملگرها، آنها را داخل پرانتز قرار دهید. تنها استثنا عملگرهای حسابی استاندارد هستند: `+`، `-`، و `**` زیرا تقدم آنها به طور گسترده درک شده است. توصیه می‌کنیم `/` و `*` را در پرانتز قرار دهید زیرا اولویت آنها ممکن است زمانی که با هم مخلوط می‌شوند مبهم باشد.
   eslint: [`no-mixed-operators`](https://eslint.org/docs/rules/no-mixed-operators)
 
     > چرا؟ این خوانایی را بهبود می بخشد و قصد توسعه دهنده را روشن می کند.
@@ -2143,7 +2143,7 @@
 ## بلوک ها
 
   <a name="blocks--braces"></a><a name="16.1"></a>
-  - [16.1](#blocks--braces) در تمام بلوک های چند خطی از بریس ها استفاده کنید. eslint: [`nonblock-statement-body-position`](https://eslint.org/docs/rules/nonblock-statement-body-position)
+- ‏[16.1](#blocks--braces) در تمام بلوک های چند خطی از بریس ها استفاده کنید. eslint: [`nonblock-statement-body-position`](https://eslint.org/docs/rules/nonblock-statement-body-position)
 
 ```javascript
     // ‎بد
@@ -2168,7 +2168,7 @@
 ```
 
   <a name="blocks--cuddled-elses"></a><a name="16.2"></a>
-  - [16.2](#blocks--cuddled-elses) اگر از بلوک‌های چند خطی با `if` و `else` استفاده می‌کنید، `else` را در همان خط مهاربند بسته شدن بلوک `if` خود قرار دهید. eslint: [`brace-style`](https://eslint.org/docs/rules/brace-style)
+- ‏[16.2](#blocks--cuddled-elses) اگر از بلوک‌های چند خطی با `if` و `else` استفاده می‌کنید، `else` را در همان خط مهاربند بسته شدن بلوک `if` خود قرار دهید. eslint: [`brace-style`](https://eslint.org/docs/rules/brace-style)
 
 ```javascript
     // ‎بد
@@ -2190,7 +2190,7 @@
 ```
 
   <a name="blocks--no-else-return"></a><a name="16.3"></a>
-  - [16.3](#blocks--no-else-return) اگر یک بلوک `if` همیشه عبارت `return` را اجرا می‌کند، بلوک `else` بعدی ضروری نیست. یک `بازگشت` در بلوک `اگر دیگر` به دنبال بلوک `اگر` که حاوی `بازگشت` است، می‌تواند به بلوک‌های `اگر` متعدد جدا شود. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
+- ‏[16.3](#blocks--no-else-return) اگر یک بلوک `if` همیشه عبارت `return` را اجرا می‌کند، بلوک `else` بعدی ضروری نیست. یک `بازگشت` در بلوک `اگر دیگر` به دنبال بلوک `اگر` که حاوی `بازگشت` است، می‌تواند به بلوک‌های `اگر` متعدد جدا شود. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
 
 ```javascript
     // ‎بد
@@ -2259,7 +2259,7 @@
 ## بیانیه های کنترلی
 
   <a name="control-statements"></a>
-  - [17.1](#control-statements) در صورتی که دستور کنترل شما (`if`, `while`  و غیره) بیش از حد طولانی شود یا از حداکثر طول خط فراتر رود، هر شرط (گروه‌بندی شده) را می‌توان در یک خط جدید قرار داد. عملگر منطقی باید خط را شروع کند.
+- ‏[17.1](#control-statements) در صورتی که دستور کنترل شما (`if`, `while`  و غیره) بیش از حد طولانی شود یا از حداکثر طول خط فراتر رود، هر شرط (گروه‌بندی شده) را می‌توان در یک خط جدید قرار داد. عملگر منطقی باید خط را شروع کند.
 
     > چرا؟ نیاز به عملگرها در ابتدای خط، عملگرها را در یک راستا نگه می‌دارد و از الگوی مشابه زنجیره‌بندی متد پیروی می‌کند. این همچنین خوانایی را با تسهیل بصری پیروی از منطق پیچیده بهبود می بخشد.
 
@@ -2313,7 +2313,7 @@
 ```
 
   <a name="control-statement--value-selection"></a><a name="control-statements--value-selection"></a>
-  - [17.2](#control-statements--value-selection) از عملگرهای انتخاب به جای دستورات کنترلی استفاده نکنید.
+- ‏[17.2](#control-statements--value-selection) از عملگرهای انتخاب به جای دستورات کنترلی استفاده نکنید.
 
 ```javascript
     // ‎بد
@@ -2330,7 +2330,7 @@
 ## توضیح نویسی
 
   <a name="comments--multiline"></a><a name="17.1"></a>
-  - [18.1](#comments--multiline) برای نظرات چند خطی از `/** ... */` استفاده کنید.
+- ‏[18.1](#comments--multiline) برای نظرات چند خطی از `/** ... */` استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -2358,7 +2358,7 @@
 ```
 
   <a name="comments--singleline"></a><a name="17.2"></a>
-  - [18.2](#comments--singleline) برای نظرات تک خطی از `//` استفاده کنید. نظرات تک خطی را در خط جدید بالای موضوع نظر قرار دهید. یک خط خالی قبل از نظر قرار دهید مگر اینکه در اولین خط یک بلوک باشد.
+- ‏[18.2](#comments--singleline) برای نظرات تک خطی از `//` استفاده کنید. نظرات تک خطی را در خط جدید بالای موضوع نظر قرار دهید. یک خط خالی قبل از نظر قرار دهید مگر اینکه در اولین خط یک بلوک باشد.
 
 ```javascript
     // ‎بد
@@ -2397,7 +2397,7 @@
 ```
 
   <a name="comments--spaces"></a>
-  - [18.3](#comments--spaces) همه نظرات را با یک فاصله شروع کنید تا خواندن آن آسان تر شود. eslint: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
+- ‏[18.3](#comments--spaces) همه نظرات را با یک فاصله شروع کنید تا خواندن آن آسان تر شود. eslint: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
 
 ```javascript
     // ‎بد
@@ -2432,10 +2432,10 @@
 ```
 
   <a name="comments--actionitems"></a><a name="17.3"></a>
-  - [18.4](#comments--actionitems) قرار دادن پیشوند نظرات خود با `FIXME` یا `TODO` به سایر برنامه‌نویسان کمک می‌کند تا به سرعت متوجه شوند که آیا به مشکلی اشاره می‌کنید که باید دوباره بررسی شود یا راه‌حلی برای مشکلی پیشنهاد می‌کنید که باید اجرا شود. اینها با نظرات معمولی متفاوت هستند زیرا قابل اجرا هستند. اقدامات عبارتند از: `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
+- ‏[18.4](#comments--actionitems) قرار دادن پیشوند نظرات خود با `FIXME` یا `TODO` به سایر برنامه‌نویسان کمک می‌کند تا به سرعت متوجه شوند که آیا به مشکلی اشاره می‌کنید که باید دوباره بررسی شود یا راه‌حلی برای مشکلی پیشنهاد می‌کنید که باید اجرا شود. اینها با نظرات معمولی متفاوت هستند زیرا قابل اجرا هستند. اقدامات عبارتند از: `FIXME: -- need to figure this out` or `TODO: -- need to implement`.
 
   <a name="comments--fixme"></a><a name="17.4"></a>
-  - [18.5](#comments--fixme) برای حاشیه نویسی مشکلات از `// FIXME:` استفاده کنید.
+- ‏[18.5](#comments--fixme) برای حاشیه نویسی مشکلات از `// FIXME:` استفاده کنید.
 
 ```javascript
     class Calculator extends Abacus {
@@ -2449,7 +2449,7 @@
 ```
 
   <a name="comments--todo"></a><a name="17.5"></a>
-  - [18.6](#comments--todo) از `// TODO:` برای حاشیه نویسی راه حل های مشکلات استفاده کنید.
+- ‏[18.6](#comments--todo) از `// TODO:` برای حاشیه نویسی راه حل های مشکلات استفاده کنید.
 
 ```javascript
     class Calculator extends Abacus {
@@ -2467,7 +2467,7 @@
 ## فضای سفید
 
   <a name="whitespace--spaces"></a><a name="18.1"></a>
-  - [19.1](#whitespace--spaces) از زبانه های نرم (نویسه فاصله) با 2 فاصله استفاده کنید. eslint: [`indent`](https://eslint.org/docs/rules/indent)
+- ‏[19.1](#whitespace--spaces) از زبانه های نرم (نویسه فاصله) با 2 فاصله استفاده کنید. eslint: [`indent`](https://eslint.org/docs/rules/indent)
 
 ```javascript
     // ‎بد
@@ -2487,7 +2487,7 @@
 ```
 
   <a name="whitespace--before-blocks"></a><a name="18.2"></a>
-  - [19.2](#whitespace--before-blocks) 1 فاصله قبل از بریس پیشرو قرار دهید. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
+- ‏[19.2](#whitespace--before-blocks) 1 فاصله قبل از بریس پیشرو قرار دهید. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
 
 ```javascript
     // ‎بد
@@ -2514,7 +2514,7 @@
 ```
 
   <a name="whitespace--around-keywords"></a><a name="18.3"></a>
-  - [19.3](#whitespace--around-keywords)  فاصله قبل از پرانتز آغازین در دستورات کنترل (`if`، `while` و غیره) قرار دهید. هیچ فاصله ای بین لیست آرگومان و نام تابع در فراخوانی ها و اعلان های تابع قرار ندهید. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing)
+- ‏[19.3](#whitespace--around-keywords)  فاصله قبل از پرانتز آغازین در دستورات کنترل (`if`، `while` و غیره) قرار دهید. هیچ فاصله ای بین لیست آرگومان و نام تابع در فراخوانی ها و اعلان های تابع قرار ندهید. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing)
 
 ```javascript
     // ‎بد
@@ -2539,7 +2539,7 @@
 ```
 
   <a name="whitespace--infix-ops"></a><a name="18.4"></a>
-  - [19.4](#whitespace--infix-ops) عملگرها را با فاصله تنظیم کنید. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops)
+- ‏[19.4](#whitespace--infix-ops) عملگرها را با فاصله تنظیم کنید. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops)
 
 ```javascript
     // ‎بد
@@ -2550,7 +2550,7 @@
 ```
 
   <a name="whitespace--newline-at-end"></a><a name="18.5"></a>
-  - [19.5](#whitespace--newline-at-end) فایل ها را با یک نویسه خط جدید پایان دهید. eslint: [`eol-last`](https://eslint.org/docs/rules/eol-last)
+- ‏[19.5](#whitespace--newline-at-end) فایل ها را با یک نویسه خط جدید پایان دهید. eslint: [`eol-last`](https://eslint.org/docs/rules/eol-last)
 
 ```javascript
     // ‎بد
@@ -2575,7 +2575,7 @@
 ```
 
   <a name="whitespace--chains"></a><a name="18.6"></a>
-  - [19.6](#whitespace--chains) هنگام ساخت زنجیرهای متد بلند (بیش از 2 زنجیره متد) از تورفتگی استفاده کنید. از یک نقطه پیشرو استفاده کنید که
+- ‏[19.6](#whitespace--chains) هنگام ساخت زنجیرهای متد بلند (بیش از 2 زنجیره متد) از تورفتگی استفاده کنید. از یک نقطه پیشرو استفاده کنید که
      تاکید می کند که خط یک فراخوانی متد است، نه یک دستور جدید.</br> eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
 
 ```javascript
@@ -2623,7 +2623,7 @@
 ```
 
   <a name="whitespace--after-blocks"></a><a name="18.7"></a>
-  - [19.7](#whitespace--after-blocks) بعد از بلوک ها و قبل از عبارت بعدی یک خط خالی بگذارید.
+- ‏[19.7](#whitespace--after-blocks) بعد از بلوک ها و قبل از عبارت بعدی یک خط خالی بگذارید.
 
 ```javascript
     // ‎بد
@@ -2681,7 +2681,7 @@
 ```
 
   <a name="whitespace--padded-blocks"></a><a name="18.8"></a>
-  - [19.8](#whitespace--padded-blocks) بلوک های خود را با خطوط خالی پر نکنید. eslint: [`padded-blocks`](https://eslint.org/docs/rules/padded-blocks)
+- ‏[19.8](#whitespace--padded-blocks) بلوک های خود را با خطوط خالی پر نکنید. eslint: [`padded-blocks`](https://eslint.org/docs/rules/padded-blocks)
 
 ```javascript
     // ‎بد
@@ -2776,7 +2776,7 @@
 ```
 
   <a name="whitespace--in-parens"></a><a name="18.9"></a>
-  - [19.10](#whitespace--in-parens) داخل پرانتز فاصله اضافه نکنید. eslint: [`space-in-parens`](https://eslint.org/docs/rules/space-in-parens)
+- ‏[19.10](#whitespace--in-parens) داخل پرانتز فاصله اضافه نکنید. eslint: [`space-in-parens`](https://eslint.org/docs/rules/space-in-parens)
 
 ```javascript
     // ‎بد
@@ -2801,7 +2801,7 @@
 ```
 
   <a name="whitespace--in-brackets"></a><a name="18.10"></a>
-  - [19.11](#whitespace--in-brackets) داخل براکت ها فاصله اضافه نکنید. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing)
+- ‏[19.11](#whitespace--in-brackets) داخل براکت ها فاصله اضافه نکنید. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing)
 
 ```javascript
     // ‎بد
@@ -2814,7 +2814,7 @@
 ```
 
   <a name="whitespace--in-braces"></a><a name="18.11"></a>
-  - [19.12](#whitespace--in-braces) فضاهای داخل کرلی بریس ها را اضافه کنید. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing)
+- ‏[19.12](#whitespace--in-braces) فضاهای داخل کرلی بریس ها را اضافه کنید. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing)
 
 ```javascript
     // ‎بد
@@ -2862,7 +2862,7 @@
 ```
 
   <a name="whitespace--block-spacing"></a>
-  - [19.14](#whitespace--block-spacing) نیاز به فاصله ثابت در داخل یک نشانه بلوک باز و نشانه بعدی در همان خط است. این قانون همچنین فاصله ثابتی را در داخل یک نشانه بلوک نزدیک و توکن قبلی در همان خط اعمال می کند. eslint: [`block-spacing`](https://eslint.org/docs/rules/block-spacing)
+- ‏[19.14](#whitespace--block-spacing) نیاز به فاصله ثابت در داخل یک نشانه بلوک باز و نشانه بعدی در همان خط است. این قانون همچنین فاصله ثابتی را در داخل یک نشانه بلوک نزدیک و توکن قبلی در همان خط اعمال می کند. eslint: [`block-spacing`](https://eslint.org/docs/rules/block-spacing)
 
 ```javascript
     // ‎بد
@@ -2875,7 +2875,7 @@
 ```
 
   <a name="whitespace--comma-spacing"></a>
-  - [19.15](#whitespace--comma-spacing) از فاصله قبل از کاما اجتناب کنید و نیاز به فاصله بعد از کاما دارید. eslint: [`comma-spacing`](https://eslint.org/docs/rules/comma-spacing)
+- ‏[19.15](#whitespace--comma-spacing) از فاصله قبل از کاما اجتناب کنید و نیاز به فاصله بعد از کاما دارید. eslint: [`comma-spacing`](https://eslint.org/docs/rules/comma-spacing)
 
 ```javascript
     // ‎بد
@@ -2888,7 +2888,7 @@
 ```
 
   <a name="whitespace--computed-property-spacing"></a>
-  - [19.16](#whitespace--computed-property-spacing) اعمال فاصله در داخل براکت های ویژگی محاسبه شده. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
+- ‏[19.16](#whitespace--computed-property-spacing) اعمال فاصله در داخل براکت های ویژگی محاسبه شده. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
 
 ```javascript
     // ‎بد
@@ -2905,7 +2905,7 @@
 ```
 
   <a name="whitespace--func-call-spacing"></a>
-  - [19.17](#whitespace--func-call-spacing) از فاصله بین توابع و فراخوانی آنها اجتناب کنید. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
+- ‏[19.17](#whitespace--func-call-spacing) از فاصله بین توابع و فراخوانی آنها اجتناب کنید. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
 
 ```javascript
     // ‎بد
@@ -2919,7 +2919,7 @@
 ```
 
   <a name="whitespace--key-spacing"></a>
-  - [19.18](#whitespace--key-spacing) اعمال فاصله بین کلیدها و مقادیر در ویژگی های لغوی شیء. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
+- ‏[19.18](#whitespace--key-spacing) اعمال فاصله بین کلیدها و مقادیر در ویژگی های لغوی شیء. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
 
 ```javascript
     // ‎بد
@@ -2931,7 +2931,7 @@
 ```
 
   <a name="whitespace--no-trailing-spaces"></a>
-  - [19.19](#whitespace--no-trailing-spaces) از فضاهای انتهایی در انتهای خطوط خودداری کنید. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
+- ‏[19.19](#whitespace--no-trailing-spaces) از فضاهای انتهایی در انتهای خطوط خودداری کنید. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
 
   <a name="whitespace--no-multiple-empty-lines"></a>
 - ‏[19.20](#whitespace--no-multiple-empty-lines) از چند خط خالی اجتناب کنید، فقط یک خط جدید در انتهای فایل ها مجاز کنید و از خط جدید در ابتدای فایل ها اجتناب کنید. eslint: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
@@ -2964,7 +2964,7 @@
 ## ویرگول ها
 
   <a name="commas--leading-trailing"></a><a name="19.1"></a>
-  - [20.1](#commas--leading-trailing) ویرگول اول: **جواب منفیست.** eslint: [`comma-style`](https://eslint.org/docs/rules/comma-style)
+- ‏[20.1](#commas--leading-trailing) ویرگول اول: **جواب منفیست.** eslint: [`comma-style`](https://eslint.org/docs/rules/comma-style)
 
 ```javascript
     // ‎بد
@@ -3149,10 +3149,10 @@
 ## نوع ریختگی و اجبار
 
   <a name="coercion--explicit"></a><a name="21.1"></a>
-  - [22.1](#coercion--explicit) اجبار نوع را در ابتدای بیانیه انجام دهید.
+- ‏[22.1](#coercion--explicit) اجبار نوع را در ابتدای بیانیه انجام دهید.
 
   <a name="coercion--strings"></a><a name="21.2"></a>
-  - [22.2](#coercion--strings) رشته ها: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+- ‏[22.2](#coercion--strings) رشته ها: eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
 ```javascript
     // => this.reviewScore = 9;
@@ -3171,7 +3171,7 @@
 ```
 
   <a name="coercion--numbers"></a><a name="21.3"></a>
-  - [22.3](#coercion--numbers) اعداد: از `Number` برای ریختن نوع و از `parseInt` همیشه با یک ریشه برای تجزیه رشته ها استفاده کنید. eslint: [`radix`](https://eslint.org/docs/rules/radix) [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+- ‏[22.3](#coercion--numbers) اعداد: از `Number` برای ریختن نوع و از `parseInt` همیشه با یک ریشه برای تجزیه رشته ها استفاده کنید. eslint: [`radix`](https://eslint.org/docs/rules/radix) [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
     > چرا؟ تابع 'parseInt' یک مقدار صحیح تولید می کند که توسط تفسیر محتویات آرگومان رشته با توجه به ریشه مشخص شده دیکته می شود. فضای سفید پیشرو در رشته نادیده گرفته می شود. اگر ریشه `undefined` یا `0` باشد، `10` در نظر گرفته می‌شود، به جز زمانی که عدد با جفت‌های کاراکتر `0x` یا `0X` شروع می‌شود، در این صورت، ریشه 16 در نظر گرفته می‌شود. این با ECMAScript 3 متفاوت است، که صرفاً تفسیر اکتالی را منع می کرد (اما مجاز می دانست). بسیاری از پیاده‌سازی‌ها از سال 2013 این رفتار را اتخاذ نکرده‌اند. و چون مرورگرهای قدیمی‌تر باید پشتیبانی شوند، همیشه یک رادیکس مشخص کنید.
 
@@ -3198,7 +3198,7 @@
 ```
 
   <a name="coercion--comment-deviations"></a><a name="21.4"></a>
-  - [22.4](#coercion--comment-deviations) اگر به هر دلیلی در حال انجام کاری غرمعمول هستید و `parseInt` تنگنای شماست و به دلیل [دلایل عملکرد](https://web.archive.org/web/20200414205431/https://jsperf.com/coercion-vs-casting/3) باید از Bitshift استفاده کنید، یک نظر بگذارید و توضیح دهید که چرا و چه کاری انجام می دهید.
+- ‏[22.4](#coercion--comment-deviations) اگر به هر دلیلی در حال انجام کاری غرمعمول هستید و `parseInt` تنگنای شماست و به دلیل [دلایل عملکرد](https://web.archive.org/web/20200414205431/https://jsperf.com/coercion-vs-casting/3) باید از Bitshift استفاده کنید، یک نظر بگذارید و توضیح دهید که چرا و چه کاری انجام می دهید.
 
 ```javascript
     // ‎خوب
@@ -3210,7 +3210,7 @@
 ```
 
   <a name="coercion--bitwise"></a><a name="21.5"></a>
-  - [22.5](#coercion--bitwise) **نکته:** هنگام استفاده از عملیات bitshift مراقب باشید. اعداد به صورت [مقادیر 64 بیتی](https://es5.github.io/#x4.3.19) نشان داده می شوند، اما عملیات bitshift همیشه یک عدد صحیح 32 بیتی ([source](https://es5.github.io/#x11.7)). Bitshift می تواند منجر به رفتار غیرمنتظره برای مقادیر صحیح بزرگتر از 32 بیت شود. [بحث](https://github.com/airbnb/javascript/issues/109). بزرگترین Int 32 بیتی امضا شده 2,147,483,647 است:
+- ‏[22.5](#coercion--bitwise) **نکته:** هنگام استفاده از عملیات bitshift مراقب باشید. اعداد به صورت [مقادیر 64 بیتی](https://es5.github.io/#x4.3.19) نشان داده می شوند، اما عملیات bitshift همیشه یک عدد صحیح 32 بیتی ([source](https://es5.github.io/#x11.7)). Bitshift می تواند منجر به رفتار غیرمنتظره برای مقادیر صحیح بزرگتر از 32 بیت شود. [بحث](https://github.com/airbnb/javascript/issues/109). بزرگترین Int 32 بیتی امضا شده 2,147,483,647 است:
 
 ```javascript
     2147483647 >> 0; // => 2147483647
@@ -3219,7 +3219,7 @@
 ```
 
   <a name="coercion--booleans"></a><a name="21.6"></a>
-  - [22.6](#coercion--booleans) بولی ها:(Booleans) eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
+- ‏[22.6](#coercion--booleans) بولی ها:(Booleans) eslint: [`no-new-wrappers`](https://eslint.org/docs/rules/no-new-wrappers)
 
 ```javascript
     const age = 0;
@@ -3239,7 +3239,7 @@
 ## قراردادهای نامگذاری
 
   <a name="naming--descriptive"></a><a name="22.1"></a>
-  - [23.1](#naming--descriptive) از نام های تک حرفی خودداری کنید. در نامگذاری توصیفی تر باشید. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
+- ‏[23.1](#naming--descriptive) از نام های تک حرفی خودداری کنید. در نامگذاری توصیفی تر باشید. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
 
 ```javascript
     // ‎بد
@@ -3253,7 +3253,7 @@
 ```
 
   <a name="naming--camelCase"></a><a name="22.2"></a>
-  - [23.2](#naming--camelCase) هنگام نامگذاری اشیا، توابع و نمونه ها از camelCase استفاده کنید. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase)
+- ‏[23.2](#naming--camelCase) هنگام نامگذاری اشیا، توابع و نمونه ها از camelCase استفاده کنید. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase)
 
 ```javascript
     // ‎بد
@@ -3266,7 +3266,7 @@
 ```
 
   <a name="naming--PascalCase"></a><a name="22.3"></a>
-  - [23.3](#naming--PascalCase) فقط هنگام نامگذاری سازنده ها یا کلاس ها از PascalCase استفاده کنید. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
+- ‏[23.3](#naming--PascalCase) فقط هنگام نامگذاری سازنده ها یا کلاس ها از PascalCase استفاده کنید. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap)
 
 ```javascript
     // ‎بد
@@ -3290,7 +3290,7 @@
 ```
 
   <a name="naming--leading-underscore"></a><a name="22.4"></a>
-  - [23.4](#naming--leading-underscore) از زیرخط های انتهایی یا پیشرو استفاده نکنید. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle)
+- ‏[23.4](#naming--leading-underscore) از زیرخط های انتهایی یا پیشرو استفاده نکنید. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle)
 
     > چرا؟ جاوا اسکریپت از نظر ویژگی ها یا روش ها مفهوم حریم خصوصی را ندارد. اگر چه یک زیرخط پیشرو یک قرارداد رایج به معنای “private” است، اما در واقع، این ویژگی‌ها کاملاً عمومی هستند و به این ترتیب، بخشی از قرارداد عمومی API شما هستند. این قرارداد ممکن است باعث شود توسعه دهندگان به اشتباه فکر کنند که تغییر به عنوان شکستگی به حساب نمی آید، یا آزمایش هایی لازم نیست. کوتاه بگوییم: اگر می‌خواهید چیزی “private” باشد، نباید به‌طور قابل مشاهده وجود داشته باشد.
 
@@ -3310,7 +3310,7 @@
 ```
 
   <a name="naming--self-this"></a><a name="22.5"></a>
-  - [23.5](#naming--self-this) ارجاعات به `this` را ذخیره نکنید. از توابع پیکان یا [Function#bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) استفاده کنید.
+- ‏[23.5](#naming--self-this) ارجاعات به `this` را ذخیره نکنید. از توابع پیکان یا [Function#bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -3338,7 +3338,7 @@
 ```
 
   <a name="naming--filename-matches-export"></a><a name="22.6"></a>
-  - [23.6](#naming--filename-matches-export) نام فایل پایه باید دقیقاً با نام `export` پیش فرض آن مطابقت داشته باشد.
+- ‏[23.6](#naming--filename-matches-export) نام فایل پایه باید دقیقاً با نام `export` پیش فرض آن مطابقت داشته باشد.
 
 ```javascript
     // ‎محتویات فایل 1
@@ -3374,7 +3374,7 @@
 ```
 
   <a name="naming--camelCase-default-export"></a><a name="22.7"></a>
-  - [23.7](#naming--camelCase-default-export) هنگام صادرات-پیش‌فرض (export-default) یک تابع، از camelCase استفاده کنید. نام فایل شما باید با نام تابع شما یکسان باشد.
+- ‏[23.7](#naming--camelCase-default-export) هنگام صادرات-پیش‌فرض (export-default) یک تابع، از camelCase استفاده کنید. نام فایل شما باید با نام تابع شما یکسان باشد.
 
 ```javascript
     function makeStyleGuide() {
@@ -3385,7 +3385,7 @@
 ```
 
   <a name="naming--PascalCase-singleton"></a><a name="22.8"></a>
-  - [23.8](#naming--PascalCase-singleton) هنگامی که یک سازنده / کلاس / تک تن / کتابخانه تابع / شیء خالی را صادر می کنید از PascalCase استفاده کنید.
+- ‏[23.8](#naming--PascalCase-singleton) هنگامی که یک سازنده / کلاس / تک تن / کتابخانه تابع / شیء خالی را صادر می کنید از PascalCase استفاده کنید.
 
 ```javascript
     const AirbnbStyleGuide = {
@@ -3475,10 +3475,10 @@
 ## دسترسی گیرنده / دهنده ها
 
   <a name="accessors--not-required"></a><a name="23.1"></a>
-  - [24.1](#accessors--not-required) توابع Accessor برای خواص مورد نیاز نیست.
+- ‏[24.1](#accessors--not-required) توابع Accessor برای خواص مورد نیاز نیست.
 
   <a name="accessors--no-getters-setters"></a><a name="23.2"></a>
-  - [24.2](#accessors--no-getters-setters) از دریافت کننده/تنظیم کننده های جاوا اسکریپت استفاده نکنید زیرا باعث ایجاد عوارض جانبی غیرمنتظره می شوند و آزمایش، نگهداری و استدلال در مورد آنها سخت تر است. در عوض، اگر توابع دسترسی را ایجاد می‌کنید، از `()getVal` و `("سلام")setVal` استفاده کنید.
+- ‏[24.2](#accessors--no-getters-setters) از دریافت کننده/تنظیم کننده های جاوا اسکریپت استفاده نکنید زیرا باعث ایجاد عوارض جانبی غیرمنتظره می شوند و آزمایش، نگهداری و استدلال در مورد آنها سخت تر است. در عوض، اگر توابع دسترسی را ایجاد می‌کنید، از `()getVal` و `("سلام")setVal` استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -3505,7 +3505,7 @@
 ```
 
   <a name="accessors--boolean-prefix"></a><a name="23.3"></a>
-  - [24.3](#accessors--boolean-prefix) اگر ویژگی/متدی `boolean` است، از `()isVal` یا `()hasVal` استفاده کنید.
+- ‏[24.3](#accessors--boolean-prefix) اگر ویژگی/متدی `boolean` است، از `()isVal` یا `()hasVal` استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -3544,7 +3544,7 @@
 ## رویدادها
 
   <a name="events--hash"></a><a name="24.1"></a>
-  - [25.1](#events--hash) هنگام پیوست کردن محموله‌های داده به رویدادها (چه رویدادهای DOM یا چیزهای اختصاصی‌تر مانند رویدادهای Backbone)، به جای مقدار خام، یک شیء را به صورت تحت اللفظی (همچنین به عنوان "hash" شناخته می‌شود) ارسال کنید. این به مشارکت‌کننده بعدی اجازه می‌دهد تا داده‌های بیشتری را بدون یافتن و به‌روزرسانی هر کنترل‌کننده رویداد به بار رویداد اضافه کند. به عنوان مثال، به جای:
+- ‏[25.1](#events--hash) هنگام پیوست کردن محموله‌های داده به رویدادها (چه رویدادهای DOM یا چیزهای اختصاصی‌تر مانند رویدادهای Backbone)، به جای مقدار خام، یک شیء را به صورت تحت اللفظی (همچنین به عنوان "hash" شناخته می‌شود) ارسال کنید. این به مشارکت‌کننده بعدی اجازه می‌دهد تا داده‌های بیشتری را بدون یافتن و به‌روزرسانی هر کنترل‌کننده رویداد به بار رویداد اضافه کند. به عنوان مثال، به جای:
 
 ```javascript
     // ‎بد
@@ -3575,7 +3575,7 @@
 ## جی کوئری
 
   <a name="jquery--dollar-prefix"></a><a name="25.1"></a>
-  - [26.1](#jquery--dollar-prefix) متغیرهای شیء jQuery را با یک `$` پیشوند کنید.
+- ‏[26.1](#jquery--dollar-prefix) متغیرهای شیء jQuery را با یک `$` پیشوند کنید.
 
 ```javascript
     // ‎بد
@@ -3589,7 +3589,7 @@
 ```
 
   <a name="jquery--cache"></a><a name="25.2"></a>
-  - [26.2](#jquery--cache) جستجوهای jQuery را ذخیره کنید.
+- ‏[26.2](#jquery--cache) جستجوهای jQuery را ذخیره کنید.
 
 ```javascript
     // ‎بد
@@ -3617,10 +3617,10 @@
 ```
 
   <a name="jquery--queries"></a><a name="25.3"></a>
-  - [26.3](#jquery--queries) برای جستارهای DOM از `$('.sidebar ul')` آبشاری یا والد > فرزند `$('.sidebar > ul')` استفاده کنید. [jsPerf](https://web.archive.org/web/20200414183810/https://jsperf.com/jquery-find-vs-context-sel/16)
+- ‏[26.3](#jquery--queries) برای جستارهای DOM از `$('.sidebar ul')` آبشاری یا والد > فرزند `$('.sidebar > ul')` استفاده کنید. [jsPerf](https://web.archive.org/web/20200414183810/https://jsperf.com/jquery-find-vs-context-sel/16)
 
   <a name="jquery--find"></a><a name="25.4"></a>
-  - [26.4](#jquery--find) از `find` با پرس و جوهای شیء jQuery با محدوده استفاده کنید.
+- ‏[26.4](#jquery--find) از `find` با پرس و جوهای شیء jQuery با محدوده استفاده کنید.
 
 ```javascript
     // ‎بد
@@ -3644,14 +3644,14 @@
 ## سازگاری با ECMAScript 5
 
   <a name="es5-compat--kangax"></a><a name="26.1"></a>
-  - [27.1](#es5-compat--kangax) به [Kangax](https://twitter.com/kangax/) ES5 [جدول سازگاری](https://kangax.github.io/es5-compat-table/) مراجعه کنید.
+- ‏[27.1](#es5-compat--kangax) به [Kangax](https://twitter.com/kangax/) ES5 [جدول سازگاری](https://kangax.github.io/es5-compat-table/) مراجعه کنید.
 
 **[⬆ بازگشت به بالا](#فهرست-مطالب)**
 
 <a name="ecmascript-6-styles"></a>
 ## سبک های ECMAScript 6+ (ES 2015+)
   <a name="es6-styles"></a><a name="27.1"></a>
-  - [28.1](#es6-styles) این مجموعه ای از پیوندها به ویژگی های مختلف ES6+ است.
+- ‏[28.1](#es6-styles) این مجموعه ای از پیوندها به ویژگی های مختلف ES6+ است.
 
 1. [توابع پیکانی](#arrows--use-them)
 1. [کلاس ها](#classes--no-duplicate-members)
@@ -3718,7 +3718,7 @@
 ## آزمایش کردن
 
   <a name="testing--yup"></a><a name="28.1"></a>
-  - [30.1](#testing--yup) **آره.**
+- ‏[30.1](#testing--yup) **آره.**
 
 ```javascript
     function foo() {
@@ -3727,7 +3727,7 @@
 ```
 
   <a name="testing--for-real"></a><a name="28.2"></a>
-  - [30.2](#testing--for-real) **نه ولی جدی**:
+- ‏[30.2](#testing--for-real) **نه ولی جدی**:
     - از هر چارچوب تستی که استفاده می کنید، باید تست بنویسید!
     - سعی کنید بسیاری از توابع خالص کوچک را بنویسید و مکان هایی که جهش ها رخ می دهند را به حداقل برسانید.
     - در مورد موارد خرد و تمسخر محتاط باشید - آنها می توانند تست های شما را شکننده تر کنند.
